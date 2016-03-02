@@ -1,0 +1,507 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		BD0BEBC41C867376005580EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEBC31C867376005580EC /* AppDelegate.swift */; };
+		BD0BEBC61C867376005580EC /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEBC51C867376005580EC /* ViewController.swift */; };
+		BD0BEBC91C867376005580EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0BEBC71C867376005580EC /* Main.storyboard */; };
+		BD0BEBCB1C867376005580EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0BEBCA1C867376005580EC /* Assets.xcassets */; };
+		BD0BEBCE1C867376005580EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0BEBCC1C867376005580EC /* LaunchScreen.storyboard */; };
+		BD0BEBD91C867376005580EC /* Smartisan_NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEBD81C867376005580EC /* Smartisan_NotesTests.swift */; };
+		BD0BEBE41C867376005580EC /* Smartisan_NotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEBE31C867376005580EC /* Smartisan_NotesUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		BD0BEBD51C867376005580EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD0BEBB81C867376005580EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD0BEBBF1C867376005580EC;
+			remoteInfo = "Smartisan-Notes";
+		};
+		BD0BEBE01C867376005580EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BD0BEBB81C867376005580EC /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = BD0BEBBF1C867376005580EC;
+			remoteInfo = "Smartisan-Notes";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		BD0BEBC01C867376005580EC /* Smartisan-Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smartisan-Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0BEBC31C867376005580EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		BD0BEBC51C867376005580EC /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD0BEBC81C867376005580EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		BD0BEBCA1C867376005580EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		BD0BEBCD1C867376005580EC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		BD0BEBCF1C867376005580EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD0BEBD41C867376005580EC /* Smartisan-NotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smartisan-NotesTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0BEBD81C867376005580EC /* Smartisan_NotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smartisan_NotesTests.swift; sourceTree = "<group>"; };
+		BD0BEBDA1C867376005580EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD0BEBDF1C867376005580EC /* Smartisan-NotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smartisan-NotesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD0BEBE31C867376005580EC /* Smartisan_NotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smartisan_NotesUITests.swift; sourceTree = "<group>"; };
+		BD0BEBE51C867376005580EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		BD0BEBBD1C867376005580EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD0BEBD11C867376005580EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD0BEBDC1C867376005580EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		BD0BEBB71C867376005580EC = {
+			isa = PBXGroup;
+			children = (
+				BD0BEBC21C867376005580EC /* Smartisan-Notes */,
+				BD0BEBD71C867376005580EC /* Smartisan-NotesTests */,
+				BD0BEBE21C867376005580EC /* Smartisan-NotesUITests */,
+				BD0BEBC11C867376005580EC /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		BD0BEBC11C867376005580EC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BEBC01C867376005580EC /* Smartisan-Notes.app */,
+				BD0BEBD41C867376005580EC /* Smartisan-NotesTests.xctest */,
+				BD0BEBDF1C867376005580EC /* Smartisan-NotesUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BD0BEBC21C867376005580EC /* Smartisan-Notes */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BEBC31C867376005580EC /* AppDelegate.swift */,
+				BD0BEBC51C867376005580EC /* ViewController.swift */,
+				BD0BEBC71C867376005580EC /* Main.storyboard */,
+				BD0BEBCA1C867376005580EC /* Assets.xcassets */,
+				BD0BEBCC1C867376005580EC /* LaunchScreen.storyboard */,
+				BD0BEBCF1C867376005580EC /* Info.plist */,
+			);
+			path = "Smartisan-Notes";
+			sourceTree = "<group>";
+		};
+		BD0BEBD71C867376005580EC /* Smartisan-NotesTests */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BEBD81C867376005580EC /* Smartisan_NotesTests.swift */,
+				BD0BEBDA1C867376005580EC /* Info.plist */,
+			);
+			path = "Smartisan-NotesTests";
+			sourceTree = "<group>";
+		};
+		BD0BEBE21C867376005580EC /* Smartisan-NotesUITests */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BEBE31C867376005580EC /* Smartisan_NotesUITests.swift */,
+				BD0BEBE51C867376005580EC /* Info.plist */,
+			);
+			path = "Smartisan-NotesUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		BD0BEBBF1C867376005580EC /* Smartisan-Notes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD0BEBE81C867376005580EC /* Build configuration list for PBXNativeTarget "Smartisan-Notes" */;
+			buildPhases = (
+				BD0BEBBC1C867376005580EC /* Sources */,
+				BD0BEBBD1C867376005580EC /* Frameworks */,
+				BD0BEBBE1C867376005580EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Smartisan-Notes";
+			productName = "Smartisan-Notes";
+			productReference = BD0BEBC01C867376005580EC /* Smartisan-Notes.app */;
+			productType = "com.apple.product-type.application";
+		};
+		BD0BEBD31C867376005580EC /* Smartisan-NotesTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD0BEBEB1C867376005580EC /* Build configuration list for PBXNativeTarget "Smartisan-NotesTests" */;
+			buildPhases = (
+				BD0BEBD01C867376005580EC /* Sources */,
+				BD0BEBD11C867376005580EC /* Frameworks */,
+				BD0BEBD21C867376005580EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD0BEBD61C867376005580EC /* PBXTargetDependency */,
+			);
+			name = "Smartisan-NotesTests";
+			productName = "Smartisan-NotesTests";
+			productReference = BD0BEBD41C867376005580EC /* Smartisan-NotesTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		BD0BEBDE1C867376005580EC /* Smartisan-NotesUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = BD0BEBEE1C867376005580EC /* Build configuration list for PBXNativeTarget "Smartisan-NotesUITests" */;
+			buildPhases = (
+				BD0BEBDB1C867376005580EC /* Sources */,
+				BD0BEBDC1C867376005580EC /* Frameworks */,
+				BD0BEBDD1C867376005580EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD0BEBE11C867376005580EC /* PBXTargetDependency */,
+			);
+			name = "Smartisan-NotesUITests";
+			productName = "Smartisan-NotesUITests";
+			productReference = BD0BEBDF1C867376005580EC /* Smartisan-NotesUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BD0BEBB81C867376005580EC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0720;
+				LastUpgradeCheck = 0720;
+				ORGANIZATIONNAME = DiegoSan;
+				TargetAttributes = {
+					BD0BEBBF1C867376005580EC = {
+						CreatedOnToolsVersion = 7.2.1;
+					};
+					BD0BEBD31C867376005580EC = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = BD0BEBBF1C867376005580EC;
+					};
+					BD0BEBDE1C867376005580EC = {
+						CreatedOnToolsVersion = 7.2.1;
+						TestTargetID = BD0BEBBF1C867376005580EC;
+					};
+				};
+			};
+			buildConfigurationList = BD0BEBBB1C867376005580EC /* Build configuration list for PBXProject "Smartisan-Notes" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = BD0BEBB71C867376005580EC;
+			productRefGroup = BD0BEBC11C867376005580EC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				BD0BEBBF1C867376005580EC /* Smartisan-Notes */,
+				BD0BEBD31C867376005580EC /* Smartisan-NotesTests */,
+				BD0BEBDE1C867376005580EC /* Smartisan-NotesUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		BD0BEBBE1C867376005580EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD0BEBCE1C867376005580EC /* LaunchScreen.storyboard in Resources */,
+				BD0BEBCB1C867376005580EC /* Assets.xcassets in Resources */,
+				BD0BEBC91C867376005580EC /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD0BEBD21C867376005580EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD0BEBDD1C867376005580EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		BD0BEBBC1C867376005580EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD0BEBC61C867376005580EC /* ViewController.swift in Sources */,
+				BD0BEBC41C867376005580EC /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD0BEBD01C867376005580EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD0BEBD91C867376005580EC /* Smartisan_NotesTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD0BEBDB1C867376005580EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				BD0BEBE41C867376005580EC /* Smartisan_NotesUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD0BEBD61C867376005580EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD0BEBBF1C867376005580EC /* Smartisan-Notes */;
+			targetProxy = BD0BEBD51C867376005580EC /* PBXContainerItemProxy */;
+		};
+		BD0BEBE11C867376005580EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = BD0BEBBF1C867376005580EC /* Smartisan-Notes */;
+			targetProxy = BD0BEBE01C867376005580EC /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		BD0BEBC71C867376005580EC /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD0BEBC81C867376005580EC /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		BD0BEBCC1C867376005580EC /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD0BEBCD1C867376005580EC /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		BD0BEBE61C867376005580EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		BD0BEBE71C867376005580EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		BD0BEBE91C867376005580EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Smartisan-Notes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DiegoSan.Smartisan-Notes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		BD0BEBEA1C867376005580EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = "Smartisan-Notes/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DiegoSan.Smartisan-Notes";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		BD0BEBEC1C867376005580EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Smartisan-NotesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DiegoSan.Smartisan-NotesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smartisan-Notes.app/Smartisan-Notes";
+			};
+			name = Debug;
+		};
+		BD0BEBED1C867376005580EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = "Smartisan-NotesTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DiegoSan.Smartisan-NotesTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Smartisan-Notes.app/Smartisan-Notes";
+			};
+			name = Release;
+		};
+		BD0BEBEF1C867376005580EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Smartisan-NotesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DiegoSan.Smartisan-NotesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Smartisan-Notes";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		BD0BEBF01C867376005580EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				INFOPLIST_FILE = "Smartisan-NotesUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "DiegoSan.Smartisan-NotesUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Smartisan-Notes";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		BD0BEBBB1C867376005580EC /* Build configuration list for PBXProject "Smartisan-Notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD0BEBE61C867376005580EC /* Debug */,
+				BD0BEBE71C867376005580EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		BD0BEBE81C867376005580EC /* Build configuration list for PBXNativeTarget "Smartisan-Notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD0BEBE91C867376005580EC /* Debug */,
+				BD0BEBEA1C867376005580EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BD0BEBEB1C867376005580EC /* Build configuration list for PBXNativeTarget "Smartisan-NotesTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD0BEBEC1C867376005580EC /* Debug */,
+				BD0BEBED1C867376005580EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		BD0BEBEE1C867376005580EC /* Build configuration list for PBXNativeTarget "Smartisan-NotesUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BD0BEBEF1C867376005580EC /* Debug */,
+				BD0BEBF01C867376005580EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BD0BEBB81C867376005580EC /* Project object */;
+}
