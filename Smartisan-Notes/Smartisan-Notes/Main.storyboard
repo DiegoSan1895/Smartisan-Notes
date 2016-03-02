@@ -176,10 +176,10 @@
                                     <constraint firstItem="Zgz-jh-8Dk" firstAttribute="leading" secondItem="nOS-db-ehi" secondAttribute="leading" constant="8" id="ygg-Tz-LAI"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-mD-Waf" customClass="AnimatableTextView" customModule="IBAnimatable">
-                                <rect key="frame" x="0.0" y="70" width="375" height="597"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" text="不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-mD-Waf" customClass="AnimatableTextView" customModule="IBAnimatable">
+                                <rect key="frame" x="0.0" y="70" width="375" height="297"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                <color key="textColor" red="0.42511659860610962" green="0.26729822158813477" blue="0.040762312710285187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
@@ -187,7 +187,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="3n5-7T-qng" secondAttribute="trailing" id="6EM-j1-HAc"/>
-                            <constraint firstItem="fYq-QD-uVU" firstAttribute="top" secondItem="Oca-mD-Waf" secondAttribute="bottom" id="7cH-PC-sAa"/>
+                            <constraint firstItem="fYq-QD-uVU" firstAttribute="top" secondItem="Oca-mD-Waf" secondAttribute="bottom" constant="300" id="7cH-PC-sAa"/>
                             <constraint firstItem="3n5-7T-qng" firstAttribute="top" secondItem="D6z-Fo-qSb" secondAttribute="top" id="HlB-IM-gSr"/>
                             <constraint firstItem="3n5-7T-qng" firstAttribute="leading" secondItem="D6z-Fo-qSb" secondAttribute="leading" id="Oug-ld-YC1"/>
                             <constraint firstItem="nOS-db-ehi" firstAttribute="top" secondItem="3n5-7T-qng" secondAttribute="bottom" id="S0u-qo-26F"/>
