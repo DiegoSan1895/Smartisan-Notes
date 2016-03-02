@@ -24,6 +24,7 @@
 		BD0BEC851C86DC43005580EC /* NotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0BEC831C86DC43005580EC /* NotesTableViewCell.xib */; };
 		BD0BEC871C86FB25005580EC /* TableViewDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC861C86FB25005580EC /* TableViewDataSourceAndDelegate.swift */; };
 		BD0BEC891C872486005580EC /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC881C872486005580EC /* WriteViewController.swift */; };
+		BD4C3DD31C8744B7004DB2A4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -80,6 +81,7 @@
 		BD0BEC831C86DC43005580EC /* NotesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesTableViewCell.xib; sourceTree = "<group>"; };
 		BD0BEC861C86FB25005580EC /* TableViewDataSourceAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceAndDelegate.swift; sourceTree = "<group>"; };
 		BD0BEC881C872486005580EC /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		F89A51B24F5A0C18838532CB /* Pods_Smartisan_Notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smartisan_Notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9985CC0FB0F5A1A01B69947 /* Pods-Smartisan-Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smartisan-Notes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smartisan-Notes/Pods-Smartisan-Notes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -218,6 +220,7 @@
 				BD0BEC771C8682D1005580EC /* HomeViewController.swift */,
 				BD0BEC861C86FB25005580EC /* TableViewDataSourceAndDelegate.swift */,
 				BD0BEC881C872486005580EC /* WriteViewController.swift */,
+				BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -409,6 +412,7 @@
 				BD0BEC891C872486005580EC /* WriteViewController.swift in Sources */,
 				BD0BEC781C8682D1005580EC /* HomeViewController.swift in Sources */,
 				BD0BEC871C86FB25005580EC /* TableViewDataSourceAndDelegate.swift in Sources */,
+				BD4C3DD31C8744B7004DB2A4 /* AboutViewController.swift in Sources */,
 				BD0BEC7C1C8685AC005580EC /* Notes.swift in Sources */,
 				BD0BEBC41C867376005580EC /* AppDelegate.swift in Sources */,
 				BD0BEC841C86DC43005580EC /* NotesTableViewCell.swift in Sources */,
