@@ -14,6 +14,10 @@
 		BD0BEBCE1C867376005580EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0BEBCC1C867376005580EC /* LaunchScreen.storyboard */; };
 		BD0BEBD91C867376005580EC /* Smartisan_NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEBD81C867376005580EC /* Smartisan_NotesTests.swift */; };
 		BD0BEBE41C867376005580EC /* Smartisan_NotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEBE31C867376005580EC /* Smartisan_NotesUITests.swift */; };
+		BD0BEBF31C8675A1005580EC /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0BEBF11C8675A1005580EC /* Realm.framework */; };
+		BD0BEBF41C8675A1005580EC /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD0BEBF11C8675A1005580EC /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		BD0BEBF51C8675A1005580EC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0BEBF21C8675A1005580EC /* RealmSwift.framework */; };
+		BD0BEBF61C8675A1005580EC /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD0BEBF21C8675A1005580EC /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +37,21 @@
 		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BD0BEBF71C8675A1005580EC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BD0BEBF61C8675A1005580EC /* RealmSwift.framework in Embed Frameworks */,
+				BD0BEBF41C8675A1005580EC /* Realm.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
 		BD0BEBC01C867376005580EC /* Smartisan-Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smartisan-Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0BEBC31C867376005580EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +66,8 @@
 		BD0BEBDF1C867376005580EC /* Smartisan-NotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smartisan-NotesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0BEBE31C867376005580EC /* Smartisan_NotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smartisan_NotesUITests.swift; sourceTree = "<group>"; };
 		BD0BEBE51C867376005580EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BD0BEBF11C8675A1005580EC /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		BD0BEBF21C8675A1005580EC /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +75,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD0BEBF51C8675A1005580EC /* RealmSwift.framework in Frameworks */,
+				BD0BEBF31C8675A1005580EC /* Realm.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -103,6 +126,7 @@
 				BD0BEBCA1C867376005580EC /* Assets.xcassets */,
 				BD0BEBCC1C867376005580EC /* LaunchScreen.storyboard */,
 				BD0BEBCF1C867376005580EC /* Info.plist */,
+				BD0BEBF81C8675B3005580EC /* Framework */,
 			);
 			path = "Smartisan-Notes";
 			sourceTree = "<group>";
@@ -125,6 +149,16 @@
 			path = "Smartisan-NotesUITests";
 			sourceTree = "<group>";
 		};
+		BD0BEBF81C8675B3005580EC /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BEBF11C8675A1005580EC /* Realm.framework */,
+				BD0BEBF21C8675A1005580EC /* RealmSwift.framework */,
+			);
+			name = Framework;
+			path = ..;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +169,7 @@
 				BD0BEBBC1C867376005580EC /* Sources */,
 				BD0BEBBD1C867376005580EC /* Frameworks */,
 				BD0BEBBE1C867376005580EC /* Resources */,
+				BD0BEBF71C8675A1005580EC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -399,6 +434,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Smartisan-Notes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "DiegoSan.Smartisan-Notes";
@@ -410,6 +449,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)",
+				);
 				INFOPLIST_FILE = "Smartisan-Notes/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "DiegoSan.Smartisan-Notes";
@@ -484,6 +527,7 @@
 				BD0BEBEA1C867376005580EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD0BEBEB1C867376005580EC /* Build configuration list for PBXNativeTarget "Smartisan-NotesTests" */ = {
 			isa = XCConfigurationList;
@@ -492,6 +536,7 @@
 				BD0BEBED1C867376005580EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BD0BEBEE1C867376005580EC /* Build configuration list for PBXNativeTarget "Smartisan-NotesUITests" */ = {
 			isa = XCConfigurationList;
@@ -500,6 +545,7 @@
 				BD0BEBF01C867376005580EC /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
