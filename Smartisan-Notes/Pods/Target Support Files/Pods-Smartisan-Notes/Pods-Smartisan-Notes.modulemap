@@ -1,0 +1,6 @@
+framework module Pods_Smartisan_Notes {
+  umbrella header "Pods-Smartisan-Notes-umbrella.h"
+
+  export *
+  module * { export * }
+}
