@@ -1,0 +1,670 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		000091484C9C01F59864D7E5FF5BB299 /* NavigationBarDesginable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C47374D4BEB587629CE0DA2232DBF74B /* NavigationBarDesginable.swift */; };
+		01E5E9ABF56C15DB82499D1426492BAE /* ColorType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 766546388E9BBE4E4DC7508A587D0487 /* ColorType.swift */; };
+		02079F0FC1B6C5E12FD87F7A3124BB30 /* IBAnimatable-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4A4CB838A29B13F536DE968B88B4B182 /* IBAnimatable-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0365474ADFAEA4C8836F75923AE7736C /* DismissSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = F1A5254715552B316FBA0FCAC26FA7D6 /* DismissSegue.swift */; };
+		04D226F8B73997E2E60C6A83A78339AE /* RotationDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9CE18CD3D3F65C9D4E220FDD9F04602 /* RotationDesignable.swift */; };
+		0A1CFFBD19F4C69FCA93BC3270AA6747 /* MaskDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 414EB1001FF6F6A29E0A4C27915ECAB1 /* MaskDesignable.swift */; };
+		129D4246F60AC903F5623967EB579943 /* ShadowDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9BF6E61052F4B2026342C8AEF678C044 /* ShadowDesignable.swift */; };
+		185E170B33A9EB8BB1CAF460EEAD5781 /* AnimatableCheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = E49FFD178EF19AD034F52448C58EBAB9 /* AnimatableCheckBox.swift */; };
+		191A185CD52F85233C0289C82FC55B7A /* Pods-Smartisan-Notes-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = CB26DF7BAA3D9B5D4F42306AE7A6353C /* Pods-Smartisan-Notes-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		1B6BA056D4A0B58E5AE69A113C8CDE13 /* AnimatableTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4D1D59481749C43C7FFAEE08FF1BCB /* AnimatableTextField.swift */; };
+		21C1959D0B0E277A05B13F4D0CE5AE97 /* TableViewCellDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EEA362C6C5AE79D0FB3CF7BD70A1EE4 /* TableViewCellDesignable.swift */; };
+		24236B255BB6F23E4F6CAC871A249398 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		2CF79307760D75F1B410F3519EFB20B1 /* AnimatableTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2D0B8A17DDF0D865D0C4B21E65C517BA /* AnimatableTableViewCell.swift */; };
+		322F13D61EE41A536F61B6BEB9E86A39 /* AnimatableBarButtonItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7329E7C1D24DAF9DA0E689B2BBDF04FB /* AnimatableBarButtonItem.swift */; };
+		3695F88E1B2C30D4A808634ACB638850 /* UIViewController+UnwindSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D54EE7FD0B875EEBAEC751E6192F68C /* UIViewController+UnwindSegue.swift */; };
+		37A47FA2A60EA75FDDD2F7019150E1B1 /* BlurDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AC40C0CCE8EBB943EA889AE4A46F67A /* BlurDesignable.swift */; };
+		4510D91605CBA2BD8715E0F85A7CC520 /* CheckBoxDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49B28A2EB74FAE3D17D31797DCDF3D3 /* CheckBoxDesignable.swift */; };
+		474EBEBE19E314097AAD996303C594F7 /* GradientType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3464E51DBF442275F6B20B9435A32800 /* GradientType.swift */; };
+		476AB20D3FFED37B8DAC0C5DE3702542 /* MaskType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D205236712DA0F67D630D096622DF3A /* MaskType.swift */; };
+		4AC29F3B31CDA6F6D1E544CF0A9DD683 /* PaddingDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E481D899CCAA185E09C6CD6DF9AE2AA1 /* PaddingDesignable.swift */; };
+		4AF231CAE083421B06B5DACAD7DEC52C /* Pods-Smartisan-Notes-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 8CF9073447D1956621FF7D9528167BD0 /* Pods-Smartisan-Notes-dummy.m */; };
+		599755F5DB721393D364AEACC110652C /* AnimatableTableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = EFC1526F37CE2FD20A08F1BBAAB2A458 /* AnimatableTableView.swift */; };
+		63DB88A00DA98059C5C4F2827ADF415F /* RootWindowDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 872F2F11CD5C21E294939BD5D360631C /* RootWindowDesignable.swift */; };
+		6773201D65160B70CBEB4C70C94E3F2E /* AnimatableStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B613A3F1B45D33A13D7182AD45DDB46F /* AnimatableStackView.swift */; };
+		7180653975297121BF110D15B544A463 /* AnimatableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BE17B5D931614A75675E9646686568 /* AnimatableView.swift */; };
+		74957CF9A6C3A6DE0BA87E1113A333CF /* AnimatableImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D370744AEAF47D4DDF5F1720046675D /* AnimatableImageView.swift */; };
+		814F1776E7ADDD5ABA526B4B1B80A159 /* Animatable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 72F7F3629398807D1EB9972DB9BBF62A /* Animatable.swift */; };
+		9003F6553BE5BACAC758DF02C82DFD58 /* AnimatableLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F535D3DD06A6B790E777B09B61242DE3 /* AnimatableLabel.swift */; };
+		9C674726701C3AC52D0FA2A9898D5B0C /* BorderSide.swift in Sources */ = {isa = PBXBuildFile; fileRef = D930FCC06B5D82F1098430D45B73E4DD /* BorderSide.swift */; };
+		A9E88E84D46F2B8C1B3591C5F61C737A /* DesignableNavigationBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 652EDF13D00D9B147B43EE0541584FC5 /* DesignableNavigationBar.swift */; };
+		B1AFE9116ED5C71BFFDD4B1ABDA3C044 /* SideImageDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5E2F2E9C51E581ACB4D93E4784D555E /* SideImageDesignable.swift */; };
+		BAA760EBBCD3903DDF5F6F931A2838D5 /* AnimatableButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8803C3F47D5B5A272AF5566CFF71DC97 /* AnimatableButton.swift */; };
+		BB2F4D664D3ED1057083559B5C465F07 /* GradientDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 11EB74CA89DD355DA2C39502664CFE3D /* GradientDesignable.swift */; };
+		BD128AF4FD48B066446BDB6830BCC821 /* DesignableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6049C540E02B5E5B90569DAEA334198 /* DesignableViewController.swift */; };
+		C384D9E15849172FDF761C089E4E2D6C /* BarButtonItemDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 269E53EC6FF4CD38E506F1FEC5C0927B /* BarButtonItemDesignable.swift */; };
+		C89BD23BAF6C2056762226A531596CCF /* TintDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0873CBB73867AF1F19024297465B01D2 /* TintDesignable.swift */; };
+		CC6501205217745C245FFD7CA82277E4 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */; };
+		CCBCF251DE26F152288A4A2ED58CF170 /* StatusBarDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C34BFB67ADD0C0EF591D1EBF52C7BDB6 /* StatusBarDesignable.swift */; };
+		D14BA87E3E65EC5B89AFA9B1D4ACD7EB /* BorderDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = C687ACBF8140D3BA0AE4F3169FE044E9 /* BorderDesignable.swift */; };
+		D398DFA42C3870376DEC1E7438A7D432 /* GradientStartPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F23CCF3DDAF87F779FF307FD10FA5E1 /* GradientStartPoint.swift */; };
+		D766DCD8A88494EA339B5C06339D48D7 /* IBAnimatable-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 527B5027D36906F85A7387230FE7BF1A /* IBAnimatable-dummy.m */; };
+		D78944FFD99A2577D80BF3FCD1CAC348 /* PlaceholderDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40D2319293BAE99F30FF95C700B00BE4 /* PlaceholderDesignable.swift */; };
+		DD905F466FF5F3921D2757C2AA49A55A /* AnimationType.swift in Sources */ = {isa = PBXBuildFile; fileRef = BA2EB8152DA66A2D3E6C4D93792D4176 /* AnimationType.swift */; };
+		DE5317DB30F2F86BC3975AEF5C815BC1 /* BlurEffectStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 135DF50F224278321A0AE6B73E5D6819 /* BlurEffectStyle.swift */; };
+		E048B2B93C7ABEB9382C1A0B7AECC954 /* ViewControllerDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A66684E05DEE2F54E2F0419DDAED3BF /* ViewControllerDesignable.swift */; };
+		E6168D00E9DF5865691CFE84EC191D10 /* UIColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17B766289F5FCE31450E96925083902B /* UIColorExtension.swift */; };
+		F19F44AC16F65C315FC216CAB545C4B4 /* FillDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4E3C4F3806619282221F9A1E4D1E23 /* FillDesignable.swift */; };
+		F3831AAFE55E159898E26127BBEE7469 /* CornerDesignable.swift in Sources */ = {isa = PBXBuildFile; fileRef = B75488E25089C8EA67AA156FECB18E4C /* CornerDesignable.swift */; };
+		F3C8A2FA02BD0E20CDAE43B42D8DF165 /* AnimatableTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A74557467E24930CACCC40DBC45A5AE9 /* AnimatableTextView.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		070F5DE9947838A512C14966E2166FAA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2A5E02F29D0FA1F58800151FF5110D7D;
+			remoteInfo = IBAnimatable;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		01BE17B5D931614A75675E9646686568 /* AnimatableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableView.swift; path = IBAnimatable/AnimatableView.swift; sourceTree = "<group>"; };
+		0873CBB73867AF1F19024297465B01D2 /* TintDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TintDesignable.swift; path = IBAnimatable/TintDesignable.swift; sourceTree = "<group>"; };
+		09BC74056481F26C084EFC53CC0A35E4 /* Pods-Smartisan-Notes-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Smartisan-Notes-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0DC615044E3B18EFAFFF05F6EC3FD0A7 /* Pods-Smartisan-Notes-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Smartisan-Notes-resources.sh"; sourceTree = "<group>"; };
+		0EEA362C6C5AE79D0FB3CF7BD70A1EE4 /* TableViewCellDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TableViewCellDesignable.swift; path = IBAnimatable/TableViewCellDesignable.swift; sourceTree = "<group>"; };
+		11EB74CA89DD355DA2C39502664CFE3D /* GradientDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientDesignable.swift; path = IBAnimatable/GradientDesignable.swift; sourceTree = "<group>"; };
+		135DF50F224278321A0AE6B73E5D6819 /* BlurEffectStyle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurEffectStyle.swift; path = IBAnimatable/BlurEffectStyle.swift; sourceTree = "<group>"; };
+		17B766289F5FCE31450E96925083902B /* UIColorExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UIColorExtension.swift; path = IBAnimatable/UIColorExtension.swift; sourceTree = "<group>"; };
+		1A4D1D59481749C43C7FFAEE08FF1BCB /* AnimatableTextField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableTextField.swift; path = IBAnimatable/AnimatableTextField.swift; sourceTree = "<group>"; };
+		269E53EC6FF4CD38E506F1FEC5C0927B /* BarButtonItemDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarButtonItemDesignable.swift; path = IBAnimatable/BarButtonItemDesignable.swift; sourceTree = "<group>"; };
+		2C4E3C4F3806619282221F9A1E4D1E23 /* FillDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillDesignable.swift; path = IBAnimatable/FillDesignable.swift; sourceTree = "<group>"; };
+		2D0B8A17DDF0D865D0C4B21E65C517BA /* AnimatableTableViewCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableTableViewCell.swift; path = IBAnimatable/AnimatableTableViewCell.swift; sourceTree = "<group>"; };
+		3464E51DBF442275F6B20B9435A32800 /* GradientType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientType.swift; path = IBAnimatable/GradientType.swift; sourceTree = "<group>"; };
+		3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS9.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		3F23CCF3DDAF87F779FF307FD10FA5E1 /* GradientStartPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStartPoint.swift; path = IBAnimatable/GradientStartPoint.swift; sourceTree = "<group>"; };
+		4048C257AEA123FCD3695299CE64033B /* IBAnimatable.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = IBAnimatable.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		40D2319293BAE99F30FF95C700B00BE4 /* PlaceholderDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PlaceholderDesignable.swift; path = IBAnimatable/PlaceholderDesignable.swift; sourceTree = "<group>"; };
+		414EB1001FF6F6A29E0A4C27915ECAB1 /* MaskDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaskDesignable.swift; path = IBAnimatable/MaskDesignable.swift; sourceTree = "<group>"; };
+		41CDBEC281B428365D61E55CF535C563 /* IBAnimatable.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = IBAnimatable.modulemap; sourceTree = "<group>"; };
+		47C32BE3830C23DC6C621FF9B0B996BB /* Pods-Smartisan-Notes.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = "sourcecode.module-map"; path = "Pods-Smartisan-Notes.modulemap"; sourceTree = "<group>"; };
+		4A4CB838A29B13F536DE968B88B4B182 /* IBAnimatable-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IBAnimatable-umbrella.h"; sourceTree = "<group>"; };
+		4CAFF50898944E15251E53124E3DEC91 /* Pods-Smartisan-Notes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smartisan-Notes.debug.xcconfig"; sourceTree = "<group>"; };
+		527B5027D36906F85A7387230FE7BF1A /* IBAnimatable-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "IBAnimatable-dummy.m"; sourceTree = "<group>"; };
+		58C1E8D2D41F0ED1F682D4F957C95E71 /* IBAnimatable-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "IBAnimatable-prefix.pch"; sourceTree = "<group>"; };
+		5D370744AEAF47D4DDF5F1720046675D /* AnimatableImageView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableImageView.swift; path = IBAnimatable/AnimatableImageView.swift; sourceTree = "<group>"; };
+		652EDF13D00D9B147B43EE0541584FC5 /* DesignableNavigationBar.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableNavigationBar.swift; path = IBAnimatable/DesignableNavigationBar.swift; sourceTree = "<group>"; };
+		6AC40C0CCE8EBB943EA889AE4A46F67A /* BlurDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BlurDesignable.swift; path = IBAnimatable/BlurDesignable.swift; sourceTree = "<group>"; };
+		72F7F3629398807D1EB9972DB9BBF62A /* Animatable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Animatable.swift; path = IBAnimatable/Animatable.swift; sourceTree = "<group>"; };
+		7329E7C1D24DAF9DA0E689B2BBDF04FB /* AnimatableBarButtonItem.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableBarButtonItem.swift; path = IBAnimatable/AnimatableBarButtonItem.swift; sourceTree = "<group>"; };
+		76484F19F8B2357AED601870BB95A4D1 /* IBAnimatable.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = IBAnimatable.xcconfig; sourceTree = "<group>"; };
+		766546388E9BBE4E4DC7508A587D0487 /* ColorType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorType.swift; path = IBAnimatable/ColorType.swift; sourceTree = "<group>"; };
+		7B82EA0999CD483AC27564BA61496696 /* Pods-Smartisan-Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Smartisan-Notes.release.xcconfig"; sourceTree = "<group>"; };
+		7D205236712DA0F67D630D096622DF3A /* MaskType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MaskType.swift; path = IBAnimatable/MaskType.swift; sourceTree = "<group>"; };
+		7D54EE7FD0B875EEBAEC751E6192F68C /* UIViewController+UnwindSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+UnwindSegue.swift"; path = "IBAnimatable/UIViewController+UnwindSegue.swift"; sourceTree = "<group>"; };
+		872F2F11CD5C21E294939BD5D360631C /* RootWindowDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RootWindowDesignable.swift; path = IBAnimatable/RootWindowDesignable.swift; sourceTree = "<group>"; };
+		8803C3F47D5B5A272AF5566CFF71DC97 /* AnimatableButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableButton.swift; path = IBAnimatable/AnimatableButton.swift; sourceTree = "<group>"; };
+		8CF9073447D1956621FF7D9528167BD0 /* Pods-Smartisan-Notes-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Smartisan-Notes-dummy.m"; sourceTree = "<group>"; };
+		9441EC3799578FAE471FB532C5AD28F6 /* Pods-Smartisan-Notes-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Smartisan-Notes-acknowledgements.plist"; sourceTree = "<group>"; };
+		9A66684E05DEE2F54E2F0419DDAED3BF /* ViewControllerDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ViewControllerDesignable.swift; path = IBAnimatable/ViewControllerDesignable.swift; sourceTree = "<group>"; };
+		9BF6E61052F4B2026342C8AEF678C044 /* ShadowDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShadowDesignable.swift; path = IBAnimatable/ShadowDesignable.swift; sourceTree = "<group>"; };
+		A49B28A2EB74FAE3D17D31797DCDF3D3 /* CheckBoxDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CheckBoxDesignable.swift; path = IBAnimatable/CheckBoxDesignable.swift; sourceTree = "<group>"; };
+		A74557467E24930CACCC40DBC45A5AE9 /* AnimatableTextView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableTextView.swift; path = IBAnimatable/AnimatableTextView.swift; sourceTree = "<group>"; };
+		B613A3F1B45D33A13D7182AD45DDB46F /* AnimatableStackView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableStackView.swift; path = IBAnimatable/AnimatableStackView.swift; sourceTree = "<group>"; };
+		B75488E25089C8EA67AA156FECB18E4C /* CornerDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CornerDesignable.swift; path = IBAnimatable/CornerDesignable.swift; sourceTree = "<group>"; };
+		B9CE18CD3D3F65C9D4E220FDD9F04602 /* RotationDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RotationDesignable.swift; path = IBAnimatable/RotationDesignable.swift; sourceTree = "<group>"; };
+		BA2EB8152DA66A2D3E6C4D93792D4176 /* AnimationType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationType.swift; path = IBAnimatable/AnimationType.swift; sourceTree = "<group>"; };
+		BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C34BFB67ADD0C0EF591D1EBF52C7BDB6 /* StatusBarDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StatusBarDesignable.swift; path = IBAnimatable/StatusBarDesignable.swift; sourceTree = "<group>"; };
+		C47374D4BEB587629CE0DA2232DBF74B /* NavigationBarDesginable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NavigationBarDesginable.swift; path = IBAnimatable/NavigationBarDesginable.swift; sourceTree = "<group>"; };
+		C687ACBF8140D3BA0AE4F3169FE044E9 /* BorderDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BorderDesignable.swift; path = IBAnimatable/BorderDesignable.swift; sourceTree = "<group>"; };
+		C884830E6D0B9D0B741DEBD421ED5979 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CA922695DB3BCCB03F011CC762EE4A07 /* Pods_Smartisan_Notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smartisan_Notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB26DF7BAA3D9B5D4F42306AE7A6353C /* Pods-Smartisan-Notes-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Smartisan-Notes-umbrella.h"; sourceTree = "<group>"; };
+		CF3126B050439A3E07B81595A8414CF1 /* Pods-Smartisan-Notes-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Smartisan-Notes-frameworks.sh"; sourceTree = "<group>"; };
+		D930FCC06B5D82F1098430D45B73E4DD /* BorderSide.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BorderSide.swift; path = IBAnimatable/BorderSide.swift; sourceTree = "<group>"; };
+		E481D899CCAA185E09C6CD6DF9AE2AA1 /* PaddingDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PaddingDesignable.swift; path = IBAnimatable/PaddingDesignable.swift; sourceTree = "<group>"; };
+		E49FFD178EF19AD034F52448C58EBAB9 /* AnimatableCheckBox.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableCheckBox.swift; path = IBAnimatable/AnimatableCheckBox.swift; sourceTree = "<group>"; };
+		E5E2F2E9C51E581ACB4D93E4784D555E /* SideImageDesignable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SideImageDesignable.swift; path = IBAnimatable/SideImageDesignable.swift; sourceTree = "<group>"; };
+		E6049C540E02B5E5B90569DAEA334198 /* DesignableViewController.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DesignableViewController.swift; path = IBAnimatable/DesignableViewController.swift; sourceTree = "<group>"; };
+		EFBDDC3B3FB289BAB26FDCA9F1616274 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		EFC1526F37CE2FD20A08F1BBAAB2A458 /* AnimatableTableView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableTableView.swift; path = IBAnimatable/AnimatableTableView.swift; sourceTree = "<group>"; };
+		F1A5254715552B316FBA0FCAC26FA7D6 /* DismissSegue.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DismissSegue.swift; path = IBAnimatable/DismissSegue.swift; sourceTree = "<group>"; };
+		F535D3DD06A6B790E777B09B61242DE3 /* AnimatableLabel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatableLabel.swift; path = IBAnimatable/AnimatableLabel.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4D0A9262524BAC8671DBC806D5C2B132 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CC6501205217745C245FFD7CA82277E4 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		935D8AF1BA7ED07F37F76DC93DCC727A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				24236B255BB6F23E4F6CAC871A249398 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		31A5425056A9D763C89C2A73B646F012 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				41CDBEC281B428365D61E55CF535C563 /* IBAnimatable.modulemap */,
+				76484F19F8B2357AED601870BB95A4D1 /* IBAnimatable.xcconfig */,
+				527B5027D36906F85A7387230FE7BF1A /* IBAnimatable-dummy.m */,
+				58C1E8D2D41F0ED1F682D4F957C95E71 /* IBAnimatable-prefix.pch */,
+				4A4CB838A29B13F536DE968B88B4B182 /* IBAnimatable-umbrella.h */,
+				EFBDDC3B3FB289BAB26FDCA9F1616274 /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/IBAnimatable";
+			sourceTree = "<group>";
+		};
+		3AC90FFCA522C24E6DDD2A29151626BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4048C257AEA123FCD3695299CE64033B /* IBAnimatable.framework */,
+				CA922695DB3BCCB03F011CC762EE4A07 /* Pods_Smartisan_Notes.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		67B8A91F4F76AFE08A62463FD86968A5 /* Pods-Smartisan-Notes */ = {
+			isa = PBXGroup;
+			children = (
+				C884830E6D0B9D0B741DEBD421ED5979 /* Info.plist */,
+				47C32BE3830C23DC6C621FF9B0B996BB /* Pods-Smartisan-Notes.modulemap */,
+				09BC74056481F26C084EFC53CC0A35E4 /* Pods-Smartisan-Notes-acknowledgements.markdown */,
+				9441EC3799578FAE471FB532C5AD28F6 /* Pods-Smartisan-Notes-acknowledgements.plist */,
+				8CF9073447D1956621FF7D9528167BD0 /* Pods-Smartisan-Notes-dummy.m */,
+				CF3126B050439A3E07B81595A8414CF1 /* Pods-Smartisan-Notes-frameworks.sh */,
+				0DC615044E3B18EFAFFF05F6EC3FD0A7 /* Pods-Smartisan-Notes-resources.sh */,
+				CB26DF7BAA3D9B5D4F42306AE7A6353C /* Pods-Smartisan-Notes-umbrella.h */,
+				4CAFF50898944E15251E53124E3DEC91 /* Pods-Smartisan-Notes.debug.xcconfig */,
+				7B82EA0999CD483AC27564BA61496696 /* Pods-Smartisan-Notes.release.xcconfig */,
+			);
+			name = "Pods-Smartisan-Notes";
+			path = "Target Support Files/Pods-Smartisan-Notes";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				BA6428E9F66FD5A23C0A2E06ED26CD2F /* Podfile */,
+				BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */,
+				95074326C1B7E24E061AA10F25CA445F /* Pods */,
+				3AC90FFCA522C24E6DDD2A29151626BA /* Products */,
+				C3045337D65CC40E7D87790AE0221321 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		95074326C1B7E24E061AA10F25CA445F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BCC2BAF2DBD851CD270F009B975B603E /* IBAnimatable */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		BC3CA7F9E30CC8F7E2DD044DD34432FC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BCC2BAF2DBD851CD270F009B975B603E /* IBAnimatable */ = {
+			isa = PBXGroup;
+			children = (
+				72F7F3629398807D1EB9972DB9BBF62A /* Animatable.swift */,
+				7329E7C1D24DAF9DA0E689B2BBDF04FB /* AnimatableBarButtonItem.swift */,
+				8803C3F47D5B5A272AF5566CFF71DC97 /* AnimatableButton.swift */,
+				E49FFD178EF19AD034F52448C58EBAB9 /* AnimatableCheckBox.swift */,
+				5D370744AEAF47D4DDF5F1720046675D /* AnimatableImageView.swift */,
+				F535D3DD06A6B790E777B09B61242DE3 /* AnimatableLabel.swift */,
+				B613A3F1B45D33A13D7182AD45DDB46F /* AnimatableStackView.swift */,
+				EFC1526F37CE2FD20A08F1BBAAB2A458 /* AnimatableTableView.swift */,
+				2D0B8A17DDF0D865D0C4B21E65C517BA /* AnimatableTableViewCell.swift */,
+				1A4D1D59481749C43C7FFAEE08FF1BCB /* AnimatableTextField.swift */,
+				A74557467E24930CACCC40DBC45A5AE9 /* AnimatableTextView.swift */,
+				01BE17B5D931614A75675E9646686568 /* AnimatableView.swift */,
+				BA2EB8152DA66A2D3E6C4D93792D4176 /* AnimationType.swift */,
+				269E53EC6FF4CD38E506F1FEC5C0927B /* BarButtonItemDesignable.swift */,
+				6AC40C0CCE8EBB943EA889AE4A46F67A /* BlurDesignable.swift */,
+				135DF50F224278321A0AE6B73E5D6819 /* BlurEffectStyle.swift */,
+				C687ACBF8140D3BA0AE4F3169FE044E9 /* BorderDesignable.swift */,
+				D930FCC06B5D82F1098430D45B73E4DD /* BorderSide.swift */,
+				A49B28A2EB74FAE3D17D31797DCDF3D3 /* CheckBoxDesignable.swift */,
+				766546388E9BBE4E4DC7508A587D0487 /* ColorType.swift */,
+				B75488E25089C8EA67AA156FECB18E4C /* CornerDesignable.swift */,
+				652EDF13D00D9B147B43EE0541584FC5 /* DesignableNavigationBar.swift */,
+				E6049C540E02B5E5B90569DAEA334198 /* DesignableViewController.swift */,
+				F1A5254715552B316FBA0FCAC26FA7D6 /* DismissSegue.swift */,
+				2C4E3C4F3806619282221F9A1E4D1E23 /* FillDesignable.swift */,
+				11EB74CA89DD355DA2C39502664CFE3D /* GradientDesignable.swift */,
+				3F23CCF3DDAF87F779FF307FD10FA5E1 /* GradientStartPoint.swift */,
+				3464E51DBF442275F6B20B9435A32800 /* GradientType.swift */,
+				414EB1001FF6F6A29E0A4C27915ECAB1 /* MaskDesignable.swift */,
+				7D205236712DA0F67D630D096622DF3A /* MaskType.swift */,
+				C47374D4BEB587629CE0DA2232DBF74B /* NavigationBarDesginable.swift */,
+				E481D899CCAA185E09C6CD6DF9AE2AA1 /* PaddingDesignable.swift */,
+				40D2319293BAE99F30FF95C700B00BE4 /* PlaceholderDesignable.swift */,
+				872F2F11CD5C21E294939BD5D360631C /* RootWindowDesignable.swift */,
+				B9CE18CD3D3F65C9D4E220FDD9F04602 /* RotationDesignable.swift */,
+				9BF6E61052F4B2026342C8AEF678C044 /* ShadowDesignable.swift */,
+				E5E2F2E9C51E581ACB4D93E4784D555E /* SideImageDesignable.swift */,
+				C34BFB67ADD0C0EF591D1EBF52C7BDB6 /* StatusBarDesignable.swift */,
+				0EEA362C6C5AE79D0FB3CF7BD70A1EE4 /* TableViewCellDesignable.swift */,
+				0873CBB73867AF1F19024297465B01D2 /* TintDesignable.swift */,
+				17B766289F5FCE31450E96925083902B /* UIColorExtension.swift */,
+				7D54EE7FD0B875EEBAEC751E6192F68C /* UIViewController+UnwindSegue.swift */,
+				9A66684E05DEE2F54E2F0419DDAED3BF /* ViewControllerDesignable.swift */,
+				31A5425056A9D763C89C2A73B646F012 /* Support Files */,
+			);
+			path = IBAnimatable;
+			sourceTree = "<group>";
+		};
+		BF6342C8B29F4CEEA088EFF7AB4DE362 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				3E4E89230EF59BC255123B67864ACF77 /* Foundation.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		C3045337D65CC40E7D87790AE0221321 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				67B8A91F4F76AFE08A62463FD86968A5 /* Pods-Smartisan-Notes */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		2942BACB7F0DDF76CD78C2B91C66EA74 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02079F0FC1B6C5E12FD87F7A3124BB30 /* IBAnimatable-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C857A9ED8446B118746C63BF3434D26F /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				191A185CD52F85233C0289C82FC55B7A /* Pods-Smartisan-Notes-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		2A5E02F29D0FA1F58800151FF5110D7D /* IBAnimatable */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 42F65B563CA0E3036C55B0E45FC46B37 /* Build configuration list for PBXNativeTarget "IBAnimatable" */;
+			buildPhases = (
+				C54FC68B5516815D2B275EC17C86340F /* Sources */,
+				4D0A9262524BAC8671DBC806D5C2B132 /* Frameworks */,
+				2942BACB7F0DDF76CD78C2B91C66EA74 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IBAnimatable;
+			productName = IBAnimatable;
+			productReference = 4048C257AEA123FCD3695299CE64033B /* IBAnimatable.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		81DD940468C3F5BDB9B79427E4DD5350 /* Pods-Smartisan-Notes */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2A5CE1828C7CAE5B2802D30B5242E1E7 /* Build configuration list for PBXNativeTarget "Pods-Smartisan-Notes" */;
+			buildPhases = (
+				85F672D9FF7C30A1813CBB000A140B97 /* Sources */,
+				935D8AF1BA7ED07F37F76DC93DCC727A /* Frameworks */,
+				C857A9ED8446B118746C63BF3434D26F /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				FA3E86086B256984D7345926D3E80BAE /* PBXTargetDependency */,
+			);
+			name = "Pods-Smartisan-Notes";
+			productName = "Pods-Smartisan-Notes";
+			productReference = CA922695DB3BCCB03F011CC762EE4A07 /* Pods_Smartisan_Notes.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0700;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 3AC90FFCA522C24E6DDD2A29151626BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2A5E02F29D0FA1F58800151FF5110D7D /* IBAnimatable */,
+				81DD940468C3F5BDB9B79427E4DD5350 /* Pods-Smartisan-Notes */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		85F672D9FF7C30A1813CBB000A140B97 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4AF231CAE083421B06B5DACAD7DEC52C /* Pods-Smartisan-Notes-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C54FC68B5516815D2B275EC17C86340F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				814F1776E7ADDD5ABA526B4B1B80A159 /* Animatable.swift in Sources */,
+				322F13D61EE41A536F61B6BEB9E86A39 /* AnimatableBarButtonItem.swift in Sources */,
+				BAA760EBBCD3903DDF5F6F931A2838D5 /* AnimatableButton.swift in Sources */,
+				185E170B33A9EB8BB1CAF460EEAD5781 /* AnimatableCheckBox.swift in Sources */,
+				74957CF9A6C3A6DE0BA87E1113A333CF /* AnimatableImageView.swift in Sources */,
+				9003F6553BE5BACAC758DF02C82DFD58 /* AnimatableLabel.swift in Sources */,
+				6773201D65160B70CBEB4C70C94E3F2E /* AnimatableStackView.swift in Sources */,
+				599755F5DB721393D364AEACC110652C /* AnimatableTableView.swift in Sources */,
+				2CF79307760D75F1B410F3519EFB20B1 /* AnimatableTableViewCell.swift in Sources */,
+				1B6BA056D4A0B58E5AE69A113C8CDE13 /* AnimatableTextField.swift in Sources */,
+				F3C8A2FA02BD0E20CDAE43B42D8DF165 /* AnimatableTextView.swift in Sources */,
+				7180653975297121BF110D15B544A463 /* AnimatableView.swift in Sources */,
+				DD905F466FF5F3921D2757C2AA49A55A /* AnimationType.swift in Sources */,
+				C384D9E15849172FDF761C089E4E2D6C /* BarButtonItemDesignable.swift in Sources */,
+				37A47FA2A60EA75FDDD2F7019150E1B1 /* BlurDesignable.swift in Sources */,
+				DE5317DB30F2F86BC3975AEF5C815BC1 /* BlurEffectStyle.swift in Sources */,
+				D14BA87E3E65EC5B89AFA9B1D4ACD7EB /* BorderDesignable.swift in Sources */,
+				9C674726701C3AC52D0FA2A9898D5B0C /* BorderSide.swift in Sources */,
+				4510D91605CBA2BD8715E0F85A7CC520 /* CheckBoxDesignable.swift in Sources */,
+				01E5E9ABF56C15DB82499D1426492BAE /* ColorType.swift in Sources */,
+				F3831AAFE55E159898E26127BBEE7469 /* CornerDesignable.swift in Sources */,
+				A9E88E84D46F2B8C1B3591C5F61C737A /* DesignableNavigationBar.swift in Sources */,
+				BD128AF4FD48B066446BDB6830BCC821 /* DesignableViewController.swift in Sources */,
+				0365474ADFAEA4C8836F75923AE7736C /* DismissSegue.swift in Sources */,
+				F19F44AC16F65C315FC216CAB545C4B4 /* FillDesignable.swift in Sources */,
+				BB2F4D664D3ED1057083559B5C465F07 /* GradientDesignable.swift in Sources */,
+				D398DFA42C3870376DEC1E7438A7D432 /* GradientStartPoint.swift in Sources */,
+				474EBEBE19E314097AAD996303C594F7 /* GradientType.swift in Sources */,
+				D766DCD8A88494EA339B5C06339D48D7 /* IBAnimatable-dummy.m in Sources */,
+				0A1CFFBD19F4C69FCA93BC3270AA6747 /* MaskDesignable.swift in Sources */,
+				476AB20D3FFED37B8DAC0C5DE3702542 /* MaskType.swift in Sources */,
+				000091484C9C01F59864D7E5FF5BB299 /* NavigationBarDesginable.swift in Sources */,
+				4AC29F3B31CDA6F6D1E544CF0A9DD683 /* PaddingDesignable.swift in Sources */,
+				D78944FFD99A2577D80BF3FCD1CAC348 /* PlaceholderDesignable.swift in Sources */,
+				63DB88A00DA98059C5C4F2827ADF415F /* RootWindowDesignable.swift in Sources */,
+				04D226F8B73997E2E60C6A83A78339AE /* RotationDesignable.swift in Sources */,
+				129D4246F60AC903F5623967EB579943 /* ShadowDesignable.swift in Sources */,
+				B1AFE9116ED5C71BFFDD4B1ABDA3C044 /* SideImageDesignable.swift in Sources */,
+				CCBCF251DE26F152288A4A2ED58CF170 /* StatusBarDesignable.swift in Sources */,
+				21C1959D0B0E277A05B13F4D0CE5AE97 /* TableViewCellDesignable.swift in Sources */,
+				C89BD23BAF6C2056762226A531596CCF /* TintDesignable.swift in Sources */,
+				E6168D00E9DF5865691CFE84EC191D10 /* UIColorExtension.swift in Sources */,
+				3695F88E1B2C30D4A808634ACB638850 /* UIViewController+UnwindSegue.swift in Sources */,
+				E048B2B93C7ABEB9382C1A0B7AECC954 /* ViewControllerDesignable.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		FA3E86086B256984D7345926D3E80BAE /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = IBAnimatable;
+			target = 2A5E02F29D0FA1F58800151FF5110D7D /* IBAnimatable */;
+			targetProxy = 070F5DE9947838A512C14966E2166FAA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		061D5AC393D75EDAFE18E7CA2B272478 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4CAFF50898944E15251E53124E3DEC91 /* Pods-Smartisan-Notes.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Smartisan-Notes/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Smartisan-Notes/Pods-Smartisan-Notes.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Smartisan_Notes;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		4506F5EDABE03BAF24E3BDC6419A0E53 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76484F19F8B2357AED601870BB95A4D1 /* IBAnimatable.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IBAnimatable/IBAnimatable-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IBAnimatable/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IBAnimatable/IBAnimatable.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = IBAnimatable;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		4A648EFBA9AAD7C890F2CCAD3B44B266 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7B82EA0999CD483AC27564BA61496696 /* Pods-Smartisan-Notes.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Smartisan-Notes/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-Smartisan-Notes/Pods-Smartisan-Notes.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_NAME = Pods_Smartisan_Notes;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		A625F262059ABC03FFB6F399395AC81A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 76484F19F8B2357AED601870BB95A4D1 /* IBAnimatable.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/IBAnimatable/IBAnimatable-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/IBAnimatable/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/IBAnimatable/IBAnimatable.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = IBAnimatable;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				ONLY_ACTIVE_ARCH = YES;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		FB45FFD90572718D82AB9092B750F0CA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = "RELEASE=1";
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2A5CE1828C7CAE5B2802D30B5242E1E7 /* Build configuration list for PBXNativeTarget "Pods-Smartisan-Notes" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				061D5AC393D75EDAFE18E7CA2B272478 /* Debug */,
+				4A648EFBA9AAD7C890F2CCAD3B44B266 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A70CDAD61F90AC503C7D04CC22DA2923 /* Debug */,
+				FB45FFD90572718D82AB9092B750F0CA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		42F65B563CA0E3036C55B0E45FC46B37 /* Build configuration list for PBXNativeTarget "IBAnimatable" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A625F262059ABC03FFB6F399395AC81A /* Debug */,
+				4506F5EDABE03BAF24E3BDC6419A0E53 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
