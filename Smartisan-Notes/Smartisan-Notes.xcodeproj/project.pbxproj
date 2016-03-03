@@ -311,6 +311,7 @@
 				TargetAttributes = {
 					BD0BEBBF1C867376005580EC = {
 						CreatedOnToolsVersion = 7.2.1;
+						DevelopmentTeam = AJ8CSRA7N4;
 					};
 					BD0BEBD31C867376005580EC = {
 						CreatedOnToolsVersion = 7.2.1;
@@ -566,6 +567,8 @@
 			baseConfigurationReference = 282BD89D0EBFFDEFDBDFA09D /* Pods-Smartisan-Notes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -574,6 +577,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "DiegoSan.Smartisan-Notes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -582,6 +586,8 @@
 			baseConfigurationReference = F9985CC0FB0F5A1A01B69947 /* Pods-Smartisan-Notes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)",
@@ -590,6 +596,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "DiegoSan.Smartisan-Notes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};

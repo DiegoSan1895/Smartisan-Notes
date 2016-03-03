@@ -203,7 +203,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ciD-zg-VAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3076.5" y="-357.5"/>
+            <point key="canvasLocation" x="3138.5" y="-363.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NsO-pm-gik">
@@ -437,7 +437,7 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="更多Smartisan应用" id="hZA-ur-byg">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="8Sj-eT-wnL">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="8Sj-eT-wnL">
                                         <rect key="frame" x="0.0" y="653" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="8Sj-eT-wnL" id="7ag-7A-eQt">
@@ -465,7 +465,7 @@
                                                 </label>
                                                 <button opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="39b-5E-3qL">
                                                     <rect key="frame" x="317" y="27" width="46" height="26"/>
-                                                    <state key="normal" title="打开" backgroundImage="button"/>
+                                                    <state key="normal" title="获取" backgroundImage="button"/>
                                                     <connections>
                                                         <action selector="openOrGetButtonDidPressed:" destination="LaC-ND-BNy" eventType="touchUpInside" id="NI4-tD-6ms"/>
                                                     </connections>
@@ -489,7 +489,7 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="JPG-Ug-ngd">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="JPG-Ug-ngd">
                                         <rect key="frame" x="0.0" y="733" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="JPG-Ug-ngd" id="aDQ-Kx-Zxf">
@@ -517,7 +517,10 @@
                                                 </label>
                                                 <button opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fuo-IF-npH">
                                                     <rect key="frame" x="317" y="27" width="46" height="26"/>
-                                                    <state key="normal" title="打开" backgroundImage="button"/>
+                                                    <state key="normal" title="获取" backgroundImage="button"/>
+                                                    <connections>
+                                                        <action selector="openOrGetButtonDidPressed:" destination="LaC-ND-BNy" eventType="touchUpInside" id="7Re-vD-Hbr"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -538,7 +541,7 @@
                                             </variation>
                                         </tableViewCellContentView>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="80" id="wni-ZW-z2V">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" rowHeight="80" id="wni-ZW-z2V">
                                         <rect key="frame" x="0.0" y="813" width="375" height="80"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="wni-ZW-z2V" id="6Df-k1-OpM">
@@ -566,7 +569,10 @@
                                                 </label>
                                                 <button opaque="NO" tag="3" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kuF-VE-bjJ">
                                                     <rect key="frame" x="317" y="27" width="46" height="26"/>
-                                                    <state key="normal" title="打开" backgroundImage="button"/>
+                                                    <state key="normal" title="获取" backgroundImage="button"/>
+                                                    <connections>
+                                                        <action selector="openOrGetButtonDidPressed:" destination="LaC-ND-BNy" eventType="touchUpInside" id="L6N-HM-NmC"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
