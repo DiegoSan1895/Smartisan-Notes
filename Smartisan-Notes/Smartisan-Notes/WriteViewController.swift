@@ -11,12 +11,13 @@ import UIKit
 class WriteViewController: UIViewController {
     
     @IBOutlet weak var textView: UITextView!
+    @IBOutlet weak var backGroundScrollView: UIScrollView!
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
-        self.textView.backgroundColor = UIColor(patternImage: UIImage(named: "note_paper_middle")!)
+        self.backGroundScrollView.backgroundColor = UIColor(patternImage: UIImage(named: "note_paper_middle")!)
     }
     @IBAction func listBackButtonDidPressed(sender: UIButton) {
         self.navigationController?.popViewControllerAnimated(true)
