@@ -16,4 +16,7 @@ class WriteViewController: UIViewController {
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
     }
+    @IBAction func listBackButtonDidPressed(sender: UIButton) {
+        self.navigationController?.popViewControllerAnimated(true) 
+    }
 }

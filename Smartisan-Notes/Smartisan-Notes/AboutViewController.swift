@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class AboutViewController: UITableViewController {
     
@@ -16,10 +17,14 @@ class AboutViewController: UITableViewController {
     @IBOutlet weak var syncOpenButton: UIButton!
     @IBOutlet weak var calenderOpenButton: UIButton!
     
+    @IBOutlet var copyFooterView: UIView!
+    
     struct AppURL {
         static let clockURL = NSURL(string: "notes://")!
         static let syncURL = NSURL(string: "huan-xi-yun-tong-bu-gong-ju://")!
         static let calenderURL = NSURL(string: "smartisan-calendar://")!
+        
+        static let smartisanWeb = NSURL(string: "https://store.smartisan.com")!
     }
     struct AppItunsURL {
         static let calenderURL = NSURL(string: "https://itunes.apple.com/us/app/smartisan-calendar/id944154964?mt=8")!
@@ -27,6 +32,10 @@ class AboutViewController: UITableViewController {
         static let clockURL = NSURL(string: "https://itunes.apple.com/us/app/smartisan-clock/id828812911?mt=8")!
     }
     
+    struct SegueIdentifier{
+        static let wechat = "wechat"
+        static let weibo = "weibo"
+    }
     @IBAction func openOrGetButtonDidPressed(sender: UIButton) {
         switch sender.tag{
         case 1:
@@ -84,7 +93,7 @@ class AboutViewController: UITableViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -132,5 +141,68 @@ extension AboutViewController {
         }else{
             return nil
         }
+    }
+}
+
+// MARK：- 关注我们
+// MARK: - ------
+extension AboutViewController{
+    
+    
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        if indexPath.section == 5{
+            switch indexPath.row{
+            case 0:
+                print("")
+            case 1:
+                print("")
+            default:
+                let sfVC = SFSafariViewController(URL: AppURL.smartisanWeb)
+                presentViewController(sfVC, animated: true, completion: nil)
+            }
+        }
+    }
+    
+    func setCopyFooterView(){
+        let width = UIScreen.mainScreen().bounds.width
+        let height = UIScreen.mainScreen().bounds.height
+        let kHeight = CGFloat(120)
+        self.copyFooterView.frame = CGRect(x: 0, y: height - kHeight, width: width, height: kHeight)
+        self.view.addSubview(copyFooterView)
+    }
+}
+
+// MARK: - prepare for segue
+extension AboutViewController{
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if let identifier = segue.identifier{
+            
+            switch identifier{
+            case SegueIdentifier.wechat:
+                let destinationVC = segue.destinationViewController as! CopyFooterViewController
+                destinationVC.contentString = "复制新浪微博ID后可打开微博进行搜索关注"
+                destinationVC.pasteString = "smartisan2013"
+            case SegueIdentifier.weibo:
+                let destinationVC = segue.destinationViewController as! CopyFooterViewController
+                destinationVC.contentString = "复制新浪微博ID后可打开微博进行搜索关注"
+                destinationVC.pasteString = "锤子科技"
+            default:
+                print("")
+                
+            }
+        
+            
+        }
+    }
+}
+
+// MARK: - CopyFooterViewControllerDelegate
+extension AboutViewController: CopyFooterViewControllerDelegate{
+    func copyingFinished() {
+        let toastView = UIButton()
+        toastView.setBackgroundImage(UIImage(named: "iOSbtnBg"), forState: .Normal)
+        toastView.userInteractionEnabled = false
+        toastView.setTitle("复制成功", forState: .Normal)
     }
 }
