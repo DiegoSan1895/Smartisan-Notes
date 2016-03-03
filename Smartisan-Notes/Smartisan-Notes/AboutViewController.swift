@@ -18,6 +18,7 @@ class AboutViewController: UITableViewController {
     @IBOutlet weak var calenderOpenButton: UIButton!
     
     @IBOutlet var copyFooterView: UIView!
+    @IBOutlet var toastButton: UIButton!
     
     struct AppURL {
         static let clockURL = NSURL(string: "notes://")!
@@ -152,14 +153,13 @@ extension AboutViewController{
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 5{
+            print("I'm in didSelect")
             switch indexPath.row{
-            case 0:
-                print("")
-            case 1:
-                print("")
-            default:
+            case 2:
                 let sfVC = SFSafariViewController(URL: AppURL.smartisanWeb)
                 presentViewController(sfVC, animated: true, completion: nil)
+            default: return
+                
             }
         }
     }
@@ -200,9 +200,13 @@ extension AboutViewController{
 // MARK: - CopyFooterViewControllerDelegate
 extension AboutViewController: CopyFooterViewControllerDelegate{
     func copyingFinished() {
-        let toastView = UIButton()
-        toastView.setBackgroundImage(UIImage(named: "iOSbtnBg"), forState: .Normal)
-        toastView.userInteractionEnabled = false
-        toastView.setTitle("复制成功", forState: .Normal)
+        print("copying")
+        self.toastButton.hidden = false
+        self.toastButton.center = CGPoint(x: self.view.center.x, y: self.tableView.contentSize.height - (UIScreen.mainScreen().bounds.height / 2))
+        self.view.addSubview(toastButton)
+        springWithDelay(0.5, delay: 3) { () -> Void in
+            self.toastButton.hidden = false
+
+        }
     }
 }

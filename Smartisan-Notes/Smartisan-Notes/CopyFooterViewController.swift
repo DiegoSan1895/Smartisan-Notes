@@ -32,7 +32,9 @@ class CopyFooterViewController: UIViewController {
         delegate?.copyingFinished()
     }
     @IBAction func giveUpButtonDidPressed(sender: UIButton) {
-        self.dismissViewControllerAnimated(false, completion: nil)
+        spring(0.3) { () -> Void in
+            self.dismissViewControllerAnimated(false, completion: nil)
+        }
     }
     
     // MARK: LiftCycle
@@ -40,7 +42,13 @@ class CopyFooterViewController: UIViewController {
         super.viewDidLoad()
         
         setUpUI()
-        self.delegate = presentingViewController as! AboutViewController
+        
+        let nav = presentingViewController as! UINavigationController
+        let aboutVC = nav.topViewController as! AboutViewController
+        self.delegate = aboutVC
+        
+        let tapGesture = UITapGestureRecognizer(target: self, action: "giveUpButtonDidPressed:")
+        self.backGroundView.addGestureRecognizer(tapGesture)
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)

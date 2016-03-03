@@ -179,7 +179,7 @@
                                     <constraint firstItem="Zgz-jh-8Dk" firstAttribute="leading" secondItem="nOS-db-ehi" secondAttribute="leading" constant="8" id="ygg-Tz-LAI"/>
                                 </constraints>
                             </view>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" text="不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-mD-Waf" customClass="AnimatableTextView" customModule="IBAnimatable">
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" text="不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="Oca-mD-Waf">
                                 <rect key="frame" x="0.0" y="70" width="375" height="297"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="textColor" red="0.42511659860610962" green="0.26729822158813477" blue="0.040762312710285187" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -201,6 +201,9 @@
                             <constraint firstAttribute="trailing" secondItem="nOS-db-ehi" secondAttribute="trailing" id="xAQ-2w-wNs"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="textView" destination="Oca-mD-Waf" id="khi-Sh-VnC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ciD-zg-VAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -745,10 +748,18 @@
                         <outlet property="clockOpenButton" destination="39b-5E-3qL" id="G07-rV-0aj"/>
                         <outlet property="copyFooterView" destination="RAJ-hP-63G" id="jeT-xQ-vjA"/>
                         <outlet property="syncOpenButton" destination="fuo-IF-npH" id="6e1-Ho-ZoE"/>
+                        <outlet property="toastButton" destination="Uxf-KJ-4fF" id="Xut-Tg-vAl"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="vNB-Md-vpY" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="xdx-py-aUw" userLabel="Exit" sceneMemberID="exit"/>
+                <button opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Uxf-KJ-4fF">
+                    <rect key="frame" x="0.0" y="0.0" width="120" height="50"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <state key="normal" title="复制成功" backgroundImage="iOSbtnBg">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </state>
+                </button>
                 <view contentMode="scaleToFill" id="RAJ-hP-63G">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="100"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -798,7 +809,7 @@
                     </variation>
                 </view>
             </objects>
-            <point key="canvasLocation" x="3152.5" y="-1271.5"/>
+            <point key="canvasLocation" x="3162.5" y="-1116.5"/>
         </scene>
         <!--Markdown Table View Controller-->
         <scene sceneID="qN9-9H-ODq">
@@ -868,72 +879,86 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jwp-pm-VjW">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                                <subviews>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ps0-vm-eB1">
-                                        <rect key="frame" x="0.0" y="547" width="375" height="120"/>
-                                        <subviews>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sh2-sX-MhP">
-                                                <rect key="frame" x="18" y="61" width="339" height="44"/>
-                                                <state key="normal" title="复制" backgroundImage="btn_menu_grey_n">
-                                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="copyButtonDidPressed:" destination="geN-jV-dAs" eventType="touchUpInside" id="bgr-gX-MLN"/>
-                                                </connections>
-                                            </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="复制新浪微博ID后可打开微博进行搜索关注" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb9-Cr-6vf">
-                                                <rect key="frame" x="64" y="19.5" width="247" height="13.5"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
-                                            <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAo-L5-UuS">
-                                                <rect key="frame" x="324" y="8" width="33" height="40"/>
-                                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
-                                                <state key="normal" title="取消" backgroundImage="button_pop_click">
-                                                    <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
-                                                </state>
-                                                <connections>
-                                                    <action selector="giveUpButtonDidPressed:" destination="geN-jV-dAs" eventType="touchUpInside" id="Yeb-6K-0CD"/>
-                                                </connections>
-                                            </button>
-                                        </subviews>
-                                        <color key="backgroundColor" red="0.9921875" green="0.9921875" blue="0.9921875" alpha="1" colorSpace="calibratedRGB"/>
-                                        <constraints>
-                                            <constraint firstAttribute="trailing" secondItem="qb9-Cr-6vf" secondAttribute="trailing" constant="64" id="4gQ-ss-f1p"/>
-                                            <constraint firstItem="qb9-Cr-6vf" firstAttribute="leading" secondItem="ps0-vm-eB1" secondAttribute="leading" constant="64" id="Mmr-ds-MPc"/>
-                                            <constraint firstAttribute="trailing" secondItem="Sh2-sX-MhP" secondAttribute="trailing" constant="18" id="PW8-ZP-zeH"/>
-                                            <constraint firstItem="Sh2-sX-MhP" firstAttribute="top" secondItem="qb9-Cr-6vf" secondAttribute="bottom" constant="28" id="T9P-R3-vlm"/>
-                                            <constraint firstItem="UAo-L5-UuS" firstAttribute="top" secondItem="ps0-vm-eB1" secondAttribute="top" constant="8" id="Vnu-RA-uhZ"/>
-                                            <constraint firstAttribute="bottom" secondItem="Sh2-sX-MhP" secondAttribute="bottom" constant="15" id="X8R-3O-YrP"/>
-                                            <constraint firstAttribute="height" constant="120" id="bBN-Bs-txJ"/>
-                                            <constraint firstItem="qb9-Cr-6vf" firstAttribute="top" secondItem="ps0-vm-eB1" secondAttribute="top" constant="19.5" id="d3B-Ii-p4L"/>
-                                            <constraint firstItem="Sh2-sX-MhP" firstAttribute="leading" secondItem="ps0-vm-eB1" secondAttribute="leading" constant="18" id="f5I-Ex-xue"/>
-                                            <constraint firstAttribute="trailing" secondItem="UAo-L5-UuS" secondAttribute="trailing" constant="18" id="ktB-eW-Y9w"/>
-                                        </constraints>
-                                        <variation key="default">
-                                            <mask key="constraints">
-                                                <exclude reference="T9P-R3-vlm"/>
-                                            </mask>
-                                        </variation>
-                                    </view>
-                                </subviews>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="547"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.20000000000000001" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ps0-vm-eB1">
+                                <rect key="frame" x="0.0" y="547" width="375" height="120"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sh2-sX-MhP">
+                                        <rect key="frame" x="18" y="61" width="339" height="44"/>
+                                        <state key="normal" title="复制" backgroundImage="btn_menu_grey_n">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="copyButtonDidPressed:" destination="geN-jV-dAs" eventType="touchUpInside" id="bgr-gX-MLN"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="复制新浪微博ID后可打开微博进行搜索关注" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qb9-Cr-6vf">
+                                        <rect key="frame" x="64" y="19" width="247" height="13.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UAo-L5-UuS">
+                                        <rect key="frame" x="324" y="8" width="33" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                        <state key="normal" title="取消" backgroundImage="button_pop_click">
+                                            <color key="titleColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="giveUpButtonDidPressed:" destination="geN-jV-dAs" eventType="touchUpInside" id="Yeb-6K-0CD"/>
+                                        </connections>
+                                    </button>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line1" translatesAutoresizingMaskIntoConstraints="NO" id="jaL-A2-Tkg">
+                                        <rect key="frame" x="0.0" y="45" width="375" height="1"/>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.9754239069506726" green="0.9754239069506726" blue="0.9754239069506726" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
-                                    <constraint firstItem="ps0-vm-eB1" firstAttribute="leading" secondItem="jwp-pm-VjW" secondAttribute="leading" id="7Kc-wh-N7t"/>
-                                    <constraint firstAttribute="bottom" secondItem="ps0-vm-eB1" secondAttribute="bottom" id="PIo-fh-2DF"/>
-                                    <constraint firstAttribute="trailing" secondItem="ps0-vm-eB1" secondAttribute="trailing" id="cFt-4u-WQs"/>
+                                    <constraint firstAttribute="trailing" secondItem="qb9-Cr-6vf" secondAttribute="trailing" constant="64" id="4gQ-ss-f1p"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="6Mz-c9-YWr"/>
+                                    <constraint firstAttribute="trailing" secondItem="jaL-A2-Tkg" secondAttribute="trailing" id="9NG-u5-YF3"/>
+                                    <constraint firstItem="qb9-Cr-6vf" firstAttribute="leading" secondItem="ps0-vm-eB1" secondAttribute="leading" constant="64" id="Mmr-ds-MPc"/>
+                                    <constraint firstAttribute="trailing" secondItem="Sh2-sX-MhP" secondAttribute="trailing" constant="18" id="PW8-ZP-zeH"/>
+                                    <constraint firstItem="Sh2-sX-MhP" firstAttribute="top" secondItem="qb9-Cr-6vf" secondAttribute="bottom" constant="28" id="T9P-R3-vlm"/>
+                                    <constraint firstItem="UAo-L5-UuS" firstAttribute="top" secondItem="ps0-vm-eB1" secondAttribute="top" constant="8" id="Vnu-RA-uhZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="Sh2-sX-MhP" secondAttribute="bottom" constant="15" id="X8R-3O-YrP"/>
+                                    <constraint firstItem="Sh2-sX-MhP" firstAttribute="top" secondItem="jaL-A2-Tkg" secondAttribute="bottom" constant="15" id="XmQ-KV-gf0"/>
+                                    <constraint firstAttribute="height" constant="120" id="bBN-Bs-txJ"/>
+                                    <constraint firstItem="qb9-Cr-6vf" firstAttribute="top" secondItem="ps0-vm-eB1" secondAttribute="top" constant="19.5" id="d3B-Ii-p4L"/>
+                                    <constraint firstItem="Sh2-sX-MhP" firstAttribute="leading" secondItem="ps0-vm-eB1" secondAttribute="leading" constant="18" id="f5I-Ex-xue"/>
+                                    <constraint firstAttribute="trailing" secondItem="UAo-L5-UuS" secondAttribute="trailing" constant="18" id="ktB-eW-Y9w"/>
+                                    <constraint firstItem="jaL-A2-Tkg" firstAttribute="leading" secondItem="ps0-vm-eB1" secondAttribute="leading" id="prH-ya-fQa"/>
                                 </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="6Mz-c9-YWr"/>
+                                        <exclude reference="T9P-R3-vlm"/>
+                                    </mask>
+                                </variation>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="jwp-pm-VjW" firstAttribute="top" secondItem="ps0-vm-eB1" secondAttribute="top" id="2Xk-r5-QIs"/>
                             <constraint firstItem="id7-nQ-lKg" firstAttribute="top" secondItem="jwp-pm-VjW" secondAttribute="bottom" id="379-Tz-Nde"/>
                             <constraint firstAttribute="trailing" secondItem="jwp-pm-VjW" secondAttribute="trailing" id="A3Z-iJ-bXK"/>
+                            <constraint firstAttribute="trailing" secondItem="ps0-vm-eB1" secondAttribute="trailing" id="I8W-cg-awE"/>
+                            <constraint firstItem="ps0-vm-eB1" firstAttribute="leading" secondItem="X7K-Y3-IJi" secondAttribute="leading" id="Msv-aw-S9X"/>
                             <constraint firstItem="jwp-pm-VjW" firstAttribute="top" secondItem="G14-Wd-x3i" secondAttribute="bottom" constant="-20" id="Paf-6n-Xty"/>
+                            <constraint firstItem="id7-nQ-lKg" firstAttribute="top" secondItem="ps0-vm-eB1" secondAttribute="bottom" id="TZL-oU-N9a"/>
+                            <constraint firstItem="ps0-vm-eB1" firstAttribute="top" secondItem="jwp-pm-VjW" secondAttribute="bottom" id="eFb-Nj-nwf"/>
+                            <constraint firstItem="id7-nQ-lKg" firstAttribute="top" secondItem="jwp-pm-VjW" secondAttribute="bottom" id="eh2-Ug-fXX"/>
                             <constraint firstItem="jwp-pm-VjW" firstAttribute="leading" secondItem="X7K-Y3-IJi" secondAttribute="leading" id="hzw-aC-bdx"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="2Xk-r5-QIs"/>
+                                <exclude reference="379-Tz-Nde"/>
+                                <exclude reference="eh2-Ug-fXX"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
@@ -1046,7 +1071,9 @@
         <image name="btn_new" width="44" height="30"/>
         <image name="button" width="46" height="26"/>
         <image name="button_pop_click" width="33" height="40"/>
+        <image name="iOSbtnBg" width="100" height="62"/>
         <image name="icon_check" width="40" height="40"/>
+        <image name="line1" width="50" height="1"/>
         <image name="titlebar_bg" width="320" height="44"/>
     </resources>
     <inferredMetricsTieBreakers>
