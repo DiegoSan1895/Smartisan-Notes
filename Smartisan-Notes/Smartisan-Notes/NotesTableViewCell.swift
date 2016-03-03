@@ -45,6 +45,8 @@ class NotesTableViewCell: UITableViewCell {
     }
     
     weak var delegate: NotesTableViewCellDelegate?
+    
+    // MARK: - Constants
     // MARK: - lifeCycle
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -66,12 +68,13 @@ class NotesTableViewCell: UITableViewCell {
     func swipeAnimation() {
         if slided {
             UIView.animateWithDuration(0.3, animations: { () -> Void in
-                self.containerView.frame.origin.x = 2
+                self.containerView.center.x = self.containerView.center.x - self.deleteButton.bounds.width * 1
                 self.clipImageView.image = UIImage(named: "clip_n")
                 }, completion: nil)
         }else {
             UIView.animateWithDuration(0.3, animations: { () -> Void in
-                self.containerView.frame.origin.x = 86
+                let centerX = self.containerView.center.x + self.deleteButton.bounds.width * 1
+                self.containerView.center.x = centerX
                 self.clipImageView.image = UIImage(named: "clip_p")
                 }, completion: nil)
         }
