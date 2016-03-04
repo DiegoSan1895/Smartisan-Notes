@@ -19,6 +19,7 @@ class AboutViewController: UITableViewController {
     
     @IBOutlet var copyFooterView: UIView!
     @IBOutlet var toastButton: UIButton!
+    @IBOutlet weak var webTableViewCell: UITableViewCell!
     
     struct AppURL {
         static let clockURL = NSURL(string: "notes://")!
@@ -31,6 +32,7 @@ class AboutViewController: UITableViewController {
         static let calenderURL = NSURL(string: "https://itunes.apple.com/us/app/smartisan-calendar/id944154964?mt=8")!
         static let syncURL = NSURL(string: "https://itunes.apple.com/cn/app/huan-xi-yun-tong-bu-gong-ju/id880078620?mt=8")!
         static let clockURL = NSURL(string: "https://itunes.apple.com/us/app/smartisan-clock/id828812911?mt=8")!
+        static let notesURL = NSURL(string: "https://itunes.apple.com/cn/app/chui-zi-bian-qian/id867934588?mt=8")!
     }
     
     struct SegueIdentifier{
@@ -94,7 +96,7 @@ class AboutViewController: UITableViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        addGestures()
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -120,6 +122,20 @@ class AboutViewController: UITableViewController {
             calenderCanOpen = false
         }
     }
+    
+    private func addGestures(){
+        let tapGesture = UITapGestureRecognizer(target: self, action: "tapToShowStoreWebsite")
+        self.webTableViewCell.addGestureRecognizer(tapGesture)
+    }
+    
+    /**
+     下面这个方法如果写成 private 会出现 unrecognizer selector exception
+     */
+    func tapToShowStoreWebsite(){
+        let sfVC = SFSafariViewController(URL: AppURL.smartisanWeb)
+        presentViewController(sfVC, animated: true, completion: nil)
+    }
+
 }
 
 // MARK: - DataSourceAndDelegate
@@ -143,35 +159,15 @@ extension AboutViewController {
             return nil
         }
     }
+    
+    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+    }
 }
 
 // MARK：- 关注我们
 // MARK: - ------
-extension AboutViewController{
-    
-    
-    
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        if indexPath.section == 5{
-            print("I'm in didSelect")
-            switch indexPath.row{
-            case 2:
-                let sfVC = SFSafariViewController(URL: AppURL.smartisanWeb)
-                presentViewController(sfVC, animated: true, completion: nil)
-            default: return
-                
-            }
-        }
-    }
-    
-    func setCopyFooterView(){
-        let width = UIScreen.mainScreen().bounds.width
-        let height = UIScreen.mainScreen().bounds.height
-        let kHeight = CGFloat(120)
-        self.copyFooterView.frame = CGRect(x: 0, y: height - kHeight, width: width, height: kHeight)
-        self.view.addSubview(copyFooterView)
-    }
-}
+
 
 // MARK: - prepare for segue
 extension AboutViewController{
@@ -181,14 +177,14 @@ extension AboutViewController{
             switch identifier{
             case SegueIdentifier.wechat:
                 let destinationVC = segue.destinationViewController as! CopyFooterViewController
-                destinationVC.contentString = "复制新浪微博ID后可打开微博进行搜索关注"
+                destinationVC.contentString = "复制微信公众号ID后可打开微信进行搜索关注"
                 destinationVC.pasteString = "smartisan2013"
             case SegueIdentifier.weibo:
                 let destinationVC = segue.destinationViewController as! CopyFooterViewController
                 destinationVC.contentString = "复制新浪微博ID后可打开微博进行搜索关注"
                 destinationVC.pasteString = "锤子科技"
             default:
-                print("")
+                break
                 
             }
         
@@ -204,7 +200,7 @@ extension AboutViewController: CopyFooterViewControllerDelegate{
         self.toastButton.hidden = false
         self.toastButton.center = CGPoint(x: self.view.center.x, y: self.tableView.contentSize.height - (UIScreen.mainScreen().bounds.height / 2))
         self.view.addSubview(toastButton)
-        springWithDelay(0.5, delay: 3) { () -> Void in
+        springWithDelay(0.5, delay: 2) { () -> Void in
             self.toastButton.hidden = false
 
         }
