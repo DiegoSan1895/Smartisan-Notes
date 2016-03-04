@@ -1015,7 +1015,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IcB-J3-v32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3468.5" y="-1823.5"/>
+            <point key="canvasLocation" x="3400.5" y="-1828.5"/>
         </scene>
         <!--Copy Footer View Controller-->
         <scene sceneID="P1q-Oq-9Gs">

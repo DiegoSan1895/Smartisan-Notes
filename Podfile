@@ -7,6 +7,7 @@ target 'Smartisan-Notes' do
     pod 'IBAnimatable'
     #pod 'Spring'
     pod 'MonkeyKing'
+    pod 'VENTouchLock'
 end
 
 target 'Smartisan-NotesTests' do

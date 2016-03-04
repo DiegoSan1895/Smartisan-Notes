@@ -9,6 +9,7 @@
 import UIKit
 import SafariServices
 import MessageUI
+import VENTouchLock
 
 class AboutViewController: UITableViewController {
     
@@ -56,7 +57,14 @@ class AboutViewController: UITableViewController {
         if !sender.on{
             
         }else{
-            
+            // 1.
+            let createPasscodeVC = VENTouchLockPasscodeViewController()
+            createPasscodeVC.title = "设置密码"
+            // 2.
+            let navigationVC = UINavigationController(rootViewController: createPasscodeVC)
+            // 3.
+            self.presentViewController(navigationVC, animated: true, completion: nil)
+            sender.setOn(false, animated: true)
         }
     }
     
@@ -89,6 +97,10 @@ class AboutViewController: UITableViewController {
         }
     }
     
+    func dismissVC(completion: () -> Void){
+        self.dismissViewControllerAnimated(true, completion: completion)
+    }
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -96,7 +108,7 @@ class AboutViewController: UITableViewController {
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        setSmartisanAppsOpenOrGetButtons()
+        //setSmartisanAppsOpenOrGetButtons()
     }
     private func setSmartisanAppsOpenOrGetButtons(){
         // 1.
