@@ -1,10 +1,13 @@
 PODS:
   - IBAnimatable (1.2)
+  - MonkeyKing (0.9.1)
 
 DEPENDENCIES:
   - IBAnimatable
+  - MonkeyKing
 
 SPEC CHECKSUMS:
   IBAnimatable: bcebfaf34b041949da5ed668ac5ab2e28a4b2357
+  MonkeyKing: 84d0f711a0e20eb104616d0b393a74efd5d9d9ad
 
 COCOAPODS: 0.39.0

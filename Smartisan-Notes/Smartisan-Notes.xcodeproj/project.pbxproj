@@ -29,6 +29,7 @@
 		BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */; };
 		BD9AB9DA1C885F29007C11FE /* CopyFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */; };
 		BD9ABA0E1C886280007C11FE /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9ABA0D1C886280007C11FE /* SpringAnimation.swift */; };
+		BD9E788E1C893973006ED8CB /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E788D1C893973006ED8CB /* Configs.swift */; };
 		BDCE36CB1C8915250080B664 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE36CA1C8915250080B664 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -91,6 +92,7 @@
 		BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownTableViewController.swift; sourceTree = "<group>"; };
 		BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyFooterViewController.swift; sourceTree = "<group>"; };
 		BD9ABA0D1C886280007C11FE /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
+		BD9E788D1C893973006ED8CB /* Configs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		BDCE36CA1C8915250080B664 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		F89A51B24F5A0C18838532CB /* Pods_Smartisan_Notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smartisan_Notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9985CC0FB0F5A1A01B69947 /* Pods-Smartisan-Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smartisan-Notes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smartisan-Notes/Pods-Smartisan-Notes.release.xcconfig"; sourceTree = "<group>"; };
@@ -240,6 +242,7 @@
 			isa = PBXGroup;
 			children = (
 				BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */,
+				BD9E788D1C893973006ED8CB /* Configs.swift */,
 				BD9AB9D31C87D472007C11FE /* SelectedFooterTableViewController.swift */,
 				BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */,
 				BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */,
@@ -434,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD9AB9DA1C885F29007C11FE /* CopyFooterViewController.swift in Sources */,
+				BD9E788E1C893973006ED8CB /* Configs.swift in Sources */,
 				BD0BEC891C872486005580EC /* WriteViewController.swift in Sources */,
 				BD9AB9D41C87D472007C11FE /* SelectedFooterTableViewController.swift in Sources */,
 				BD0BEC781C8682D1005580EC /* HomeViewController.swift in Sources */,
