@@ -17,6 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         if UIApplication.sharedApplication().canOpenURL(NSURL(string: "smartisan-clock://")!){
             print("can open")
         }
+        print(iPhoneInfo.deviceName)
         return true
     }
 }

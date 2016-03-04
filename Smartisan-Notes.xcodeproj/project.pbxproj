@@ -35,6 +35,7 @@
 		BD9E78A81C89A11B006ED8CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78A71C89A11B006ED8CB /* ViewController.swift */; };
 		BD9E78AA1C89AE9E006ED8CB /* statement.html in Resources */ = {isa = PBXBuildFile; fileRef = BD9E78A91C89AE9E006ED8CB /* statement.html */; };
 		BD9E78AC1C89AF77006ED8CB /* UEAdjustmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */; };
+		BD9E78B01C89D68A006ED8CB /* NSString+GetDeviceName.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78AF1C89D68A006ED8CB /* NSString+GetDeviceName.m */; };
 		BDCE36CB1C8915250080B664 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE36CA1C8915250080B664 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -103,6 +104,9 @@
 		BD9E78A71C89A11B006ED8CB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD9E78A91C89AE9E006ED8CB /* statement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = statement.html; sourceTree = "<group>"; };
 		BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UEAdjustmentViewController.swift; sourceTree = "<group>"; };
+		BD9E78AD1C89D68A006ED8CB /* Smartisan-Notes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smartisan-Notes-Bridging-Header.h"; sourceTree = "<group>"; };
+		BD9E78AE1C89D68A006ED8CB /* NSString+GetDeviceName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GetDeviceName.h"; sourceTree = "<group>"; };
+		BD9E78AF1C89D68A006ED8CB /* NSString+GetDeviceName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GetDeviceName.m"; sourceTree = "<group>"; };
 		BDCE36CA1C8915250080B664 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		F89A51B24F5A0C18838532CB /* Pods_Smartisan_Notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smartisan_Notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9985CC0FB0F5A1A01B69947 /* Pods-Smartisan-Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smartisan-Notes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smartisan-Notes/Pods-Smartisan-Notes.release.xcconfig"; sourceTree = "<group>"; };
@@ -185,9 +189,11 @@
 				BD0BEC751C867CDB005580EC /* Main.storyboard */,
 				BD0BEBCA1C867376005580EC /* Assets.xcassets */,
 				BD0BEBCC1C867376005580EC /* LaunchScreen.storyboard */,
+				BD9E78B11C89D6A1006ED8CB /* Support */,
 				BD0BEBCF1C867376005580EC /* Info.plist */,
 				BD9E78A91C89AE9E006ED8CB /* statement.html */,
 				BD0BEBF81C8675B3005580EC /* Framework */,
+				BD9E78AD1C89D68A006ED8CB /* Smartisan-Notes-Bridging-Header.h */,
 			);
 			path = "Smartisan-Notes";
 			sourceTree = "<group>";
@@ -264,6 +270,15 @@
 				BD9E78A71C89A11B006ED8CB /* ViewController.swift */,
 			);
 			name = SettingsVC;
+			sourceTree = "<group>";
+		};
+		BD9E78B11C89D6A1006ED8CB /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BD9E78AE1C89D68A006ED8CB /* NSString+GetDeviceName.h */,
+				BD9E78AF1C89D68A006ED8CB /* NSString+GetDeviceName.m */,
+			);
+			name = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -467,6 +482,7 @@
 				BD0BEBC41C867376005580EC /* AppDelegate.swift in Sources */,
 				BD0BEC841C86DC43005580EC /* NotesTableViewCell.swift in Sources */,
 				BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */,
+				BD9E78B01C89D68A006ED8CB /* NSString+GetDeviceName.m in Sources */,
 				BD9E78A81C89A11B006ED8CB /* ViewController.swift in Sources */,
 				BD9E78A61C898094006ED8CB /* SetCodeViewController.swift in Sources */,
 			);
@@ -603,6 +619,7 @@
 			baseConfigurationReference = 282BD89D0EBFFDEFDBDFA09D /* Pods-Smartisan-Notes.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -614,6 +631,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "DiegoSan.Smartisan-Notes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Smartisan-Notes/Smartisan-Notes-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -622,6 +641,7 @@
 			baseConfigurationReference = F9985CC0FB0F5A1A01B69947 /* Pods-Smartisan-Notes.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				FRAMEWORK_SEARCH_PATHS = (
@@ -633,6 +653,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "DiegoSan.Smartisan-Notes";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE = "";
+				SWIFT_OBJC_BRIDGING_HEADER = "Smartisan-Notes/Smartisan-Notes-Bridging-Header.h";
 			};
 			name = Release;
 		};
