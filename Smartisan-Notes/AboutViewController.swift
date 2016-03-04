@@ -8,6 +8,8 @@
 
 import UIKit
 import SafariServices
+import MessageUI
+import VENTouchLock
 
 class AboutViewController: UITableViewController {
     
@@ -25,6 +27,7 @@ class AboutViewController: UITableViewController {
     struct SegueIdentifier{
         static let wechat = "wechat"
         static let weibo = "weibo"
+        static let setCode = "setCode"
     }
     @IBAction func openOrGetButtonDidPressed(sender: UIButton) {
         switch sender.tag{
@@ -47,7 +50,21 @@ class AboutViewController: UITableViewController {
                 UIApplication.sharedApplication().openURL(AppItunsURL.calenderURL)
             }
         default:
-            print("")
+            break
+        }
+    }
+    @IBAction func switchToSetCode(sender: UISwitch) {
+        if !sender.on{
+            
+        }else{
+            // 1.
+            let createPasscodeVC = VENTouchLockPasscodeViewController()
+            createPasscodeVC.title = "设置密码"
+            // 2.
+            let navigationVC = UINavigationController(rootViewController: createPasscodeVC)
+            // 3.
+            self.presentViewController(navigationVC, animated: true, completion: nil)
+            sender.setOn(false, animated: true)
         }
     }
     
@@ -80,6 +97,10 @@ class AboutViewController: UITableViewController {
         }
     }
     
+    func dismissVC(completion: () -> Void){
+        self.dismissViewControllerAnimated(true, completion: completion)
+    }
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -87,7 +108,7 @@ class AboutViewController: UITableViewController {
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        setSmartisanAppsOpenOrGetButtons()
+        //setSmartisanAppsOpenOrGetButtons()
     }
     private func setSmartisanAppsOpenOrGetButtons(){
         // 1.
@@ -122,7 +143,26 @@ class AboutViewController: UITableViewController {
         let sfVC = SFSafariViewController(URL: AppURL.smartisanWeb)
         presentViewController(sfVC, animated: true, completion: nil)
     }
-
+    
+    func sendEmailForAdvices(){
+        
+        // checking the availability of the composition interface
+        if !MFMailComposeViewController.canSendMail(){
+            print("Mail service are not available")
+        }else{
+            let composeVC = MFMailComposeViewController()
+            composeVC.mailComposeDelegate = self
+            
+            let messageBody: String = "锤子便签版本：\(AppInfo.App_Version)\niOS版本：\(iPhoneInfo.iOS_Version)\n 手机型号：\(iPhoneInfo.deviceName)"
+            // configure the fields of the interface
+            composeVC.setToRecipients(["iosbug@smartisan.com"])
+            composeVC.setSubject("锤子便签（iOS）版反馈")
+            composeVC.setMessageBody(messageBody, isHTML: false)
+            
+            // present the view controller modally
+            self.presentViewController(composeVC, animated: true, completion: nil)
+        }
+    }
 }
 
 // MARK: - DataSourceAndDelegate
@@ -148,7 +188,14 @@ extension AboutViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        if indexPath.section == 3{
+            if indexPath.row == 1{
+                UIApplication.sharedApplication().openURL(AppItunsURL.clockURL)
+            }
+            if indexPath.row == 2{
+                sendEmailForAdvices()
+            }
+        }
     }
 }
 
@@ -190,6 +237,33 @@ extension AboutViewController: CopyFooterViewControllerDelegate{
         springWithDelay(0.5, delay: 2) { () -> Void in
             self.toastButton.hidden = false
 
+        }
+    }
+}
+
+// MARK: - MailComposeVC Delegate
+extension AboutViewController: MFMailComposeViewControllerDelegate{
+    func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
+        switch result{
+        case MFMailComposeResultSent, MFMailComposeResultFailed, MFMailComposeResultSaved:
+            controller.dismissViewControllerAnimated(true, completion: nil)
+        case MFMailComposeResultCancelled:
+            // 1.
+            let alertController = UIAlertController(title: "取消选项", message: "message", preferredStyle: .ActionSheet)
+            // 2.
+            let action1 = UIAlertAction(title: "存储草稿", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
+                controller.dismissViewControllerAnimated(true, completion: nil)
+            })
+            let action2 = UIAlertAction(title: "删除草稿", style: UIAlertActionStyle.Destructive, handler: { (action) -> Void in
+                controller.dismissViewControllerAnimated(true, completion: nil)
+            })
+            // 3.
+            alertController.addAction(action1)
+            alertController.addAction(action2)
+            // 4.
+            self.presentViewController(alertController, animated: true, completion: nil)
+        default:
+            break
         }
     }
 }

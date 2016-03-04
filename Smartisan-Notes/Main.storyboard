@@ -271,6 +271,119 @@
             </objects>
             <point key="canvasLocation" x="2004.5" y="-1104.5"/>
         </scene>
+        <!--欢喜云服务-->
+        <scene sceneID="Dwj-zg-HHN">
+            <objects>
+                <viewController title="欢喜云服务" id="LCh-6N-tGS" customClass="ViewController" customModule="Smartisan_Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="UnF-UW-sg2"/>
+                        <viewControllerLayoutGuide type="bottom" id="6Pn-HS-MCL"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TcI-9r-sZZ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="5Ox-uN-11H" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2445.5" y="-1841.5"/>
+        </scene>
+        <!--用户体验改进计划-->
+        <scene sceneID="We3-rx-v1A">
+            <objects>
+                <viewController title="用户体验改进计划" id="MxW-bA-VlZ" customClass="UEAdjustmentViewController" customModule="Smartisan_Notes" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CeC-vI-Fhq"/>
+                        <viewControllerLayoutGuide type="bottom" id="tlS-J3-QiB"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="f22-Fc-OZr">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <webView opaque="NO" contentMode="scaleToFill" scalesPageToFit="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ZyA-sE-AcL">
+                                <rect key="frame" x="0.0" y="64" width="375" height="444"/>
+                                <color key="backgroundColor" red="0.36078431372549019" green="0.38823529411764707" blue="0.40392156862745099" alpha="1" colorSpace="deviceRGB"/>
+                            </webView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Ndm-bC-1rj">
+                                <rect key="frame" x="0.0" y="508" width="375" height="44"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="参与用户体验改进计划" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bbz-5C-IAS">
+                                        <rect key="frame" x="14" y="13" width="140" height="17"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="uxB-NY-eyW">
+                                        <rect key="frame" x="312" y="6" width="51" height="31"/>
+                                        <connections>
+                                            <action selector="switchToJoinUE:" destination="MxW-bA-VlZ" eventType="valueChanged" id="A9h-bR-EM7"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="uxB-NY-eyW" firstAttribute="centerY" secondItem="Ndm-bC-1rj" secondAttribute="centerY" id="7NM-q3-65W"/>
+                                    <constraint firstAttribute="trailing" secondItem="uxB-NY-eyW" secondAttribute="trailing" constant="14" id="X0B-lj-JaN"/>
+                                    <constraint firstItem="bbz-5C-IAS" firstAttribute="leading" secondItem="Ndm-bC-1rj" secondAttribute="leading" constant="14" id="d17-Yk-Fml"/>
+                                    <constraint firstItem="bbz-5C-IAS" firstAttribute="centerY" secondItem="Ndm-bC-1rj" secondAttribute="centerY" id="sCp-cd-x94"/>
+                                    <constraint firstAttribute="height" constant="44" id="zfk-zc-nsP"/>
+                                </constraints>
+                            </view>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line1" translatesAutoresizingMaskIntoConstraints="NO" id="Jfg-p2-Nms">
+                                <rect key="frame" x="0.0" y="507" width="375" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="8yD-dY-ifv"/>
+                                </constraints>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line1" translatesAutoresizingMaskIntoConstraints="NO" id="nGY-an-qeR">
+                                <rect key="frame" x="0.0" y="552" width="375" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="1" id="beW-cE-jhN"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="为了改进产品的用户体验，锤子便签会对各个功能的使用情况进行统计，但绝不会涉及到用户的个人隐私数据" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eac-4s-NVU">
+                                <rect key="frame" x="16" y="556" width="343" height="26.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Jfg-p2-Nms" firstAttribute="leading" secondItem="f22-Fc-OZr" secondAttribute="leading" id="4qv-Pd-dCL"/>
+                            <constraint firstItem="Ndm-bC-1rj" firstAttribute="leading" secondItem="f22-Fc-OZr" secondAttribute="leading" id="7fX-77-L16"/>
+                            <constraint firstItem="eac-4s-NVU" firstAttribute="leading" secondItem="f22-Fc-OZr" secondAttribute="leadingMargin" id="7jX-NB-wfP"/>
+                            <constraint firstAttribute="trailing" secondItem="ZyA-sE-AcL" secondAttribute="trailing" id="9y3-FU-ID0"/>
+                            <constraint firstItem="eac-4s-NVU" firstAttribute="top" secondItem="Ndm-bC-1rj" secondAttribute="bottom" constant="4" id="DHA-Dv-fC0"/>
+                            <constraint firstItem="Ndm-bC-1rj" firstAttribute="top" secondItem="nGY-an-qeR" secondAttribute="bottom" constant="-45" id="Ea5-vn-2nR"/>
+                            <constraint firstItem="tlS-J3-QiB" firstAttribute="top" secondItem="ZyA-sE-AcL" secondAttribute="bottom" constant="140" id="O0k-X9-sAN"/>
+                            <constraint firstItem="ZyA-sE-AcL" firstAttribute="top" secondItem="CeC-vI-Fhq" secondAttribute="bottom" id="PwK-om-olN"/>
+                            <constraint firstItem="nGY-an-qeR" firstAttribute="leading" secondItem="f22-Fc-OZr" secondAttribute="leading" id="Q7M-BS-9PA"/>
+                            <constraint firstItem="ZyA-sE-AcL" firstAttribute="leading" secondItem="f22-Fc-OZr" secondAttribute="leading" id="RSZ-RY-SfP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="eac-4s-NVU" secondAttribute="trailing" id="Rey-Go-Fr6"/>
+                            <constraint firstAttribute="trailing" secondItem="Jfg-p2-Nms" secondAttribute="trailing" id="Y34-yy-RFF"/>
+                            <constraint firstItem="Ndm-bC-1rj" firstAttribute="top" secondItem="Jfg-p2-Nms" secondAttribute="bottom" id="gPx-5s-Hg6"/>
+                            <constraint firstAttribute="trailing" secondItem="Ndm-bC-1rj" secondAttribute="trailing" id="knb-M4-0nF"/>
+                            <constraint firstAttribute="trailing" secondItem="nGY-an-qeR" secondAttribute="trailing" id="pOQ-Pe-JLV"/>
+                            <constraint firstItem="Ndm-bC-1rj" firstAttribute="top" secondItem="ZyA-sE-AcL" secondAttribute="bottom" id="x0U-8g-1Vt"/>
+                            <constraint firstItem="Ndm-bC-1rj" firstAttribute="top" secondItem="ZyA-sE-AcL" secondAttribute="bottom" id="xaX-cM-Loh"/>
+                            <constraint firstItem="tlS-J3-QiB" firstAttribute="top" secondItem="eac-4s-NVU" secondAttribute="bottom" constant="40" id="ypr-Tk-Mdy"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="O0k-X9-sAN"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="webView" destination="ZyA-sE-AcL" id="7WR-e8-ojl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ROA-LD-aeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2908.5" y="-1841.5"/>
+        </scene>
         <!--设置-->
         <scene sceneID="Bh0-JR-DUw">
             <objects>
@@ -299,6 +412,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="LCh-6N-tGS" kind="show" id="MnV-gh-NAh"/>
+                                        </connections>
                                     </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" textLabel="eRa-ZK-4yj" style="IBUITableViewCellStyleDefault" id="qTr-WX-qmX">
                                         <rect key="frame" x="0.0" y="143" width="375" height="44"/>
@@ -365,15 +481,18 @@
                             </tableViewSection>
                             <tableViewSection headerTitle="" id="wlK-dc-p4Y">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="ugy-HC-9S8">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" id="ugy-HC-9S8">
                                         <rect key="frame" x="0.0" y="347" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="ugy-HC-9S8" id="wPc-5f-XuS">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="rRC-e5-kL5">
+                                                <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="rRC-e5-kL5">
                                                     <rect key="frame" x="318" y="6.5" width="51" height="31"/>
+                                                    <connections>
+                                                        <action selector="switchToSetCode:" destination="LaC-ND-BNy" eventType="valueChanged" id="M9E-JL-oWC"/>
+                                                    </connections>
                                                 </switch>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Touch ID 和密码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8QD-os-wph">
                                                     <rect key="frame" x="8" y="11" width="123.5" height="20.5"/>
@@ -464,6 +583,9 @@
                                                 </label>
                                             </subviews>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="MxW-bA-VlZ" kind="show" id="2zG-PB-aUb"/>
+                                        </connections>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -893,7 +1015,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IcB-J3-v32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2881.5" y="-1823.5"/>
+            <point key="canvasLocation" x="3400.5" y="-1828.5"/>
         </scene>
         <!--Copy Footer View Controller-->
         <scene sceneID="P1q-Oq-9Gs">
