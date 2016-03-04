@@ -30,6 +30,11 @@
 		BD9AB9DA1C885F29007C11FE /* CopyFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */; };
 		BD9ABA0E1C886280007C11FE /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9ABA0D1C886280007C11FE /* SpringAnimation.swift */; };
 		BD9E788E1C893973006ED8CB /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E788D1C893973006ED8CB /* Configs.swift */; };
+		BD9E78A41C897EBE006ED8CB /* TouchID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78A31C897EBE006ED8CB /* TouchID.swift */; };
+		BD9E78A61C898094006ED8CB /* SetCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78A51C898094006ED8CB /* SetCodeViewController.swift */; };
+		BD9E78A81C89A11B006ED8CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78A71C89A11B006ED8CB /* ViewController.swift */; };
+		BD9E78AA1C89AE9E006ED8CB /* statement.html in Resources */ = {isa = PBXBuildFile; fileRef = BD9E78A91C89AE9E006ED8CB /* statement.html */; };
+		BD9E78AC1C89AF77006ED8CB /* UEAdjustmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */; };
 		BDCE36CB1C8915250080B664 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE36CA1C8915250080B664 /* ShareViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -93,6 +98,11 @@
 		BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyFooterViewController.swift; sourceTree = "<group>"; };
 		BD9ABA0D1C886280007C11FE /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		BD9E788D1C893973006ED8CB /* Configs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		BD9E78A31C897EBE006ED8CB /* TouchID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchID.swift; sourceTree = "<group>"; };
+		BD9E78A51C898094006ED8CB /* SetCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCodeViewController.swift; sourceTree = "<group>"; };
+		BD9E78A71C89A11B006ED8CB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		BD9E78A91C89AE9E006ED8CB /* statement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = statement.html; sourceTree = "<group>"; };
+		BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UEAdjustmentViewController.swift; sourceTree = "<group>"; };
 		BDCE36CA1C8915250080B664 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		F89A51B24F5A0C18838532CB /* Pods_Smartisan_Notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smartisan_Notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9985CC0FB0F5A1A01B69947 /* Pods-Smartisan-Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smartisan-Notes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smartisan-Notes/Pods-Smartisan-Notes.release.xcconfig"; sourceTree = "<group>"; };
@@ -176,6 +186,7 @@
 				BD0BEBCA1C867376005580EC /* Assets.xcassets */,
 				BD0BEBCC1C867376005580EC /* LaunchScreen.storyboard */,
 				BD0BEBCF1C867376005580EC /* Info.plist */,
+				BD9E78A91C89AE9E006ED8CB /* statement.html */,
 				BD0BEBF81C8675B3005580EC /* Framework */,
 			);
 			path = "Smartisan-Notes";
@@ -247,6 +258,10 @@
 				BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */,
 				BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */,
 				BDCE36CA1C8915250080B664 /* ShareViewController.swift */,
+				BD9E78A51C898094006ED8CB /* SetCodeViewController.swift */,
+				BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */,
+				BD9E78A31C897EBE006ED8CB /* TouchID.swift */,
+				BD9E78A71C89A11B006ED8CB /* ViewController.swift */,
 			);
 			name = SettingsVC;
 			sourceTree = "<group>";
@@ -364,6 +379,7 @@
 				BD0BEBCE1C867376005580EC /* LaunchScreen.storyboard in Resources */,
 				BD0BEBCB1C867376005580EC /* Assets.xcassets in Resources */,
 				BD0BEC851C86DC43005580EC /* NotesTableViewCell.xib in Resources */,
+				BD9E78AA1C89AE9E006ED8CB /* statement.html in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -436,6 +452,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD9E78AC1C89AF77006ED8CB /* UEAdjustmentViewController.swift in Sources */,
 				BD9AB9DA1C885F29007C11FE /* CopyFooterViewController.swift in Sources */,
 				BD9E788E1C893973006ED8CB /* Configs.swift in Sources */,
 				BD0BEC891C872486005580EC /* WriteViewController.swift in Sources */,
@@ -446,9 +463,12 @@
 				BDCE36CB1C8915250080B664 /* ShareViewController.swift in Sources */,
 				BD0BEC7C1C8685AC005580EC /* Notes.swift in Sources */,
 				BD9ABA0E1C886280007C11FE /* SpringAnimation.swift in Sources */,
+				BD9E78A41C897EBE006ED8CB /* TouchID.swift in Sources */,
 				BD0BEBC41C867376005580EC /* AppDelegate.swift in Sources */,
 				BD0BEC841C86DC43005580EC /* NotesTableViewCell.swift in Sources */,
 				BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */,
+				BD9E78A81C89A11B006ED8CB /* ViewController.swift in Sources */,
+				BD9E78A61C898094006ED8CB /* SetCodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

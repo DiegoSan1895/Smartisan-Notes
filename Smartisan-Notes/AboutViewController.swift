@@ -25,6 +25,7 @@ class AboutViewController: UITableViewController {
     struct SegueIdentifier{
         static let wechat = "wechat"
         static let weibo = "weibo"
+        static let setCode = "setCode"
     }
     @IBAction func openOrGetButtonDidPressed(sender: UIButton) {
         switch sender.tag{
@@ -47,7 +48,14 @@ class AboutViewController: UITableViewController {
                 UIApplication.sharedApplication().openURL(AppItunsURL.calenderURL)
             }
         default:
-            print("")
+            break
+        }
+    }
+    @IBAction func switchToSetCode(sender: UISwitch) {
+        if !sender.on{
+            
+        }else{
+            
         }
     }
     
@@ -148,7 +156,12 @@ extension AboutViewController {
     }
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
-        
+        if indexPath.section == 3{
+            
+            if indexPath.row == 1{
+                UIApplication.sharedApplication().openURL(AppURL.clockURL)
+            }
+        }
     }
 }
 
