@@ -7,11 +7,13 @@
 //
 
 import UIKit
+import MonkeyKing
 
 class ShareViewController: UIViewController {
 
     @IBOutlet weak var backGroundView: UIView!
 
     @IBAction func giveUpButtonDidPressed(sender: UIButton) {
+        
     }
 }
