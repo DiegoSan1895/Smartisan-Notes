@@ -6,6 +6,7 @@ use_frameworks!
 target 'Smartisan-Notes' do
     pod 'IBAnimatable'
     #pod 'Spring'
+    pod 'MonkeyKing'
 end
 
 target 'Smartisan-NotesTests' do

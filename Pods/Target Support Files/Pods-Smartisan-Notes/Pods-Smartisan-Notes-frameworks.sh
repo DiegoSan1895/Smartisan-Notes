@@ -85,7 +85,9 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Smartisan-Notes/IBAnimatable.framework"
+  install_framework "Pods-Smartisan-Notes/MonkeyKing.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Smartisan-Notes/IBAnimatable.framework"
+  install_framework "Pods-Smartisan-Notes/MonkeyKing.framework"
 fi

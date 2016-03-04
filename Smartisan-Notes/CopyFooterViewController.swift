@@ -32,7 +32,7 @@ class CopyFooterViewController: UIViewController {
         delegate?.copyingFinished()
     }
     @IBAction func giveUpButtonDidPressed(sender: UIButton) {
-        spring(0.3) { () -> Void in
+        spring(0.1) { () -> Void in
             self.dismissViewControllerAnimated(false, completion: nil)
         }
     }
@@ -57,7 +57,7 @@ class CopyFooterViewController: UIViewController {
     }
     func animateFooterView(){
         footerView.transform = CGAffineTransformMakeTranslation(0, 120)
-        spring(0.4){
+        spring(0.2){
             self.footerView.transform = CGAffineTransformMakeTranslation(0, 0)
         }
     }
