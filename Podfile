@@ -8,6 +8,7 @@ target 'Smartisan-Notes' do
     #pod 'Spring'
     pod 'MonkeyKing'
     pod 'VENTouchLock'
+    pod 'HPReorderTableView'
 end
 
 target 'Smartisan-NotesTests' do
