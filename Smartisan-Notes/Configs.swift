@@ -30,5 +30,5 @@ struct iPhoneInfo{
 }
 
 struct AppInfo{
-    static let App_Version = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString")!
+    static let App_Version = NSBundle.mainBundle().objectForInfoDictionaryKey("CFBundleShortVersionString") as! String
 }

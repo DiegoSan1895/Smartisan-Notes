@@ -64,22 +64,31 @@ class NotesTableViewCell: UITableViewCell {
         swipeGesture.direction = [UISwipeGestureRecognizerDirection.Right, UISwipeGestureRecognizerDirection.Left]
         self.addGestureRecognizer(swipeGesture)
     }
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        
+        setToFormalState()
+    }
     
     func swipeAnimation() {
         if slided {
             UIView.animateWithDuration(0.3, animations: { () -> Void in
-                self.containerView.center.x = self.containerView.center.x - self.deleteButton.bounds.width * 1
+                self.containerView.transform = CGAffineTransformIdentity
                 self.clipImageView.image = UIImage(named: "clip_n")
                 }, completion: nil)
         }else {
             UIView.animateWithDuration(0.3, animations: { () -> Void in
-                let centerX = self.containerView.center.x + self.deleteButton.bounds.width * 1
-                self.containerView.center.x = centerX
+                self.containerView.transform = CGAffineTransformMakeTranslation(self.deleteButton.bounds.width * 0.8, 0)
                 self.clipImageView.image = UIImage(named: "clip_p")
                 }, completion: nil)
         }
         
         slided = slided == true ? false : true
+    }
+    
+    func setToFormalState(){
+        self.clipImageView.image = UIImage(named: "clip_n")
+        self.containerView.transform = CGAffineTransformIdentity
     }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -95,4 +104,10 @@ class NotesTableViewCell: UITableViewCell {
         self.delegate?.slideToDelete(self) 
     }
     
+}
+
+extension NotesTableViewCell: UIScrollViewDelegate{
+    func scrollViewDidScroll(scrollView: UIScrollView) {
+        setToFormalState()
+    }
 }

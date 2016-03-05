@@ -10,7 +10,7 @@
         _passcodeViewControllerCharacterColor = [UIColor blackColor];
         _passcodeViewControllerBackgroundColor = [UIColor colorWithRed:239/255.0f green:239/255.0f blue:244/255.0f alpha:1.0f];
         _passcodeViewControllerShouldEmbedInNavigationController = NO;
-        _cancelBarButtonItemTitle = NSLocalizedString(@"Cancel", nil);
+        _cancelBarButtonItemTitle = NSLocalizedString(@"取消", nil);
         _createPasscodeInitialLabelText = NSLocalizedString(@"请输入密码", nil);
         _createPasscodeConfirmLabelText = NSLocalizedString(@"请再次输入密码", nil);
         _createPasscodeMismatchedLabelText = NSLocalizedString(@"Passwords did not match. Try again", nil);

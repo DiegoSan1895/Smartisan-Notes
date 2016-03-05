@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import VENTouchLock
+
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
@@ -14,10 +16,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     var window: UIWindow?
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
-        if UIApplication.sharedApplication().canOpenURL(NSURL(string: "smartisan-clock://")!){
-            print("can open")
-        }
-        print(iPhoneInfo.deviceName)
+        
+        // set up VENTouchLock
+        //VENTouchLock.sharedInstance().setKeychainService(TouchID.service, keychainAccount: TouchID.account, touchIDReason: TouchID.touchIDReason, passcodeAttemptLimit: TouchID.passcodeAttemptLimit, splashViewControllerClass: SubVENTouchLockSplashViewController.classForCoder())
         return true
     }
 }

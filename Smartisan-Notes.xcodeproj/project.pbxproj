@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		3A99F69C9325E351218F4C49 /* Pods_Smartisan_Notes.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F89A51B24F5A0C18838532CB /* Pods_Smartisan_Notes.framework */; };
+		BD0BCFB81C8AF65F009D0B6F /* SubVENTouchLockSplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BCFB71C8AF65F009D0B6F /* SubVENTouchLockSplashViewController.swift */; };
 		BD0BEBC41C867376005580EC /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEBC31C867376005580EC /* AppDelegate.swift */; };
 		BD0BEBCB1C867376005580EC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BD0BEBCA1C867376005580EC /* Assets.xcassets */; };
 		BD0BEBCE1C867376005580EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0BEBCC1C867376005580EC /* LaunchScreen.storyboard */; };
@@ -25,6 +26,7 @@
 		BD0BEC871C86FB25005580EC /* TableViewDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC861C86FB25005580EC /* TableViewDataSourceAndDelegate.swift */; };
 		BD0BEC891C872486005580EC /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC881C872486005580EC /* WriteViewController.swift */; };
 		BD4C3DD31C8744B7004DB2A4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */; };
+		BD5F33C61C8AFF0600223364 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C51C8AFF0600223364 /* Async.swift */; };
 		BD9AB9D41C87D472007C11FE /* SelectedFooterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D31C87D472007C11FE /* SelectedFooterTableViewController.swift */; };
 		BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */; };
 		BD9AB9DA1C885F29007C11FE /* CopyFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */; };
@@ -32,7 +34,6 @@
 		BD9E788E1C893973006ED8CB /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E788D1C893973006ED8CB /* Configs.swift */; };
 		BD9E78A41C897EBE006ED8CB /* TouchID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78A31C897EBE006ED8CB /* TouchID.swift */; };
 		BD9E78A61C898094006ED8CB /* SetCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78A51C898094006ED8CB /* SetCodeViewController.swift */; };
-		BD9E78A81C89A11B006ED8CB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78A71C89A11B006ED8CB /* ViewController.swift */; };
 		BD9E78AA1C89AE9E006ED8CB /* statement.html in Resources */ = {isa = PBXBuildFile; fileRef = BD9E78A91C89AE9E006ED8CB /* statement.html */; };
 		BD9E78AC1C89AF77006ED8CB /* UEAdjustmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */; };
 		BD9E78B01C89D68A006ED8CB /* NSString+GetDeviceName.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78AF1C89D68A006ED8CB /* NSString+GetDeviceName.m */; };
@@ -73,6 +74,7 @@
 
 /* Begin PBXFileReference section */
 		282BD89D0EBFFDEFDBDFA09D /* Pods-Smartisan-Notes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smartisan-Notes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smartisan-Notes/Pods-Smartisan-Notes.debug.xcconfig"; sourceTree = "<group>"; };
+		BD0BCFB71C8AF65F009D0B6F /* SubVENTouchLockSplashViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SubVENTouchLockSplashViewController.swift; sourceTree = "<group>"; };
 		BD0BEBC01C867376005580EC /* Smartisan-Notes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Smartisan-Notes.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0BEBC31C867376005580EC /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD0BEBCA1C867376005580EC /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -94,6 +96,7 @@
 		BD0BEC861C86FB25005580EC /* TableViewDataSourceAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceAndDelegate.swift; sourceTree = "<group>"; };
 		BD0BEC881C872486005580EC /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		BD5F33C51C8AFF0600223364 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		BD9AB9D31C87D472007C11FE /* SelectedFooterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedFooterTableViewController.swift; sourceTree = "<group>"; };
 		BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownTableViewController.swift; sourceTree = "<group>"; };
 		BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyFooterViewController.swift; sourceTree = "<group>"; };
@@ -101,7 +104,6 @@
 		BD9E788D1C893973006ED8CB /* Configs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
 		BD9E78A31C897EBE006ED8CB /* TouchID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchID.swift; sourceTree = "<group>"; };
 		BD9E78A51C898094006ED8CB /* SetCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCodeViewController.swift; sourceTree = "<group>"; };
-		BD9E78A71C89A11B006ED8CB /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		BD9E78A91C89AE9E006ED8CB /* statement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = statement.html; sourceTree = "<group>"; };
 		BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UEAdjustmentViewController.swift; sourceTree = "<group>"; };
 		BD9E78AD1C89D68A006ED8CB /* Smartisan-Notes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smartisan-Notes-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -155,6 +157,15 @@
 				F89A51B24F5A0C18838532CB /* Pods_Smartisan_Notes.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		BD0BCFB61C8A6724009D0B6F /* TouchID and KeyChain */ = {
+			isa = PBXGroup;
+			children = (
+				BD9E78A31C897EBE006ED8CB /* TouchID.swift */,
+				BD0BCFB71C8AF65F009D0B6F /* SubVENTouchLockSplashViewController.swift */,
+			);
+			name = "TouchID and KeyChain";
 			sourceTree = "<group>";
 		};
 		BD0BEBB71C867376005580EC = {
@@ -266,8 +277,7 @@
 				BDCE36CA1C8915250080B664 /* ShareViewController.swift */,
 				BD9E78A51C898094006ED8CB /* SetCodeViewController.swift */,
 				BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */,
-				BD9E78A31C897EBE006ED8CB /* TouchID.swift */,
-				BD9E78A71C89A11B006ED8CB /* ViewController.swift */,
+				BD0BCFB61C8A6724009D0B6F /* TouchID and KeyChain */,
 			);
 			name = SettingsVC;
 			sourceTree = "<group>";
@@ -277,6 +287,7 @@
 			children = (
 				BD9E78AE1C89D68A006ED8CB /* NSString+GetDeviceName.h */,
 				BD9E78AF1C89D68A006ED8CB /* NSString+GetDeviceName.m */,
+				BD5F33C51C8AFF0600223364 /* Async.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -481,9 +492,10 @@
 				BD9E78A41C897EBE006ED8CB /* TouchID.swift in Sources */,
 				BD0BEBC41C867376005580EC /* AppDelegate.swift in Sources */,
 				BD0BEC841C86DC43005580EC /* NotesTableViewCell.swift in Sources */,
+				BD5F33C61C8AFF0600223364 /* Async.swift in Sources */,
 				BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */,
+				BD0BCFB81C8AF65F009D0B6F /* SubVENTouchLockSplashViewController.swift in Sources */,
 				BD9E78B01C89D68A006ED8CB /* NSString+GetDeviceName.m in Sources */,
-				BD9E78A81C89A11B006ED8CB /* ViewController.swift in Sources */,
 				BD9E78A61C898094006ED8CB /* SetCodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
