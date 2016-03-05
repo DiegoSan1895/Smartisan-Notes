@@ -27,14 +27,14 @@
                         </connections>
                     </button>
                     <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6RY-co-7fS" userLabel="Container">
-                        <rect key="frame" x="12" y="4" width="345" height="75.5"/>
+                        <rect key="frame" x="12" y="4" width="355" height="75.5"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pad_n" translatesAutoresizingMaskIntoConstraints="NO" id="7kh-Ux-kDT">
-                                <rect key="frame" x="0.0" y="0.0" width="345" height="75.5"/>
+                                <rect key="frame" x="0.0" y="0.0" width="355" height="75.5"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleAspectFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fLX-Fe-TQg" userLabel="StarButton">
-                                <rect key="frame" x="304" y="-4" width="35" height="30"/>
+                                <rect key="frame" x="314" y="-4" width="35" height="30"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="30" id="GNu-6i-Z9T"/>
                                     <constraint firstAttribute="width" constant="35" id="rxR-yQ-SLm"/>
@@ -52,7 +52,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyz-xt-UQH">
-                                <rect key="frame" x="40" y="44" width="305" height="14.5"/>
+                                <rect key="frame" x="40" y="44" width="301" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
@@ -64,7 +64,7 @@
                             <constraint firstItem="7kh-Ux-kDT" firstAttribute="leading" secondItem="6RY-co-7fS" secondAttribute="leading" id="0TA-pI-lwh"/>
                             <constraint firstAttribute="trailing" secondItem="7kh-Ux-kDT" secondAttribute="trailing" id="CSf-wj-e2b"/>
                             <constraint firstItem="xi3-K0-ftf" firstAttribute="leading" secondItem="6RY-co-7fS" secondAttribute="leading" constant="40" id="FoJ-KW-iI2"/>
-                            <constraint firstAttribute="trailing" secondItem="xyz-xt-UQH" secondAttribute="trailing" id="Poy-qT-3hQ"/>
+                            <constraint firstAttribute="trailing" secondItem="xyz-xt-UQH" secondAttribute="trailing" constant="14" id="Poy-qT-3hQ"/>
                             <constraint firstItem="xyz-xt-UQH" firstAttribute="leading" secondItem="xi3-K0-ftf" secondAttribute="leading" id="PvB-NS-ghd"/>
                             <constraint firstAttribute="trailing" secondItem="fLX-Fe-TQg" secondAttribute="trailing" constant="6" id="ZUK-Tv-Ty9"/>
                             <constraint firstItem="7kh-Ux-kDT" firstAttribute="top" secondItem="6RY-co-7fS" secondAttribute="top" id="bVL-Id-WoS"/>
@@ -86,7 +86,7 @@
                     <constraint firstItem="Js4-fo-zn0" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" id="KFb-Bn-vHW"/>
                     <constraint firstAttribute="bottom" secondItem="6RY-co-7fS" secondAttribute="bottom" id="KbB-pl-zqY"/>
                     <constraint firstItem="Zmg-fC-HIJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="Mop-eZ-9vb"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="6RY-co-7fS" secondAttribute="trailing" constant="10" id="WYI-4K-SQs"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="6RY-co-7fS" secondAttribute="trailing" id="WYI-4K-SQs"/>
                     <constraint firstItem="6RY-co-7fS" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="4" id="Zd6-dD-W7h"/>
                     <constraint firstItem="Zmg-fC-HIJ" firstAttribute="centerY" secondItem="H2p-sc-9uM" secondAttribute="centerY" id="lTv-6u-iYP"/>
                     <constraint firstItem="Js4-fo-zn0" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="q1a-g2-xSW"/>

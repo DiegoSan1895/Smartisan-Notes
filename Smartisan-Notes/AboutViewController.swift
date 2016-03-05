@@ -23,12 +23,14 @@ class AboutViewController: UITableViewController {
     @IBOutlet var toastButton: UIButton!
     @IBOutlet weak var webTableViewCell: UITableViewCell!
     
-        
+    @IBOutlet weak var versionLabel: UILabel!
+    
     struct SegueIdentifier{
         static let wechat = "wechat"
         static let weibo = "weibo"
         static let setCode = "setCode"
     }
+    
     @IBAction func openOrGetButtonDidPressed(sender: UIButton) {
         switch sender.tag{
         case 1:
@@ -56,15 +58,23 @@ class AboutViewController: UITableViewController {
     @IBAction func switchToSetCode(sender: UISwitch) {
         if !sender.on{
             
+            // 1.
+            let enterPasscodeVC = VENTouchLockEnterPasscodeViewController()
+            enterPasscodeVC.title = "请输入密码"
+            // 2.
+            self.presentViewController(enterPasscodeVC.embeddedInNavigationController(), animated: true, completion: nil)
+            
+            
         }else{
             // 1.
-            let createPasscodeVC = VENTouchLockPasscodeViewController()
+            let createPasscodeVC = VENTouchLockCreatePasscodeViewController()
             createPasscodeVC.title = "设置密码"
             // 2.
-            let navigationVC = UINavigationController(rootViewController: createPasscodeVC)
+            self.presentViewController(createPasscodeVC.embeddedInNavigationController(), animated: true, completion: nil)
             // 3.
-            self.presentViewController(navigationVC, animated: true, completion: nil)
-            sender.setOn(false, animated: true)
+            if VENTouchLock.canUseTouchID(){
+                VENTouchLock.setShouldUseTouchID(true)
+            }
         }
     }
     
@@ -97,14 +107,13 @@ class AboutViewController: UITableViewController {
         }
     }
     
-    func dismissVC(completion: () -> Void){
-        self.dismissViewControllerAnimated(true, completion: completion)
-    }
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         addGestures()
+        self.tableView.tableFooterView = copyFooterView
+        self.versionLabel.text = AppInfo.App_Version
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -228,15 +237,15 @@ extension AboutViewController{
 }
 
 // MARK: - CopyFooterViewControllerDelegate
+// TODO: - delay time hava some exception
 extension AboutViewController: CopyFooterViewControllerDelegate{
     func copyingFinished() {
-        print("copying")
         self.toastButton.hidden = false
         self.toastButton.center = CGPoint(x: self.view.center.x, y: self.tableView.contentSize.height - (UIScreen.mainScreen().bounds.height / 2))
         self.view.addSubview(toastButton)
-        springWithDelay(0.5, delay: 2) { () -> Void in
-            self.toastButton.hidden = false
-
+        
+        delay(12) { () -> () in
+            self.toastButton.removeFromSuperview()
         }
     }
 }

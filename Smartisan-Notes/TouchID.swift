@@ -7,20 +7,10 @@
 //
 
 import Foundation
-import LocalAuthentication
 
-func authenticateUser(){
-    
-    // 1.
-    let context = LAContext()
-    
-    // 2.
-    var error: NSError?
-    
-    // 3.
-    let reasonString = "Authentication is needed to access your notes"
-    // 4.
-    context.canEvaluatePolicy(LAPolicy.DeviceOwnerAuthentication, error: &error)
-    
-    print(error?.localizedDescription)
+struct TouchID{
+    static let service = "service"
+    static let account = "account"
+    static let touchIDReason = "扫描指纹解锁"
+    static let passcodeAttemptLimit: UInt = 10
 }

@@ -11,6 +11,8 @@ import RealmSwift
 
 let cellIdentifier = "NotesCell"
 let writeSegueIdentifier = "writeNote"
+
+
 class HomeViewController: UIViewController {
     
     // MARK: - properties
@@ -25,7 +27,8 @@ class HomeViewController: UIViewController {
         super.viewDidLoad()
         
         setUpViews()
-        populateDefaultNotes() 
+        populateDefaultNotes()
+        
     }
     
     // MARK: - private methods
@@ -61,3 +64,6 @@ class HomeViewController: UIViewController {
         performSegueWithIdentifier(writeSegueIdentifier, sender: self)
     }
 }
+
+
+
