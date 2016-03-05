@@ -22,6 +22,7 @@ class HomeViewController: UIViewController {
     }()
     
     @IBOutlet weak var tableView: UITableView!
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -29,8 +30,19 @@ class HomeViewController: UIViewController {
         setUpViews()
         populateDefaultNotes()
         
+        self.tableView.panGestureRecognizer.addTarget(self, action: "startToScroll")
     }
     
+    // set the cell to normal state when scroll
+    func startToScroll(){
+        let wrapperView = self.tableView.subviews.first
+        for subview in (wrapperView?.subviews)!{
+            if let notesCell = subview as? NotesTableViewCell{
+                notesCell.setToNormalState()
+            }
+            
+        }
+    }
     // MARK: - private methods
     private func setUpViews() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
@@ -51,6 +63,18 @@ class HomeViewController: UIViewController {
         }
     }
     
+    func getCells() -> [NotesTableViewCell] {
+        var resultCells = [NotesTableViewCell]()
+        
+        let wrapperView = self.tableView.subviews.first
+        for subview in (wrapperView?.subviews)!{
+            if let notesCell = subview as? NotesTableViewCell{
+                resultCells.append(notesCell)
+            }
+        }
+        
+        return resultCells
+    }
     // MARK: - set statusBar
     override func prefersStatusBarHidden() -> Bool {
         return false

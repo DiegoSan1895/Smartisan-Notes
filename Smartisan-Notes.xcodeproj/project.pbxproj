@@ -23,10 +23,11 @@
 		BD0BEC7C1C8685AC005580EC /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC7B1C8685AC005580EC /* Notes.swift */; };
 		BD0BEC841C86DC43005580EC /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC821C86DC43005580EC /* NotesTableViewCell.swift */; };
 		BD0BEC851C86DC43005580EC /* NotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0BEC831C86DC43005580EC /* NotesTableViewCell.xib */; };
-		BD0BEC871C86FB25005580EC /* TableViewDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC861C86FB25005580EC /* TableViewDataSourceAndDelegate.swift */; };
+		BD0BEC871C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC861C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift */; };
 		BD0BEC891C872486005580EC /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC881C872486005580EC /* WriteViewController.swift */; };
 		BD4C3DD31C8744B7004DB2A4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */; };
 		BD5F33C61C8AFF0600223364 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C51C8AFF0600223364 /* Async.swift */; };
+		BD5F33C81C8B09FD00223364 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C71C8B09FD00223364 /* Extension.swift */; };
 		BD9AB9D41C87D472007C11FE /* SelectedFooterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D31C87D472007C11FE /* SelectedFooterTableViewController.swift */; };
 		BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */; };
 		BD9AB9DA1C885F29007C11FE /* CopyFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */; };
@@ -93,10 +94,11 @@
 		BD0BEC7B1C8685AC005580EC /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
 		BD0BEC821C86DC43005580EC /* NotesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
 		BD0BEC831C86DC43005580EC /* NotesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesTableViewCell.xib; sourceTree = "<group>"; };
-		BD0BEC861C86FB25005580EC /* TableViewDataSourceAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewDataSourceAndDelegate.swift; sourceTree = "<group>"; };
+		BD0BEC861C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVCDataSourceAndDelegate.swift; sourceTree = "<group>"; };
 		BD0BEC881C872486005580EC /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
 		BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		BD5F33C51C8AFF0600223364 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
+		BD5F33C71C8B09FD00223364 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		BD9AB9D31C87D472007C11FE /* SelectedFooterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedFooterTableViewController.swift; sourceTree = "<group>"; };
 		BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownTableViewController.swift; sourceTree = "<group>"; };
 		BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyFooterViewController.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 				BD0BEC821C86DC43005580EC /* NotesTableViewCell.swift */,
 				BD0BEC831C86DC43005580EC /* NotesTableViewCell.xib */,
 				BD9ABA0D1C886280007C11FE /* SpringAnimation.swift */,
+				BD5F33C71C8B09FD00223364 /* Extension.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -259,7 +262,7 @@
 			isa = PBXGroup;
 			children = (
 				BD0BEC771C8682D1005580EC /* HomeViewController.swift */,
-				BD0BEC861C86FB25005580EC /* TableViewDataSourceAndDelegate.swift */,
+				BD0BEC861C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift */,
 				BD0BEC881C872486005580EC /* WriteViewController.swift */,
 				BD9AB9D71C87D8DE007C11FE /* SettingsVC */,
 			);
@@ -484,7 +487,7 @@
 				BD0BEC891C872486005580EC /* WriteViewController.swift in Sources */,
 				BD9AB9D41C87D472007C11FE /* SelectedFooterTableViewController.swift in Sources */,
 				BD0BEC781C8682D1005580EC /* HomeViewController.swift in Sources */,
-				BD0BEC871C86FB25005580EC /* TableViewDataSourceAndDelegate.swift in Sources */,
+				BD0BEC871C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift in Sources */,
 				BD4C3DD31C8744B7004DB2A4 /* AboutViewController.swift in Sources */,
 				BDCE36CB1C8915250080B664 /* ShareViewController.swift in Sources */,
 				BD0BEC7C1C8685AC005580EC /* Notes.swift in Sources */,
@@ -493,6 +496,7 @@
 				BD0BEBC41C867376005580EC /* AppDelegate.swift in Sources */,
 				BD0BEC841C86DC43005580EC /* NotesTableViewCell.swift in Sources */,
 				BD5F33C61C8AFF0600223364 /* Async.swift in Sources */,
+				BD5F33C81C8B09FD00223364 /* Extension.swift in Sources */,
 				BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */,
 				BD0BCFB81C8AF65F009D0B6F /* SubVENTouchLockSplashViewController.swift in Sources */,
 				BD9E78B01C89D68A006ED8CB /* NSString+GetDeviceName.m in Sources */,

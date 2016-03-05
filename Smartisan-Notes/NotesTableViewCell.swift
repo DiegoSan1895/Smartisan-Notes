@@ -10,6 +10,7 @@ import UIKit
 
 protocol NotesTableViewCellDelegate: class {
     func slideToDelete(cell: NotesTableViewCell)
+    func longPressureGestureStart(cell: NotesTableViewCell)
 }
 class NotesTableViewCell: UITableViewCell {
     
@@ -46,6 +47,7 @@ class NotesTableViewCell: UITableViewCell {
     
     weak var delegate: NotesTableViewCellDelegate?
     
+    var longGesture: UILongPressGestureRecognizer!
     // MARK: - Constants
     // MARK: - lifeCycle
     override func awakeFromNib() {
@@ -59,36 +61,53 @@ class NotesTableViewCell: UITableViewCell {
             }
         }
         
-        // add swipeGesture
-        let swipeGesture = UISwipeGestureRecognizer(target: self, action: "swipeAnimation")
-        swipeGesture.direction = [UISwipeGestureRecognizerDirection.Right, UISwipeGestureRecognizerDirection.Left]
-        self.addGestureRecognizer(swipeGesture)
+        addGestures()
     }
     override func prepareForReuse() {
         super.prepareForReuse()
         
-        setToFormalState()
+        setToNormalState()
     }
     
+    // add swipeGesture
+    func addGestures(){
+        // 1.
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: "swipeAnimation")
+        swipeGesture.direction = [UISwipeGestureRecognizerDirection.Right, UISwipeGestureRecognizerDirection.Left]
+        self.addGestureRecognizer(swipeGesture)
+        
+        // 2.
+        longGesture = UILongPressGestureRecognizer(target: self, action: "longGestureStart")
+        self.addGestureRecognizer(longGesture)
+    }
     func swipeAnimation() {
+        
         if slided {
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
-                self.containerView.transform = CGAffineTransformIdentity
-                self.clipImageView.image = UIImage(named: "clip_n")
-                }, completion: nil)
+            setToNormalState()
         }else {
-            UIView.animateWithDuration(0.3, animations: { () -> Void in
+            spring(0.4, animations: { () -> Void in
                 self.containerView.transform = CGAffineTransformMakeTranslation(self.deleteButton.bounds.width * 0.8, 0)
                 self.clipImageView.image = UIImage(named: "clip_p")
-                }, completion: nil)
+            })
         }
         
         slided = slided == true ? false : true
     }
     
-    func setToFormalState(){
-        self.clipImageView.image = UIImage(named: "clip_n")
-        self.containerView.transform = CGAffineTransformIdentity
+    func setToNormalState(){
+        
+        spring(0.4) { () -> Void in
+            self.clipImageView.image = UIImage(named: "clip_n")
+            self.containerView.transform = CGAffineTransformIdentity
+        }
+    }
+    
+    func setToHightLightState(){
+        self.clipImageView.image = UIImage(named: "clip_p")
+    }
+    
+    func longGestureStart(){
+       self.delegate?.longPressureGestureStart(self)
     }
     override func setSelected(selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
@@ -106,8 +125,3 @@ class NotesTableViewCell: UITableViewCell {
     
 }
 
-extension NotesTableViewCell: UIScrollViewDelegate{
-    func scrollViewDidScroll(scrollView: UIScrollView) {
-        setToFormalState()
-    }
-}
