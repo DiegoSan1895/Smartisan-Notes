@@ -36,4 +36,17 @@ extension HomeViewController: NotesTableViewCellDelegate {
         }
         self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
+    func longPressureGestureStart(cell: NotesTableViewCell) {
+        switch cell.longGesture.state{
+        case .Began:
+            for cell in getCells(){
+                cell.setToHightLightState()
+            }
+        case .Ended:
+            for cell in getCells(){
+                cell.setToNormalState()
+            }
+        default: return
+        }
+    }
 }
