@@ -70,10 +70,10 @@ static NSString *HPReorderTableViewCellReuseIdentifier = @"HPReorderTableViewCel
     [self addGestureRecognizer:_reorderGestureRecognizer];
     
     _reorderDragView = [[UIImageView alloc] init];
-    _reorderDragView.layer.shadowColor = [UIColor blackColor].CGColor;
-    _reorderDragView.layer.shadowRadius = 2;
-    _reorderDragView.layer.shadowOpacity = 0.5;
-    _reorderDragView.layer.shadowOffset = CGSizeMake(0, 0);
+    _reorderDragView.layer.shadowColor = [UIColor clearColor].CGColor;
+//    _reorderDragView.layer.shadowRadius = 2;
+//    _reorderDragView.layer.shadowOpacity = 0.5;
+//    _reorderDragView.layer.shadowOffset = CGSizeMake(0, 0);
     _reorderDragView.layer.masksToBounds = NO;
     
     // Data Source forwarding
