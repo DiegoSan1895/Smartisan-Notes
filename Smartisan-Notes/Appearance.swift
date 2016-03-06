@@ -8,4 +8,7 @@
 
 import UIKit
 
+struct Colors{
+    static let textColor = UIColor(red:0.49, green:0.31, blue:0.1, alpha:1)
+}
 

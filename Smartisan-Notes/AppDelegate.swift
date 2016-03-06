@@ -28,8 +28,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     func customerAppearance(){
         UINavigationBar.appearance().setBackgroundImage(UIImage(named: "titlebar_bg"), forBarMetrics: .Default) 
         UINavigationBar.appearance().backIndicatorImage = UIImage(named: "btn_bg_p")
-        UITextView.appearance().tintColor = UIColor(red:0.49, green:0.31, blue:0.1, alpha:1)
-        UITextView.appearance().textColor = UIColor(red:0.49, green:0.31, blue:0.1, alpha:1)
+        UITextView.appearance().tintColor = Colors.textColor
+        UITextView.appearance().textColor = Colors.textColor
     }
 }
 
