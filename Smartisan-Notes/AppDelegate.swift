@@ -8,7 +8,7 @@
 
 import UIKit
 import VENTouchLock
-
+import IQKeyboardManagerSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
@@ -19,7 +19,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
         // set up VENTouchLock
         //VENTouchLock.sharedInstance().setKeychainService(TouchID.service, keychainAccount: TouchID.account, touchIDReason: TouchID.touchIDReason, passcodeAttemptLimit: TouchID.passcodeAttemptLimit, splashViewControllerClass: SubVENTouchLockSplashViewController.classForCoder())
+        
+        //IQKeyboardManager.sharedManager().enable = true
+        customerAppearance()
         return true
+    }
+    
+    func customerAppearance(){
+        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "titlebar_bg"), forBarMetrics: .Default) 
+        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "btn_bg_p")
+        UITextView.appearance().tintColor = UIColor(red:0.49, green:0.31, blue:0.1, alpha:1)
+        UITextView.appearance().textColor = UIColor(red:0.49, green:0.31, blue:0.1, alpha:1)
     }
 }
 

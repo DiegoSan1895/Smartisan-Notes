@@ -9,6 +9,7 @@ target 'Smartisan-Notes' do
     pod 'MonkeyKing'
     pod 'VENTouchLock'
     pod 'HPReorderTableView'
+    pod 'IQKeyboardManagerSwift'
 end
 
 target 'Smartisan-NotesTests' do

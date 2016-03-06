@@ -18,85 +18,113 @@
 	<string>1.0</string>
 	<key>CFBundleSignature</key>
 	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>1</string>
 	<key>CFBundleURLTypes</key>
 	<array>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>WeChat</string>
+			<string>notes</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wx4868b35061f87885</string>
+				<string>smartisannotes</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>QQ</string>
+			<string>weixin</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>tencent1104881792</string>
-				<string>QQ41db2880</string>
+				<string>wx084389157f21520f</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>Weibo</string>
+			<string>tencentopenapi</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>wb1772193724</string>
+				<string>tencent1101134210</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>com.readitlater</string>
+			<string>tencentApiIdentifier</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>pocketapp48363</string>
+				<string>tencent1101134210.content</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
 			<key>CFBundleURLName</key>
-			<string>Alipay</string>
+			<string>mqqapi</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>ap2016012101112529</string>
+				<string>QQ0003640E</string>
 			</array>
 		</dict>
 		<dict>
 			<key>CFBundleTypeRole</key>
 			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>weibo</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>itms-apps</string>
+				<string>wb3069170637</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>fb</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb1628957027352108</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>momo</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>mm4ddb7dac01ca6688</string>
 			</array>
 		</dict>
 	</array>
-	<key>CFBundleVersion</key>
-	<string>1</string>
 	<key>LSApplicationCategoryType</key>
 	<string></string>
-	<key>LSApplicationQueriesSchemes</key>
-	<array>
-		<string>taobao</string>
-		<string>wechat</string>
-		<string>weixin</string>
-		<string>weibosdk</string>
-		<string>mqqapi</string>
-		<string>smartisan-calendar</string>
-		<string>smartisan-clock</string>
-		<string>huan-xi-yun-tong-bu-gong-ju</string>
-	</array>
 	<key>LSRequiresIPhoneOS</key>
 	<true/>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>sinaweibohd</string>
+		<string>sinaweibo</string>
+		<string>weibosdk</string>
+		<string>weixin</string>
+		<string>mqq</string>
+		<string>mqqopensdkapiV2</string>
+		<string>mqqbrowser</string>
+		<string>mqqapi</string>
+		<string>fbauth2</string>
+		<string>mqqapi</string>
+		<string>smartisancalendar</string>
+		<string>smartisanclock</string>
+		<string>smartisansync</string>
+		<string>smartisansync</string>
+		<string>momochat</string>
+	</array>
 	<key>NSAppTransportSecurity</key>
 	<dict>
 		<key>NSAllowsArbitraryLoads</key>

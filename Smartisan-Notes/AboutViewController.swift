@@ -10,6 +10,7 @@ import UIKit
 import SafariServices
 import MessageUI
 import VENTouchLock
+import StoreKit
 
 class AboutViewController: UITableViewController {
     
@@ -118,6 +119,8 @@ class AboutViewController: UITableViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         //setSmartisanAppsOpenOrGetButtons()
+        
+
     }
     private func setSmartisanAppsOpenOrGetButtons(){
         // 1.
@@ -176,7 +179,7 @@ class AboutViewController: UITableViewController {
 
 // MARK: - DataSourceAndDelegate
 // MARK: - ---------------------
-extension AboutViewController {
+extension AboutViewController: SKStoreProductViewControllerDelegate {
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if section == 6 {
             let footerView = UIView(frame: CGRect(origin: CGPointZero, size: CGSize(width: self.tableView.bounds.width, height: 160)))
@@ -199,11 +202,30 @@ extension AboutViewController {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 3{
             if indexPath.row == 1{
-                UIApplication.sharedApplication().openURL(AppItunsURL.clockURL)
+                let storeProductVC = SKStoreProductViewController()
+                storeProductVC.delegate = self
+                
+                storeProductVC.loadProductWithParameters([SKStoreProductParameterITunesItemIdentifier: 867934588], completionBlock: { (success, error) -> Void in
+                    
+                    if success {
+                        self.presentViewController(storeProductVC, animated: false, completion: nil)
+                    }
+                })
             }
             if indexPath.row == 2{
                 sendEmailForAdvices()
             }
+        }
+    }
+    
+    override func tableView(tableView: UITableView, willDeselectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
+        tableView.deselectRowAtIndexPath(indexPath, animated: false)
+        return nil
+    }
+    
+    func productViewControllerDidFinish(viewController: SKStoreProductViewController) {
+        viewController.dismissViewControllerAnimated(true) { () -> Void in
+            
         }
     }
 }

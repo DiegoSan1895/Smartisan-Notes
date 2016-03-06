@@ -25,6 +25,7 @@
 		BD0BEC851C86DC43005580EC /* NotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0BEC831C86DC43005580EC /* NotesTableViewCell.xib */; };
 		BD0BEC871C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC861C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift */; };
 		BD0BEC891C872486005580EC /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC881C872486005580EC /* WriteViewController.swift */; };
+		BD1CCB8E1C8C045500E9FA8D /* ContentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1CCB8D1C8C045500E9FA8D /* ContentViewController.swift */; };
 		BD4C3DD31C8744B7004DB2A4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */; };
 		BD5F33C61C8AFF0600223364 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C51C8AFF0600223364 /* Async.swift */; };
 		BD5F33C81C8B09FD00223364 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C71C8B09FD00223364 /* Extension.swift */; };
@@ -32,7 +33,7 @@
 		BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */; };
 		BD9AB9DA1C885F29007C11FE /* CopyFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */; };
 		BD9ABA0E1C886280007C11FE /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9ABA0D1C886280007C11FE /* SpringAnimation.swift */; };
-		BD9E788E1C893973006ED8CB /* Configs.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E788D1C893973006ED8CB /* Configs.swift */; };
+		BD9E788E1C893973006ED8CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E788D1C893973006ED8CB /* Constants.swift */; };
 		BD9E78A41C897EBE006ED8CB /* TouchID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78A31C897EBE006ED8CB /* TouchID.swift */; };
 		BD9E78A61C898094006ED8CB /* SetCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78A51C898094006ED8CB /* SetCodeViewController.swift */; };
 		BD9E78AA1C89AE9E006ED8CB /* statement.html in Resources */ = {isa = PBXBuildFile; fileRef = BD9E78A91C89AE9E006ED8CB /* statement.html */; };
@@ -96,6 +97,7 @@
 		BD0BEC831C86DC43005580EC /* NotesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesTableViewCell.xib; sourceTree = "<group>"; };
 		BD0BEC861C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVCDataSourceAndDelegate.swift; sourceTree = "<group>"; };
 		BD0BEC881C872486005580EC /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		BD1CCB8D1C8C045500E9FA8D /* ContentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentViewController.swift; sourceTree = "<group>"; };
 		BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		BD5F33C51C8AFF0600223364 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		BD5F33C71C8B09FD00223364 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
@@ -103,7 +105,7 @@
 		BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownTableViewController.swift; sourceTree = "<group>"; };
 		BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyFooterViewController.swift; sourceTree = "<group>"; };
 		BD9ABA0D1C886280007C11FE /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
-		BD9E788D1C893973006ED8CB /* Configs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Configs.swift; sourceTree = "<group>"; };
+		BD9E788D1C893973006ED8CB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BD9E78A31C897EBE006ED8CB /* TouchID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchID.swift; sourceTree = "<group>"; };
 		BD9E78A51C898094006ED8CB /* SetCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCodeViewController.swift; sourceTree = "<group>"; };
 		BD9E78A91C89AE9E006ED8CB /* statement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = statement.html; sourceTree = "<group>"; };
@@ -264,6 +266,7 @@
 				BD0BEC771C8682D1005580EC /* HomeViewController.swift */,
 				BD0BEC861C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift */,
 				BD0BEC881C872486005580EC /* WriteViewController.swift */,
+				BD1CCB8D1C8C045500E9FA8D /* ContentViewController.swift */,
 				BD9AB9D71C87D8DE007C11FE /* SettingsVC */,
 			);
 			name = Controller;
@@ -273,7 +276,7 @@
 			isa = PBXGroup;
 			children = (
 				BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */,
-				BD9E788D1C893973006ED8CB /* Configs.swift */,
+				BD9E788D1C893973006ED8CB /* Constants.swift */,
 				BD9AB9D31C87D472007C11FE /* SelectedFooterTableViewController.swift */,
 				BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */,
 				BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */,
@@ -483,7 +486,7 @@
 			files = (
 				BD9E78AC1C89AF77006ED8CB /* UEAdjustmentViewController.swift in Sources */,
 				BD9AB9DA1C885F29007C11FE /* CopyFooterViewController.swift in Sources */,
-				BD9E788E1C893973006ED8CB /* Configs.swift in Sources */,
+				BD9E788E1C893973006ED8CB /* Constants.swift in Sources */,
 				BD0BEC891C872486005580EC /* WriteViewController.swift in Sources */,
 				BD9AB9D41C87D472007C11FE /* SelectedFooterTableViewController.swift in Sources */,
 				BD0BEC781C8682D1005580EC /* HomeViewController.swift in Sources */,
@@ -494,6 +497,7 @@
 				BD9ABA0E1C886280007C11FE /* SpringAnimation.swift in Sources */,
 				BD9E78A41C897EBE006ED8CB /* TouchID.swift in Sources */,
 				BD0BEBC41C867376005580EC /* AppDelegate.swift in Sources */,
+				BD1CCB8E1C8C045500E9FA8D /* ContentViewController.swift in Sources */,
 				BD0BEC841C86DC43005580EC /* NotesTableViewCell.swift in Sources */,
 				BD5F33C61C8AFF0600223364 /* Async.swift in Sources */,
 				BD5F33C81C8B09FD00223364 /* Extension.swift in Sources */,

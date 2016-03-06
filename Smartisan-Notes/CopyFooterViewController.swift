@@ -47,6 +47,7 @@ class CopyFooterViewController: UIViewController {
         let aboutVC = nav.topViewController as! AboutViewController
         self.delegate = aboutVC
         
+        
         let tapGesture = UITapGestureRecognizer(target: self, action: "giveUpButtonDidPressed:")
         self.backGroundView.addGestureRecognizer(tapGesture)
     }

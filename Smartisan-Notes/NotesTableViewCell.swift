@@ -79,6 +79,7 @@ class NotesTableViewCell: UITableViewCell {
         // 2.
         longGesture = UILongPressGestureRecognizer(target: self, action: "longGestureStart")
         //self.addGestureRecognizer(longGesture)
+        
     }
     func swipeAnimation() {
         

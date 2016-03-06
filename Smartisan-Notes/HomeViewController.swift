@@ -11,14 +11,14 @@ import RealmSwift
 
 let cellIdentifier = "NotesCell"
 let writeSegueIdentifier = "writeNote"
-
+let contentSequeIdentifier = "showContent"
 
 class HomeViewController: UIViewController {
     
     // MARK: - properties
     let realm = try! Realm()
     lazy var notes: Results<Notes> = {
-        self.realm.objects(Notes)
+        self.realm.objects(Notes).sorted("created", ascending: false)
     }()
     
     @IBOutlet weak var tableView: UITableView!
@@ -33,6 +33,11 @@ class HomeViewController: UIViewController {
         self.tableView.panGestureRecognizer.addTarget(self, action: "startToScroll")
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tableView.reloadData()
+    }
     // set the cell to normal state when scroll
     func startToScroll(){
         let wrapperView = self.tableView.subviews.first

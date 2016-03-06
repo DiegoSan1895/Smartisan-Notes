@@ -86,6 +86,7 @@ strip_invalid_archs() {
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Smartisan-Notes/HPReorderTableView.framework"
   install_framework "Pods-Smartisan-Notes/IBAnimatable.framework"
+  install_framework "Pods-Smartisan-Notes/IQKeyboardManagerSwift.framework"
   install_framework "Pods-Smartisan-Notes/MonkeyKing.framework"
   install_framework "Pods-Smartisan-Notes/SSKeychain.framework"
   install_framework "Pods-Smartisan-Notes/VENTouchLock.framework"
@@ -93,6 +94,7 @@ fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Smartisan-Notes/HPReorderTableView.framework"
   install_framework "Pods-Smartisan-Notes/IBAnimatable.framework"
+  install_framework "Pods-Smartisan-Notes/IQKeyboardManagerSwift.framework"
   install_framework "Pods-Smartisan-Notes/MonkeyKing.framework"
   install_framework "Pods-Smartisan-Notes/SSKeychain.framework"
   install_framework "Pods-Smartisan-Notes/VENTouchLock.framework"
