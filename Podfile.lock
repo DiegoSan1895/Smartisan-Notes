@@ -1,5 +1,6 @@
 PODS:
   - CXAlertView (1.1.0)
+  - DateTools (1.7.0)
   - HPReorderTableView (0.2)
   - IBAnimatable (1.2)
   - IQKeyboardManagerSwift (4.0.0)
@@ -10,6 +11,7 @@ PODS:
 
 DEPENDENCIES:
   - CXAlertView
+  - DateTools
   - HPReorderTableView
   - IBAnimatable
   - IQKeyboardManagerSwift
@@ -18,6 +20,7 @@ DEPENDENCIES:
 
 SPEC CHECKSUMS:
   CXAlertView: 7387ca9af81796ab22d26ff2fc3cfcb082f3ee09
+  DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   HPReorderTableView: fbecadc7f8b2d5a138d976aa5fe6fbb09524022a
   IBAnimatable: bcebfaf34b041949da5ed668ac5ab2e28a4b2357
   IQKeyboardManagerSwift: ede2a27b4e1ce053d03073b9c7fa439322f5e405

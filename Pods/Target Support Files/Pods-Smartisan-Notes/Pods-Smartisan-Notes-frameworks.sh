@@ -85,6 +85,7 @@ strip_invalid_archs() {
 
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Smartisan-Notes/CXAlertView.framework"
+  install_framework "Pods-Smartisan-Notes/DateTools.framework"
   install_framework "Pods-Smartisan-Notes/HPReorderTableView.framework"
   install_framework "Pods-Smartisan-Notes/IBAnimatable.framework"
   install_framework "Pods-Smartisan-Notes/IQKeyboardManagerSwift.framework"
@@ -94,6 +95,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Smartisan-Notes/CXAlertView.framework"
+  install_framework "Pods-Smartisan-Notes/DateTools.framework"
   install_framework "Pods-Smartisan-Notes/HPReorderTableView.framework"
   install_framework "Pods-Smartisan-Notes/IBAnimatable.framework"
   install_framework "Pods-Smartisan-Notes/IQKeyboardManagerSwift.framework"

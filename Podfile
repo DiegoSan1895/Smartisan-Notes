@@ -12,6 +12,7 @@ target 'Smartisan-Notes' do
     pod 'IQKeyboardManagerSwift'
     #pod 'RSKGrowingTextView'
     pod 'CXAlertView'
+    pod 'DateTools'
 end
 
 target 'Smartisan-NotesTests' do
