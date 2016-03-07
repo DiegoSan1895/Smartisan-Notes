@@ -25,6 +25,8 @@
 		BD0BEC851C86DC43005580EC /* NotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0BEC831C86DC43005580EC /* NotesTableViewCell.xib */; };
 		BD0BEC871C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC861C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift */; };
 		BD0BEC891C872486005580EC /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC881C872486005580EC /* WriteViewController.swift */; };
+		BD1003BE1C8D99F500C00C15 /* UEAdjustmentViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1003BD1C8D99F500C00C15 /* UEAdjustmentViewController2.swift */; };
+		BD1003C01C8D9A9400C00C15 /* ResuseFunctions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1003BF1C8D9A9400C00C15 /* ResuseFunctions.swift */; };
 		BD4C3DD31C8744B7004DB2A4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */; };
 		BD5F33C61C8AFF0600223364 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C51C8AFF0600223364 /* Async.swift */; };
 		BD5F33C81C8B09FD00223364 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C71C8B09FD00223364 /* Appearance.swift */; };
@@ -96,6 +98,8 @@
 		BD0BEC831C86DC43005580EC /* NotesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesTableViewCell.xib; sourceTree = "<group>"; };
 		BD0BEC861C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVCDataSourceAndDelegate.swift; sourceTree = "<group>"; };
 		BD0BEC881C872486005580EC /* WriteViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		BD1003BD1C8D99F500C00C15 /* UEAdjustmentViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UEAdjustmentViewController2.swift; sourceTree = "<group>"; };
+		BD1003BF1C8D9A9400C00C15 /* ResuseFunctions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResuseFunctions.swift; sourceTree = "<group>"; };
 		BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		BD5F33C51C8AFF0600223364 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		BD5F33C71C8B09FD00223364 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
@@ -280,6 +284,7 @@
 				BDCE36CA1C8915250080B664 /* ShareViewController.swift */,
 				BD9E78A51C898094006ED8CB /* SetCodeViewController.swift */,
 				BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */,
+				BD1003BD1C8D99F500C00C15 /* UEAdjustmentViewController2.swift */,
 				BD0BCFB61C8A6724009D0B6F /* TouchID and KeyChain */,
 			);
 			name = SettingsVC;
@@ -291,6 +296,7 @@
 				BD9E78AE1C89D68A006ED8CB /* NSString+GetDeviceName.h */,
 				BD9E78AF1C89D68A006ED8CB /* NSString+GetDeviceName.m */,
 				BD5F33C51C8AFF0600223364 /* Async.swift */,
+				BD1003BF1C8D9A9400C00C15 /* ResuseFunctions.swift */,
 			);
 			name = Support;
 			sourceTree = "<group>";
@@ -499,7 +505,9 @@
 				BD5F33C81C8B09FD00223364 /* Appearance.swift in Sources */,
 				BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */,
 				BD0BCFB81C8AF65F009D0B6F /* SubVENTouchLockSplashViewController.swift in Sources */,
+				BD1003C01C8D9A9400C00C15 /* ResuseFunctions.swift in Sources */,
 				BD9E78B01C89D68A006ED8CB /* NSString+GetDeviceName.m in Sources */,
+				BD1003BE1C8D99F500C00C15 /* UEAdjustmentViewController2.swift in Sources */,
 				BD9E78A61C898094006ED8CB /* SetCodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,7 +10,8 @@ target 'Smartisan-Notes' do
     pod 'VENTouchLock'
     pod 'HPReorderTableView'
     pod 'IQKeyboardManagerSwift'
-    pod 'RSKGrowingTextView'
+    #pod 'RSKGrowingTextView'
+    pod 'CXAlertView'
 end
 
 target 'Smartisan-NotesTests' do

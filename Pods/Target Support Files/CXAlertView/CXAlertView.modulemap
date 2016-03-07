@@ -1,0 +1,6 @@
+framework module CXAlertView {
+  umbrella header "CXAlertView-umbrella.h"
+
+  export *
+  module * { export * }
+}

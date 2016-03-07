@@ -25,6 +25,8 @@ class WriteViewController: UIViewController {
     
     let realm = try! Realm()
     var stared: Bool = false
+    
+    var state: State = State.write
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()

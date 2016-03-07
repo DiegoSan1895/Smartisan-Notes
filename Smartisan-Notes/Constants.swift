@@ -9,6 +9,9 @@
 
 import UIKit
 
+let isFirstOpenSmartisanNotes = "isFirstOpenSmartisanNotes"
+let ueAgreeOrNot = "userAgreeToJoinUEPlan"
+let NSBundleURL = NSBundle.mainBundle().bundleURL
 
 struct AppURL {
     static let clockURL = NSURL(string: "notes://")!
