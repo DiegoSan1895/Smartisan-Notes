@@ -21,6 +21,7 @@ class NotesTableViewCell: UITableViewCell {
     @IBOutlet weak var clipImageView: UIImageView!
     @IBOutlet weak var staredButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var cameraImageView: UIImageView!
     
     // MARK: - properties
     var isStared: Bool = false {

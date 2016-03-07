@@ -9,7 +9,7 @@
 import UIKit
 import VENTouchLock
 import IQKeyboardManagerSwift
-
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
@@ -23,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
         IQKeyboardManager.sharedManager().enable = true
         customerAppearance()
+        migrateRealmDataBase()
         
         return true
     }
@@ -35,7 +36,37 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         UITextView.appearance().textColor = Colors.textColor
     }
     
-
+    func migrateRealmDataBase(){
+        let config = Realm.Configuration(path: nil,
+            inMemoryIdentifier: "realm",
+            encryptionKey: nil,
+            readOnly: false,
+            
+            // Set the new schema version. This must be greater than the previously used
+            // version (if you've never set a schema version before, the version is 0).
+            schemaVersion: 1,
+            
+            // Set the block which will be called automatically when opening a Realm with
+            // a schema version lower than the one set above
+            migrationBlock: { (migration, oldSchemaVersion) -> Void in
+                
+            if oldSchemaVersion < 1{
+                
+                migration.enumerate(Notes.className(), { (oldObject, newObject) -> Void in
+                    
+                    newObject!["hasPhoto"] = false
+                })}
+                
+            }, objectTypes: nil)
+        
+        // Tell Realm to use this new configuraiton object for the default Realm
+        Realm.Configuration.defaultConfiguration = config
+        
+        // Now that we've told Realm how to handle the schema change, opening the file
+        // will automatically perform the migration
+        let realm = try! Realm()
+        print(realm)
+    }
 }
 
 

@@ -19,6 +19,7 @@ class HomeViewController: UIViewController {
     
     // MARK: - properties
     let realm = try! Realm()
+    
     lazy var notes: Results<Notes> = {
         self.realm.objects(Notes).sorted("created", ascending: false)
     }()
