@@ -13,6 +13,8 @@ target 'Smartisan-Notes' do
     #pod 'RSKGrowingTextView'
     pod 'CXAlertView'
     pod 'DateTools'
+    pod 'SECoreTextView'
+    #pod 'UITableView+FDTemplateLayoutCell'
 end
 
 target 'Smartisan-NotesTests' do

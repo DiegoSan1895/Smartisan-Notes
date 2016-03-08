@@ -1,0 +1,6 @@
+framework module SECoreTextView {
+  umbrella header "SECoreTextView-umbrella.h"
+
+  export *
+  module * { export * }
+}

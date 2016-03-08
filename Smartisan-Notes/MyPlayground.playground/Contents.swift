@@ -31,3 +31,6 @@ extension Int{
 }
 
 NSDate().weekday().weekdayString()
+
+let string = "想我我啊是的噶傻大个"
+NSUserDefaults.standardUserDefaults().boolForKey("dfhs")
