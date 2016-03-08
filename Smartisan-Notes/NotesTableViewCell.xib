@@ -45,34 +45,47 @@
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="22天前 10:13 2016年2月13日" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xi3-K0-ftf">
-                                <rect key="frame" x="40" y="10" width="135" height="12"/>
+                                <rect key="frame" x="40" y="12" width="110" height="10"/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <color key="textColor" red="0.2417846132286996" green="0.2417846132286996" blue="0.2417846132286996" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyz-xt-UQH">
-                                <rect key="frame" x="40" y="44" width="301" height="14.5"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xyz-xt-UQH">
+                                <rect key="frame" x="40" y="44" width="261" height="14.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="icon_photo" translatesAutoresizingMaskIntoConstraints="NO" id="iWv-73-FL8">
+                                <rect key="frame" x="305" y="36" width="44" height="30"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <gestureRecognizers/>
                         <constraints>
                             <constraint firstItem="7kh-Ux-kDT" firstAttribute="leading" secondItem="6RY-co-7fS" secondAttribute="leading" id="0TA-pI-lwh"/>
+                            <constraint firstItem="iWv-73-FL8" firstAttribute="leading" secondItem="xyz-xt-UQH" secondAttribute="trailing" constant="4" id="9Il-YB-lfe"/>
                             <constraint firstAttribute="trailing" secondItem="7kh-Ux-kDT" secondAttribute="trailing" id="CSf-wj-e2b"/>
                             <constraint firstItem="xi3-K0-ftf" firstAttribute="leading" secondItem="6RY-co-7fS" secondAttribute="leading" constant="40" id="FoJ-KW-iI2"/>
-                            <constraint firstAttribute="trailing" secondItem="xyz-xt-UQH" secondAttribute="trailing" constant="14" id="Poy-qT-3hQ"/>
+                            <constraint firstAttribute="trailing" secondItem="xyz-xt-UQH" secondAttribute="trailing" constant="34" id="Poy-qT-3hQ"/>
                             <constraint firstItem="xyz-xt-UQH" firstAttribute="leading" secondItem="xi3-K0-ftf" secondAttribute="leading" id="PvB-NS-ghd"/>
+                            <constraint firstAttribute="trailing" secondItem="iWv-73-FL8" secondAttribute="trailing" constant="6" id="Y4X-eW-oxR"/>
                             <constraint firstAttribute="trailing" secondItem="fLX-Fe-TQg" secondAttribute="trailing" constant="6" id="ZUK-Tv-Ty9"/>
                             <constraint firstItem="7kh-Ux-kDT" firstAttribute="top" secondItem="6RY-co-7fS" secondAttribute="top" id="bVL-Id-WoS"/>
-                            <constraint firstItem="xi3-K0-ftf" firstAttribute="top" secondItem="6RY-co-7fS" secondAttribute="top" constant="10" id="c6r-Ou-9PR"/>
+                            <constraint firstItem="xi3-K0-ftf" firstAttribute="top" secondItem="6RY-co-7fS" secondAttribute="top" constant="12" id="c6r-Ou-9PR"/>
                             <constraint firstAttribute="bottom" secondItem="7kh-Ux-kDT" secondAttribute="bottom" id="gdt-0A-EA9"/>
+                            <constraint firstItem="iWv-73-FL8" firstAttribute="centerY" secondItem="xyz-xt-UQH" secondAttribute="centerY" id="ja2-pu-9SQ"/>
                             <constraint firstItem="fLX-Fe-TQg" firstAttribute="top" secondItem="6RY-co-7fS" secondAttribute="top" constant="-4" id="qoM-3U-lbk"/>
+                            <constraint firstItem="iWv-73-FL8" firstAttribute="leading" secondItem="fLX-Fe-TQg" secondAttribute="leading" id="vqv-fQ-0QT"/>
                             <constraint firstAttribute="bottom" secondItem="xyz-xt-UQH" secondAttribute="bottom" constant="16.5" id="xqU-31-szy"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Poy-qT-3hQ"/>
+                                <exclude reference="vqv-fQ-0QT"/>
+                            </mask>
+                        </variation>
                     </view>
                     <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="clip_n" translatesAutoresizingMaskIntoConstraints="NO" id="Js4-fo-zn0">
                         <rect key="frame" x="0.0" y="0.0" width="26" height="79.5"/>
@@ -94,6 +107,7 @@
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
+                <outlet property="cameraImageView" destination="iWv-73-FL8" id="god-Aw-V3L"/>
                 <outlet property="clipImageView" destination="Js4-fo-zn0" id="MIH-oA-Zen"/>
                 <outlet property="containerView" destination="6RY-co-7fS" id="pfI-gQ-T2o"/>
                 <outlet property="contentLabel" destination="xyz-xt-UQH" id="RsX-aA-yVs"/>
@@ -101,11 +115,12 @@
                 <outlet property="deleteButton" destination="Zmg-fC-HIJ" id="WvA-3Q-vNn"/>
                 <outlet property="staredButton" destination="fLX-Fe-TQg" id="1zv-Dv-HnK"/>
             </connections>
-            <point key="canvasLocation" x="884.5" y="551.5"/>
+            <point key="canvasLocation" x="884.5" y="551"/>
         </tableViewCell>
     </objects>
     <resources>
         <image name="clip_n" width="26" height="66"/>
+        <image name="icon_photo" width="44" height="30"/>
         <image name="pad_n" width="320" height="66"/>
         <image name="slider_delete_n" width="161" height="66"/>
         <image name="star_big_normal" width="44" height="37"/>

@@ -8,20 +8,49 @@
 
 import UIKit
 import RealmSwift
+import CXAlertView
 
 let cellIdentifier = "NotesCell"
 let writeSegueIdentifier = "writeNote"
-
+let contentSequeIdentifier = "showContent"
+let showUEVCIdentifire = "showUEVC"
 
 class HomeViewController: UIViewController {
     
     // MARK: - properties
     let realm = try! Realm()
+    
     lazy var notes: Results<Notes> = {
-        self.realm.objects(Notes)
+        self.realm.objects(Notes).sorted("created", ascending: false)
     }()
     
+    var alertView: CXAlertView!
     @IBOutlet weak var tableView: UITableView!
+    
+    // CXAlertView
+    @IBOutlet weak var alertContentView: UIView!
+    @IBOutlet weak var checkButton: UIButton!
+    var isChecked: Bool = true
+    
+    @IBAction func ueAdjustmentButtonDidPressed(sender: UIButton) {
+        // 1.
+        alertView.dismiss()
+        // 2.
+        self.performSegueWithIdentifier(showUEVCIdentifire, sender: self)
+    }
+    @IBAction func checkToAgreeUEPlanButtonDidPressed(sender: UIButton) {
+        
+
+        if !isChecked{
+            checkButton.setImage(UIImage(named: "icon_check"), forState: .Normal)
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: ueAgreeOrNot)
+            isChecked = true
+        }else{
+            checkButton.setImage(UIImage(named: "icon_uncheck"), forState: .Normal)
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: ueAgreeOrNot)
+            isChecked = false
+        }
+    }
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -33,6 +62,27 @@ class HomeViewController: UIViewController {
         self.tableView.panGestureRecognizer.addTarget(self, action: "startToScroll")
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.tableView.reloadData()
+    }
+    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        if NSUserDefaults.standardUserDefaults().boolForKey(isFirstOpenSmartisanNotes){
+            alertView = CXAlertView(title: "用户体验改进计划", contentView: alertContentView, cancelButtonTitle: nil)
+            alertView.titleFont = UIFont.boldSystemFontOfSize(16)
+            alertView.cancelButtonFont = UIFont.boldSystemFontOfSize(16)
+            alertView.addButtonWithTitle("确定", type: .Cancel, handler: { (alertView, buttonItem) -> Void in
+                NSUserDefaults.standardUserDefaults().setBool(false, forKey: isFirstOpenSmartisanNotes)
+                
+                alertView.dismiss()
+            })
+            alertView.show()
+        }
+    }
     // set the cell to normal state when scroll
     func startToScroll(){
         let wrapperView = self.tableView.subviews.first

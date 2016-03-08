@@ -21,6 +21,16 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
         
         return cell
     }
+    
+    // MARK: - delegate
+    func tableView(tableView: UITableView, moveRowAtIndexPath sourceIndexPath: NSIndexPath, toIndexPath destinationIndexPath: NSIndexPath) {
+        // change the dataSource
+        
+    }
+    
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        performSegueWithIdentifier(contentSequeIdentifier, sender: self)
+    }
 }
 
 

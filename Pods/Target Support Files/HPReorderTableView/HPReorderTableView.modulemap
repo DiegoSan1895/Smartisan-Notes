@@ -1,0 +1,6 @@
+framework module HPReorderTableView {
+  umbrella header "HPReorderTableView-umbrella.h"
+
+  export *
+  module * { export * }
+}

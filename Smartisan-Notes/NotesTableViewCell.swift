@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import DateTools
 
 protocol NotesTableViewCellDelegate: class {
     func slideToDelete(cell: NotesTableViewCell)
@@ -21,6 +22,7 @@ class NotesTableViewCell: UITableViewCell {
     @IBOutlet weak var clipImageView: UIImageView!
     @IBOutlet weak var staredButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
+    @IBOutlet weak var cameraImageView: UIImageView!
     
     // MARK: - properties
     var isStared: Bool = false {
@@ -40,7 +42,24 @@ class NotesTableViewCell: UITableViewCell {
             if let note = note{
                 self.contentLabel.text = note.contents
                 self.isStared = note.stared
-                self.createdTimeLabel.text = note.created.description
+                
+                // create the time string with format
+                let date = note.created
+                var day: String = ""
+                
+                switch date.daysAgo(){
+                case 0:
+                    day = "今天"
+                case 1:
+                    day = "昨天"
+                case 2..<7:
+                    day = "\((date.weekday()-1).weekdayString())"
+                default:
+                    day = "\(date.daysAgo())天前"
+                }
+                
+                let timeString = "\(day) \(date.hour()):\(date.minute())  \(date.year())年\(date.month())月\(date.day())日"
+                self.createdTimeLabel.text = timeString
             }
         }
     }
@@ -78,7 +97,8 @@ class NotesTableViewCell: UITableViewCell {
         
         // 2.
         longGesture = UILongPressGestureRecognizer(target: self, action: "longGestureStart")
-        self.addGestureRecognizer(longGesture)
+        //self.addGestureRecognizer(longGesture)
+        
     }
     func swipeAnimation() {
         

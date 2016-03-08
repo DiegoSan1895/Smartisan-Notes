@@ -8,6 +8,11 @@ target 'Smartisan-Notes' do
     #pod 'Spring'
     pod 'MonkeyKing'
     pod 'VENTouchLock'
+    pod 'HPReorderTableView'
+    pod 'IQKeyboardManagerSwift'
+    #pod 'RSKGrowingTextView'
+    pod 'CXAlertView'
+    pod 'DateTools'
 end
 
 target 'Smartisan-NotesTests' do

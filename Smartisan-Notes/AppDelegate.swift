@@ -8,7 +8,8 @@
 
 import UIKit
 import VENTouchLock
-
+import IQKeyboardManagerSwift
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
@@ -19,7 +20,48 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
         
         // set up VENTouchLock
         //VENTouchLock.sharedInstance().setKeychainService(TouchID.service, keychainAccount: TouchID.account, touchIDReason: TouchID.touchIDReason, passcodeAttemptLimit: TouchID.passcodeAttemptLimit, splashViewControllerClass: SubVENTouchLockSplashViewController.classForCoder())
+        
+        IQKeyboardManager.sharedManager().enable = true
+        customerAppearance()
+        migrateRealmDataBase()
+        
         return true
+    }
+    
+    func customerAppearance(){
+//        UINavigationBar.appearance().setBackgroundImage(UIImage(named: "titlebar_bg"), forBarMetrics: .Default) 
+//        UINavigationBar.appearance().backIndicatorImage = UIImage(named: "btn_bg_p")
+        
+        UITextView.appearance().tintColor = Colors.textColor
+        UITextView.appearance().textColor = Colors.textColor
+    }
+    
+    func migrateRealmDataBase(){
+        let config = Realm.Configuration(path: nil,
+            inMemoryIdentifier: "realm",
+            encryptionKey: nil,
+            readOnly: false,
+            
+            // Set the new schema version. This must be greater than the previously used
+            // version (if you've never set a schema version before, the version is 0).
+            schemaVersion: 1,
+            
+            // Set the block which will be called automatically when opening a Realm with
+            // a schema version lower than the one set above
+            migrationBlock: { (migration, oldSchemaVersion) -> Void in
+                
+            if oldSchemaVersion < 1{
+                
+                migration.enumerate(Notes.className(), { (oldObject, newObject) -> Void in
+                    
+                    newObject!["hasPhoto"] = false
+                })}
+                
+            }, objectTypes: nil)
+        
+        // Tell Realm to use this new configuraiton object for the default Realm
+        Realm.Configuration.defaultConfiguration = config
+    
     }
 }
 

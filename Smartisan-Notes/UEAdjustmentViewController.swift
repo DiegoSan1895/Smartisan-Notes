@@ -8,33 +8,32 @@
 
 import UIKit
 
-let NSBundleURL = NSBundle.mainBundle().bundleURL
 class UEAdjustmentViewController: UIViewController {
 
     @IBOutlet weak var webView: UIWebView!
-
+    @IBOutlet weak var switchButton: UISwitch!
     @IBAction func switchToJoinUE(sender: UISwitch) {
+        if sender.on{
+            NSUserDefaults.standardUserDefaults().setBool(true, forKey: ueAgreeOrNot)
+        }else{
+            NSUserDefaults.standardUserDefaults().setBool(false, forKey: ueAgreeOrNot)
+        }
     }
     
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        loadHTMLForWebView()
+        loadHTMLForWebView(self.webView)
+        setUpUI()
     }
     
-    func loadHTMLForWebView(){
-        
-        let mainHTML = NSBundle.mainBundle().URLForResource("statement", withExtension: "html")
-        do {
-            let contents = try NSString(contentsOfURL: mainHTML!, encoding: NSUTF8StringEncoding)
-            // use this method to load local HTML file, don't use loadRequest:
-            self.webView.loadHTMLString(contents as String, baseURL: NSBundleURL)
-            self.webView.scrollView.backgroundColor = UIColor(red:0.4, green:0.45, blue:0.49, alpha:1)
-            self.webView.scrollView.contentInset = UIEdgeInsets(top: -64, left: 0, bottom: 0, right: 0)
-            self.webView.backgroundColor = UIColor.whiteColor()
-            
-        }catch let error as NSError{
-            print(error.localizedDescription)
+
+    func setUpUI(){
+        if NSUserDefaults.standardUserDefaults().boolForKey(ueAgreeOrNot){
+            switchButton.setOn(true, animated: false)
+        }else{
+            switchButton.setOn(false, animated: false)
         }
     }
 }
