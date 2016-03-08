@@ -29,6 +29,11 @@ extension HomeViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        
+        if let cell = tableView.cellForRowAtIndexPath(indexPath) as? NotesTableViewCell{
+            selectedCell = cell
+        }
+        
         performSegueWithIdentifier(contentSequeIdentifier, sender: self)
     }
 }
@@ -57,6 +62,18 @@ extension HomeViewController: NotesTableViewCellDelegate {
                 cell.setToNormalState()
             }
         default: return
+        }
+    }
+}
+
+// MARK: - segue
+
+extension HomeViewController{
+    override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
+        if segue.identifier == contentSequeIdentifier{
+            if let writeVC = segue.destinationViewController as? WriteViewController{
+                writeVC.note = selectedCell?.note
+            }
         }
     }
 }

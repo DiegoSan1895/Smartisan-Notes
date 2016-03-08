@@ -14,6 +14,7 @@ target 'Smartisan-Notes' do
     pod 'CXAlertView'
     pod 'DateTools'
     pod 'SECoreTextView'
+    #pod 'UITableView+FDTemplateLayoutCell'
 end
 
 target 'Smartisan-NotesTests' do

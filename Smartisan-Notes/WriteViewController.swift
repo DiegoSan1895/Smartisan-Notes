@@ -16,24 +16,37 @@ class WriteViewController: UIViewController {
         case view
     }
     // MARK:- IBOutlets
-    @IBOutlet weak var textView: UITextView!
-    @IBOutlet var textViewHeaderView: UIView!
 
+    @IBOutlet var tableViewHeaderView: UIView!
+    @IBOutlet weak var tableView: UITableView!
+    
+    // tableViewHeaderView
     @IBOutlet weak var timeLabel: UILabel!
     @IBOutlet weak var numberOfCharactersLabel: UILabel!
     @IBOutlet weak var staredButton: UIButton!
     
+    // navigationBar
+    @IBOutlet weak var cameraAndDeleteButton: UIButton!
+    @IBOutlet weak var doneAndShareButton: UIButton!
+    
     let realm = try! Realm()
     var stared: Bool = false
     
-    var state: State = State.write
+    var state: State?
+    
+    var note:Notes!
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpUI()
     }
-    
+    override func viewDidAppear(animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        
+    }
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
@@ -53,9 +66,8 @@ class WriteViewController: UIViewController {
             staredButton.setImage(UIImage(named: "star_big_normal"), forState: .Normal)
         }
     }
-    @IBAction func downButtonDidPressed(sender: UIButton) {
-        self.textView.resignFirstResponder()
-    }
+
+    
     // Appearance
     override func prefersStatusBarHidden() -> Bool {
         return false
@@ -66,31 +78,16 @@ class WriteViewController: UIViewController {
     
     // 
     func saveNote(){
-        if textView.text != ""{
-            try! realm.write({ () -> Void in
-                let newNote = Notes(stared: stared, created: NSDate(), contents: self.textView.text)
-                self.realm.add(newNote)
-            })
-        }
+
     }
     
     func setUpUI(){
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
-        self.textView.backgroundColor = UIColor(patternImage: UIImage(named: "note_paper_middle")!)
-        self.textView.textContainerInset = UIEdgeInsets(top: 54, left: 24, bottom: 450, right: 24)
-        
-        self.textViewHeaderView.frame = CGRect(x: 0, y: 0, width: self.view.frame.width, height: 44)
-        self.textView.addSubview(textViewHeaderView)
-        
-        self.textView.text = ""
-        self.textView.delegate = self
-        
+        self.tableView.backgroundColor = UIColor.clearColor()
         self.timeLabel.text = "        \(NSDate().description)"
+        
+        self.tableView.estimatedRowHeight = 500
+        //self.tableView.rowHeight = UITableViewAutomaticDimension
     }
 }
 
-extension WriteViewController: UITextViewDelegate{
-    func textViewDidChange(textView: UITextView) {
-        
-    }
-}

@@ -7,6 +7,7 @@ PODS:
   - MonkeyKing (0.9.1)
   - SECoreTextView (0.8.5)
   - SSKeychain (1.3.1)
+  - UITableView+FDTemplateLayoutCell (1.4)
   - VENTouchLock (1.11.0):
     - SSKeychain (~> 1.0)
 
@@ -18,6 +19,7 @@ DEPENDENCIES:
   - IQKeyboardManagerSwift
   - MonkeyKing
   - SECoreTextView
+  - UITableView+FDTemplateLayoutCell
   - VENTouchLock
 
 SPEC CHECKSUMS:
@@ -29,6 +31,7 @@ SPEC CHECKSUMS:
   MonkeyKing: 84d0f711a0e20eb104616d0b393a74efd5d9d9ad
   SECoreTextView: 5f3bedc0c9ffc2f4c109c37142f25c12f37368dd
   SSKeychain: 04c4ec40f4c3deda524e269bc76e5f30e638a174
+  UITableView+FDTemplateLayoutCell: 234e1582bcc4e18461af91155123bb96538ed030
   VENTouchLock: f3145d6fbff243d6692dfb1107b88db06dc216c9
 
 COCOAPODS: 0.39.0

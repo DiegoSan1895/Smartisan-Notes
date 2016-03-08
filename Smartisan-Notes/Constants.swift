@@ -9,7 +9,7 @@
 
 import UIKit
 
-let isFirstOpenSmartisanNotes = "isFirstOpenSmartisanNotes"
+let isNotFirstOpenSmartisanNotes = "isNotFirstOpenSmartisanNotes"
 let ueAgreeOrNot = "userAgreeToJoinUEPlan"
 let NSBundleURL = NSBundle.mainBundle().bundleURL
 

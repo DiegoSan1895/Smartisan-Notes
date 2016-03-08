@@ -32,6 +32,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var checkButton: UIButton!
     var isChecked: Bool = true
     
+    var selectedCell: NotesTableViewCell?
     @IBAction func ueAdjustmentButtonDidPressed(sender: UIButton) {
         // 1.
         alertView.dismiss()
@@ -52,6 +53,11 @@ class HomeViewController: UIViewController {
         }
     }
     
+    @IBAction func aboutButtonDidPressed(sender: UIButton) {
+    }
+    @IBAction func writeButtonDidPressed(sender: UIButton) {
+        performSegueWithIdentifier(writeSegueIdentifier, sender: self)
+    }
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -71,18 +77,21 @@ class HomeViewController: UIViewController {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        if NSUserDefaults.standardUserDefaults().boolForKey(isFirstOpenSmartisanNotes){
+        // if firstEnterApp, show the alertView
+        // NSUserDefaults.standardUserDefaults().boolForKey 默认是false
+        if !NSUserDefaults.standardUserDefaults().boolForKey(isNotFirstOpenSmartisanNotes){
             alertView = CXAlertView(title: "用户体验改进计划", contentView: alertContentView, cancelButtonTitle: nil)
             alertView.titleFont = UIFont.boldSystemFontOfSize(16)
             alertView.cancelButtonFont = UIFont.boldSystemFontOfSize(16)
             alertView.addButtonWithTitle("确定", type: .Cancel, handler: { (alertView, buttonItem) -> Void in
-                NSUserDefaults.standardUserDefaults().setBool(false, forKey: isFirstOpenSmartisanNotes)
+                NSUserDefaults.standardUserDefaults().setBool(true, forKey: isNotFirstOpenSmartisanNotes)
                 
                 alertView.dismiss()
             })
             alertView.show()
         }
     }
+    
     // set the cell to normal state when scroll
     func startToScroll(){
         let wrapperView = self.tableView.subviews.first
@@ -93,6 +102,7 @@ class HomeViewController: UIViewController {
             
         }
     }
+    
     // MARK: - private methods
     private func setUpViews() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
@@ -105,7 +115,7 @@ class HomeViewController: UIViewController {
             try! realm.write({ () -> Void in
                 // 3.
                 for _ in 0..<30 {
-                    let note = Notes(stared: false, created: NSDate(), contents: "不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行")
+                    let note = Notes(stared: false, created: NSDate(), contents: "不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行")
                     self.realm.add(note)
                 }
                 
@@ -125,6 +135,7 @@ class HomeViewController: UIViewController {
         
         return resultCells
     }
+    
     // MARK: - set statusBar
     override func prefersStatusBarHidden() -> Bool {
         return false
@@ -132,11 +143,7 @@ class HomeViewController: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
-    @IBAction func aboutButtonDidPressed(sender: UIButton) {
-    }
-    @IBAction func writeButtonDidPressed(sender: UIButton) {
-        performSegueWithIdentifier(writeSegueIdentifier, sender: self)
-    }
+
 }
 
 
