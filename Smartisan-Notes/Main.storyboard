@@ -218,10 +218,20 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="d6H-6k-sFY" userLabel="AboutButtton">
                                         <rect key="frame" x="323" y="3" width="44" height="44"/>
                                         <state key="normal" image="btn_done" backgroundImage="btn_bg_n"/>
+                                        <connections>
+                                            <action selector="doneAndShareButton:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="fGR-do-1YC"/>
+                                        </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdf-Si-ANu" userLabel="AboutButtton">
+                                    <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kdf-Si-ANu" userLabel="AboutButtton">
                                         <rect key="frame" x="271" y="3" width="44" height="44"/>
-                                        <state key="normal" image="btn_camera" backgroundImage="btn_bg_n"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="44" id="LJK-4U-WNS"/>
+                                            <constraint firstAttribute="height" constant="44" id="kc4-X0-QZx"/>
+                                        </constraints>
+                                        <state key="normal" image="btn_delete" backgroundImage="btn_bg_n"/>
+                                        <connections>
+                                            <action selector="cameraAndDeleteButtonDidPressed:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="YSw-h8-jwi"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -289,7 +299,7 @@
                                                         <constraint firstAttribute="height" constant="38" id="l6N-bw-jL7"/>
                                                     </constraints>
                                                 </view>
-                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPg-Wr-uYH" customClass="SETextView">
+                                                <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPg-Wr-uYH" customClass="SETextView">
                                                     <rect key="frame" x="26" y="50" width="329" height="442"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
@@ -339,9 +349,14 @@
                                     <outlet property="delegate" destination="NnY-Ur-g5t" id="z2d-yk-mJo"/>
                                 </connections>
                             </tableView>
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWv-Vh-gvC">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.67736181358381498" colorSpace="calibratedRGB"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="vWv-Vh-gvC" firstAttribute="top" secondItem="nOS-db-ehi" secondAttribute="bottom" id="0vO-jX-1Ur"/>
                             <constraint firstItem="fYq-QD-uVU" firstAttribute="top" secondItem="gxj-6b-xRk" secondAttribute="bottom" id="2az-ac-jU8"/>
                             <constraint firstAttribute="trailing" secondItem="3n5-7T-qng" secondAttribute="trailing" id="6EM-j1-HAc"/>
                             <constraint firstAttribute="trailing" secondItem="gxj-6b-xRk" secondAttribute="trailing" id="HH4-oG-qjj"/>
@@ -351,12 +366,23 @@
                             <constraint firstItem="gxj-6b-xRk" firstAttribute="top" secondItem="nOS-db-ehi" secondAttribute="bottom" constant="4" id="ask-zU-XFu"/>
                             <constraint firstItem="nOS-db-ehi" firstAttribute="leading" secondItem="D6z-Fo-qSb" secondAttribute="leading" id="exP-fp-NCq"/>
                             <constraint firstItem="gxj-6b-xRk" firstAttribute="leading" secondItem="D6z-Fo-qSb" secondAttribute="leading" id="k4m-H5-Xqr"/>
+                            <constraint firstAttribute="trailing" secondItem="vWv-Vh-gvC" secondAttribute="trailing" id="sO4-yD-nNe"/>
+                            <constraint firstItem="fYq-QD-uVU" firstAttribute="top" secondItem="vWv-Vh-gvC" secondAttribute="bottom" id="uwz-p9-Bem"/>
+                            <constraint firstItem="vWv-Vh-gvC" firstAttribute="leading" secondItem="D6z-Fo-qSb" secondAttribute="leading" id="wAY-gq-acL"/>
                             <constraint firstAttribute="trailing" secondItem="nOS-db-ehi" secondAttribute="trailing" id="xAQ-2w-wNs"/>
+                            <constraint firstItem="vWv-Vh-gvC" firstAttribute="top" secondItem="qiX-gH-uYw" secondAttribute="bottom" id="zc2-GI-iGR"/>
                         </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="0vO-jX-1Ur"/>
+                            </mask>
+                        </variation>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                     <connections>
+                        <outlet property="backGroundShadowView" destination="vWv-Vh-gvC" id="USx-uc-FX7"/>
                         <outlet property="cameraAndDeleteButton" destination="Kdf-Si-ANu" id="dtB-Fz-DkZ"/>
+                        <outlet property="chosePhotoFooterView" destination="kfb-MI-Ncj" id="rsa-fx-B54"/>
                         <outlet property="doneAndShareButton" destination="d6H-6k-sFY" id="Erd-qG-ss6"/>
                         <outlet property="numberOfCharactersLabel" destination="CM8-km-aF6" id="7eh-2U-4NG"/>
                         <outlet property="staredButton" destination="laT-dF-ULg" id="T1d-PV-1PX"/>
@@ -366,6 +392,94 @@
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ciD-zg-VAI" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <view contentMode="scaleToFill" id="kfb-MI-Ncj">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                    <subviews>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BRG-eQ-EdY">
+                            <rect key="frame" x="0.0" y="0.0" width="375" height="160"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0A1-GQ-ME3">
+                                    <rect key="frame" x="18" y="47" width="339" height="44"/>
+                                    <state key="normal" title="选择照片" backgroundImage="btn_menu_grey_n">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="chosePhotoButtonDidPressed:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="Qr6-Lw-Ira"/>
+                                        <action selector="copyButtonDidPressed:" destination="geN-jV-dAs" eventType="touchUpInside" id="Qj5-GC-h2c"/>
+                                    </connections>
+                                </button>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加照片" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMo-L1-cNA">
+                                    <rect key="frame" x="64" y="10" width="247" height="13.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpi-m6-uIt">
+                                    <rect key="frame" x="324" y="8" width="33" height="40"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                    <state key="normal" title="取消" backgroundImage="button_pop_click">
+                                        <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="giveUpButtonDidPressed:" destination="geN-jV-dAs" eventType="touchUpInside" id="j6h-hv-zbo"/>
+                                        <action selector="giveUpToAddPhoto:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="uDF-5g-YmL"/>
+                                    </connections>
+                                </button>
+                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line1" translatesAutoresizingMaskIntoConstraints="NO" id="6Yt-3E-4em">
+                                    <rect key="frame" x="0.0" y="31" width="375" height="1"/>
+                                </imageView>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F6n-0m-LPI">
+                                    <rect key="frame" x="18" y="101" width="339" height="44"/>
+                                    <state key="normal" title="拍摄照片" backgroundImage="btn_menu_grey_n">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </state>
+                                    <connections>
+                                        <action selector="copyButtonDidPressed:" destination="geN-jV-dAs" eventType="touchUpInside" id="SD1-xz-VlN"/>
+                                        <action selector="takePictureButtonDidPressed:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="XfV-zX-isd"/>
+                                    </connections>
+                                </button>
+                            </subviews>
+                            <color key="backgroundColor" red="0.97542390700000003" green="0.97542390700000003" blue="0.97542390700000003" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstItem="6Yt-3E-4em" firstAttribute="leading" secondItem="BRG-eQ-EdY" secondAttribute="leading" id="3wl-aH-9al"/>
+                                <constraint firstAttribute="trailing" secondItem="6Yt-3E-4em" secondAttribute="trailing" id="4Xg-qs-uxx"/>
+                                <constraint firstItem="0A1-GQ-ME3" firstAttribute="top" secondItem="JMo-L1-cNA" secondAttribute="bottom" constant="28" id="6VN-IW-Y4B"/>
+                                <constraint firstItem="Hpi-m6-uIt" firstAttribute="top" secondItem="BRG-eQ-EdY" secondAttribute="top" constant="8" id="8Kp-Ds-2w2"/>
+                                <constraint firstItem="0A1-GQ-ME3" firstAttribute="leading" secondItem="BRG-eQ-EdY" secondAttribute="leading" constant="18" id="9et-hv-FT2"/>
+                                <constraint firstItem="F6n-0m-LPI" firstAttribute="height" secondItem="0A1-GQ-ME3" secondAttribute="height" id="BQ0-gT-ock"/>
+                                <constraint firstItem="0A1-GQ-ME3" firstAttribute="top" secondItem="6Yt-3E-4em" secondAttribute="bottom" constant="15" id="Ejk-1k-ybx"/>
+                                <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="120" id="FQG-iP-AFX"/>
+                                <constraint firstAttribute="trailing" secondItem="Hpi-m6-uIt" secondAttribute="trailing" constant="18" id="SmH-4K-KzV"/>
+                                <constraint firstAttribute="trailing" secondItem="0A1-GQ-ME3" secondAttribute="trailing" constant="18" id="bju-vP-XLJ"/>
+                                <constraint firstItem="F6n-0m-LPI" firstAttribute="width" secondItem="0A1-GQ-ME3" secondAttribute="width" id="dNM-z7-XCP"/>
+                                <constraint firstAttribute="trailing" secondItem="JMo-L1-cNA" secondAttribute="trailing" constant="64" id="dii-Xv-Qwc"/>
+                                <constraint firstItem="F6n-0m-LPI" firstAttribute="centerX" secondItem="0A1-GQ-ME3" secondAttribute="centerX" id="gIX-gK-aU9"/>
+                                <constraint firstAttribute="bottom" secondItem="0A1-GQ-ME3" secondAttribute="bottom" constant="15" id="soh-E0-i3K"/>
+                                <constraint firstAttribute="bottom" secondItem="F6n-0m-LPI" secondAttribute="bottom" constant="15" id="te6-dF-dRc"/>
+                                <constraint firstAttribute="height" constant="120" id="xrx-4n-lIi"/>
+                                <constraint firstItem="JMo-L1-cNA" firstAttribute="top" secondItem="BRG-eQ-EdY" secondAttribute="top" constant="10" id="z5V-tv-GMY"/>
+                                <constraint firstItem="F6n-0m-LPI" firstAttribute="top" secondItem="0A1-GQ-ME3" secondAttribute="bottom" constant="10" id="zQq-wo-FqE"/>
+                                <constraint firstItem="JMo-L1-cNA" firstAttribute="leading" secondItem="BRG-eQ-EdY" secondAttribute="leading" constant="64" id="zlE-Ki-PbW"/>
+                            </constraints>
+                            <variation key="default">
+                                <mask key="constraints">
+                                    <exclude reference="FQG-iP-AFX"/>
+                                    <exclude reference="xrx-4n-lIi"/>
+                                    <exclude reference="6VN-IW-Y4B"/>
+                                    <exclude reference="soh-E0-i3K"/>
+                                </mask>
+                            </variation>
+                        </view>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstItem="BRG-eQ-EdY" firstAttribute="top" secondItem="kfb-MI-Ncj" secondAttribute="top" id="Vre-2Y-0lt"/>
+                        <constraint firstItem="BRG-eQ-EdY" firstAttribute="leading" secondItem="kfb-MI-Ncj" secondAttribute="leading" id="YVt-Dh-Kmc"/>
+                        <constraint firstAttribute="trailing" secondItem="BRG-eQ-EdY" secondAttribute="trailing" id="bfI-7X-vJo"/>
+                        <constraint firstAttribute="bottom" secondItem="BRG-eQ-EdY" secondAttribute="bottom" id="viH-JU-qzS"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" id="zxv-Mq-9Iw">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="38"/>
                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -426,7 +540,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2881.5" y="-377.5"/>
+            <point key="canvasLocation" x="2926.5" y="-336.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NsO-pm-gik">
@@ -1301,7 +1415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="zhx-TI-UrQ" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3322.5" y="-1095.5"/>
+            <point key="canvasLocation" x="3346.5" y="-1095.5"/>
         </scene>
         <!--Selected Footer Table View Controller-->
         <scene sceneID="Atg-Cx-atW">
@@ -1709,7 +1823,7 @@
         <image name="SomeNotes" width="289" height="98"/>
         <image name="btn_about" width="44" height="30"/>
         <image name="btn_bg_n" width="44" height="44"/>
-        <image name="btn_camera" width="44" height="30"/>
+        <image name="btn_delete" width="44" height="30"/>
         <image name="btn_done" width="44" height="30"/>
         <image name="btn_long_bg_n" width="56" height="44"/>
         <image name="btn_menu_grey_n" width="286" height="44"/>
