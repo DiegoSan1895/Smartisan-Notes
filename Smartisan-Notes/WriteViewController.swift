@@ -14,14 +14,14 @@ enum State: Int{
     case write = 0
     case view
 }
-class WriteViewController: UIViewController, WriteCellDelegate {
+class WriteViewController: UIViewController, WriteCellDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
 
     // MARK:- IBOutlets
 
     @IBOutlet var tableViewHeaderView: UIView!
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var backGroundShadowView: UIView!
+    @IBOutlet weak var backGroundShadowView: UIControl!
     
     // tableViewHeaderView
     @IBOutlet weak var timeLabel: UILabel!
@@ -87,7 +87,6 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     // MARK: - IBAcitons
     @IBAction func listBackButtonDidPressed(sender: UIButton) {
         saveNote()
-        
         self.navigationController?.popViewControllerAnimated(true)
     }
     
@@ -122,16 +121,28 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     // MARK: - chose photo footerView
     @IBAction func chosePhotoButtonDidPressed(sender: AnyObject) {
         let imagePickerVC = UIImagePickerController()
+        imagePickerVC.delegate = self
         self.presentViewController(imagePickerVC, animated: true, completion: nil)
+        imagePickerVC.takePicture()
     }
+    // 这块应该检测设备是否支持拍摄
     @IBAction func takePictureButtonDidPressed(sender: AnyObject) {
-        
+        let imagePickerVC = UIImagePickerController()
+        imagePickerVC.delegate = self
+        self.presentViewController(imagePickerVC, animated: true, completion: nil)
+        imagePickerVC.takePicture()
     }
     @IBAction func giveUpToAddPhoto(sender: AnyObject) {
+        backToNormalState()
+    }
+
+    @IBAction func backGroundViewTouched(sender: AnyObject) {
+        backToNormalState()
+    }
+    func backToNormalState(){
         self.backGroundShadowView.hidden = true
         self.chosePhotoFooterView.hidden = true
     }
-    
     func chosePhoto(){
         
         self.backGroundShadowView.hidden = false
@@ -176,11 +187,7 @@ class WriteViewController: UIViewController, WriteCellDelegate {
         self.tableView.estimatedRowHeight = 500
         //self.tableView.rowHeight = UITableViewAutomaticDimension
         
-        let tapGesture = UIGestureRecognizer(target: self, action: "giveUpToAddPhoto:")
-        self.backGroundShadowView.addGestureRecognizer(tapGesture)
     }
-    
-
     func navigationBarChangeToStateView(){
         self.cameraAndDeleteButton.setImage(UIImage(named: "btn_delete"), forState: .Normal)
         self.cameraAndDeleteButton.setBackgroundImage(UIImage(named: "btn_red_bg_n"), forState: .Normal)
@@ -201,5 +208,12 @@ class WriteViewController: UIViewController, WriteCellDelegate {
         self.state = State.view
     }
     
+    // MARK: - UINavigationControllerDelegate-UIImagePickerControllerDelegate
+    // if you want to become UIImagePickerController's delegat, you must conform the two above protocol at the same time
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        backToNormalState()
+    }
 }
 

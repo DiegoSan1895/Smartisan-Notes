@@ -73,6 +73,7 @@ class WriteCell: UITableViewCell, SETextViewDelegate{
         self.textView.editable = true
         self.textView.selectedTextBackgroundColor = Colors.selectedTextBackgroundColor
         self.textView.delegate = self
+        self.textView.tintColor = Colors.textColor
         
         // 2. labels
         self.timeLabel.textColor = Colors.timeLabelColor
