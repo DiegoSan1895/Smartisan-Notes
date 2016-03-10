@@ -8,17 +8,20 @@
 
 import UIKit
 import RealmSwift
+import SECoreTextView
 
-class WriteViewController: UIViewController {
+enum State: Int{
+    case write = 0
+    case view
+}
+class WriteViewController: UIViewController, WriteCellDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
     
-    enum State: Int{
-        case write = 0
-        case view
-    }
+
     // MARK:- IBOutlets
 
     @IBOutlet var tableViewHeaderView: UIView!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var backGroundShadowView: UIControl!
     
     // tableViewHeaderView
     @IBOutlet weak var timeLabel: UILabel!
@@ -29,18 +32,46 @@ class WriteViewController: UIViewController {
     @IBOutlet weak var cameraAndDeleteButton: UIButton!
     @IBOutlet weak var doneAndShareButton: UIButton!
     
+    // chose photo footerView
+    @IBOutlet var chosePhotoFooterView: UIView!
+    
     let realm = try! Realm()
     var stared: Bool = false
     
-    var state: State?
-    
+    var state: State = State.view{
+        didSet{
+           
+                switch state{
+                case .write:
+                    navigationBarChangeToStateWrite()
+                case .view:
+                    navigationBarChangeToStateView()
+                }
+        }
+    }
+    var stateHelper: Int = 0
     var note:Notes!
     
+    var textView: SETextView?{
+        if let cell = self.tableView.subviews.first?.subviews.first as? WriteCell, let textView = cell.viewWithTag(10) as? SETextView{
+            return textView
+        }
+        return nil
+    }
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpUI()
+    }
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        if stateHelper == 0{
+            self.state = State.view
+        }else{
+            self.state = State.write
+        }
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
@@ -55,6 +86,7 @@ class WriteViewController: UIViewController {
     
     // MARK: - IBAcitons
     @IBAction func listBackButtonDidPressed(sender: UIButton) {
+        saveNote()
         self.navigationController?.popViewControllerAnimated(true)
     }
     
@@ -67,8 +99,63 @@ class WriteViewController: UIViewController {
         }
     }
 
+    @IBAction func cameraAndDeleteButtonDidPressed(sender: UIButton) {
+        switch state{
+        case .write:
+            chosePhoto()
+        case .view:
+            deleteNote()
+        }
+    }
     
-    // Appearance
+    @IBAction func doneAndShareButton(sender: UIButton) {
+            switch state{
+            case .view:
+                break
+            case .write:
+                self.textView?.resignFirstResponder()
+            }
+
+    }
+    
+    // MARK: - chose photo footerView
+    @IBAction func chosePhotoButtonDidPressed(sender: AnyObject) {
+        let imagePickerVC = UIImagePickerController()
+        imagePickerVC.delegate = self
+        self.presentViewController(imagePickerVC, animated: true, completion: nil)
+        imagePickerVC.takePicture()
+    }
+    // 这块应该检测设备是否支持拍摄
+    @IBAction func takePictureButtonDidPressed(sender: AnyObject) {
+        let imagePickerVC = UIImagePickerController()
+        imagePickerVC.delegate = self
+        self.presentViewController(imagePickerVC, animated: true, completion: nil)
+        imagePickerVC.takePicture()
+    }
+    @IBAction func giveUpToAddPhoto(sender: AnyObject) {
+        backToNormalState()
+    }
+
+    @IBAction func backGroundViewTouched(sender: AnyObject) {
+        backToNormalState()
+    }
+    func backToNormalState(){
+        self.backGroundShadowView.hidden = true
+        self.chosePhotoFooterView.hidden = true
+    }
+    func chosePhoto(){
+        
+        self.backGroundShadowView.hidden = false
+        self.chosePhotoFooterView.hidden = false
+        self.chosePhotoFooterView.frame = CGRect(x: 0, y: self.view.frame.height - 160, width: self.view.frame.width, height: 160)
+        self.view.addSubview(self.chosePhotoFooterView)
+        
+    }
+    
+    func deleteNote(){
+        
+    }
+    // MARK: - statusBar
     override func prefersStatusBarHidden() -> Bool {
         return false
     }
@@ -76,9 +163,20 @@ class WriteViewController: UIViewController {
         return UIStatusBarStyle.LightContent
     }
     
+    
     // 
     func saveNote(){
-
+        switch state{
+        case .view:
+            try! realm.write({ () -> Void in
+                note.contents = (self.textView?.text)!
+            })
+        case .write:
+            try! realm.write({ () -> Void in
+                self.note = Notes(stared: stared, created: NSDate(), contents: (self.textView?.text)!, hasPhoto: false)
+                realm.add(self.note)
+            })
+        }
     }
     
     func setUpUI(){
@@ -88,6 +186,34 @@ class WriteViewController: UIViewController {
         
         self.tableView.estimatedRowHeight = 500
         //self.tableView.rowHeight = UITableViewAutomaticDimension
+        
+    }
+    func navigationBarChangeToStateView(){
+        self.cameraAndDeleteButton.setImage(UIImage(named: "btn_delete"), forState: .Normal)
+        self.cameraAndDeleteButton.setBackgroundImage(UIImage(named: "btn_red_bg_n"), forState: .Normal)
+        self.doneAndShareButton.setImage(UIImage(named: "btn_send"), forState: .Normal)
+    }
+    func navigationBarChangeToStateWrite(){
+        
+        self.cameraAndDeleteButton.setImage(UIImage(named: "btn_camera"), forState: .Normal)
+        self.cameraAndDeleteButton.setBackgroundImage(UIImage(named: "btn_bg_n"), forState: .Normal)
+        self.doneAndShareButton.setImage(UIImage(named: "btn_done"), forState: .Normal)
+    }
+    
+    // MARK: - WriteCellDelegate
+    func stateBecomeWrite() {
+        self.state = State.write
+    }
+    func stateBecomeView() {
+        self.state = State.view
+    }
+    
+    // MARK: - UINavigationControllerDelegate-UIImagePickerControllerDelegate
+    // if you want to become UIImagePickerController's delegat, you must conform the two above protocol at the same time
+    func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
+        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
+        
+        backToNormalState()
     }
 }
 

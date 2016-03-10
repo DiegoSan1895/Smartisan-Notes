@@ -9,7 +9,11 @@
 import UIKit
 import SECoreTextView
 
-class WriteCell: UITableViewCell {
+@objc protocol WriteCellDelegate{
+    func stateBecomeView()
+    func stateBecomeWrite()
+}
+class WriteCell: UITableViewCell, SETextViewDelegate{
     
     // MARK: - IBActions-IBOutlets
     @IBOutlet weak var textView: SETextView!
@@ -20,6 +24,8 @@ class WriteCell: UITableViewCell {
     @IBAction func starButtonDidPressed(sender: UIButton) {
         
     }
+    
+    @IBOutlet weak var delegate: WriteCellDelegate?
     
     var note:Notes!{
         didSet{
@@ -58,7 +64,7 @@ class WriteCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
-//        self.textView.text = "在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行\n\n在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行"
+        //        self.textView.text = "在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行\n\n在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行在平坦的路面上曲折前行"
         
         // 1. textView
         self.textView.textColor = Colors.textColor
@@ -66,7 +72,8 @@ class WriteCell: UITableViewCell {
         self.textView.font = UIFont.systemFontOfSize(15)
         self.textView.editable = true
         self.textView.selectedTextBackgroundColor = Colors.selectedTextBackgroundColor
-        
+        self.textView.delegate = self
+        self.textView.tintColor = Colors.textColor
         
         // 2. labels
         self.timeLabel.textColor = Colors.timeLabelColor
@@ -75,12 +82,24 @@ class WriteCell: UITableViewCell {
         // 3. set cell's backgroungColor
         self.backgroundColor = UIColor(patternImage: UIImage(named: "note_paper_middle")!)
         
+
+        
     }
-
-    override func setSelected(selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    // MARK: - TextViewDelegate
+    func textViewDidChange(textView: SETextView!) {
+        self.charactersCountLabel.text = "\(textView.text.characters.count)"
+    }
+    func textViewDidBeginEditing(textView: SETextView!) {
+        
+        if let VC = self.parentViewController as? WriteCellDelegate{
+            self.delegate = VC
+        }
+        
+        self.delegate?.stateBecomeWrite()
+    }
+    func textViewDidEndEditing(textView: SETextView!) {
+        self.delegate?.stateBecomeView()
     }
 
 }
