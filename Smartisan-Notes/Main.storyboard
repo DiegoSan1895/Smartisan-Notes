@@ -349,9 +349,12 @@
                                     <outlet property="delegate" destination="NnY-Ur-g5t" id="z2d-yk-mJo"/>
                                 </connections>
                             </tableView>
-                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWv-Vh-gvC">
+                            <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vWv-Vh-gvC" customClass="UIControl">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
                                 <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.67736181358381498" colorSpace="calibratedRGB"/>
+                                <connections>
+                                    <action selector="backGroundViewTouched:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="XYl-pZ-0I1"/>
+                                </connections>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -416,7 +419,7 @@
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleAspectFit" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hpi-m6-uIt">
-                                    <rect key="frame" x="324" y="8" width="33" height="40"/>
+                                    <rect key="frame" x="324" y="-3.5" width="33" height="40.5"/>
                                     <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                     <state key="normal" title="取消" backgroundImage="button_pop_click">
                                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
@@ -444,6 +447,7 @@
                             <constraints>
                                 <constraint firstItem="6Yt-3E-4em" firstAttribute="leading" secondItem="BRG-eQ-EdY" secondAttribute="leading" id="3wl-aH-9al"/>
                                 <constraint firstAttribute="trailing" secondItem="6Yt-3E-4em" secondAttribute="trailing" id="4Xg-qs-uxx"/>
+                                <constraint firstItem="Hpi-m6-uIt" firstAttribute="centerY" secondItem="JMo-L1-cNA" secondAttribute="centerY" id="582-19-3eu"/>
                                 <constraint firstItem="0A1-GQ-ME3" firstAttribute="top" secondItem="JMo-L1-cNA" secondAttribute="bottom" constant="28" id="6VN-IW-Y4B"/>
                                 <constraint firstItem="Hpi-m6-uIt" firstAttribute="top" secondItem="BRG-eQ-EdY" secondAttribute="top" constant="8" id="8Kp-Ds-2w2"/>
                                 <constraint firstItem="0A1-GQ-ME3" firstAttribute="leading" secondItem="BRG-eQ-EdY" secondAttribute="leading" constant="18" id="9et-hv-FT2"/>
@@ -468,6 +472,7 @@
                                     <exclude reference="xrx-4n-lIi"/>
                                     <exclude reference="6VN-IW-Y4B"/>
                                     <exclude reference="soh-E0-i3K"/>
+                                    <exclude reference="8Kp-Ds-2w2"/>
                                 </mask>
                             </variation>
                         </view>
