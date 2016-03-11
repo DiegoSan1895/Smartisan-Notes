@@ -266,7 +266,7 @@ extension AboutViewController: CopyFooterViewControllerDelegate{
         self.toastButton.center = CGPoint(x: self.view.center.x, y: self.tableView.contentSize.height - (UIScreen.mainScreen().bounds.height / 2))
         self.view.addSubview(toastButton)
         
-        delay(12) { () -> () in
+        Async.main(after: 1.6) { () -> Void in
             self.toastButton.removeFromSuperview()
         }
     }

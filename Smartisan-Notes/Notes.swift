@@ -33,5 +33,5 @@ class Notes: Object {
         self.contents = contents
         self.hasPhoto = hasPhoto
     }
-
+    
 }

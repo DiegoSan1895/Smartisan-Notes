@@ -32,6 +32,11 @@
 		BD5F33C81C8B09FD00223364 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C71C8B09FD00223364 /* Appearance.swift */; };
 		BD71D6FF1C8EC86800FA1D90 /* WriteTableViewDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71D6FE1C8EC86800FA1D90 /* WriteTableViewDataSourceAndDelegate.swift */; };
 		BD71D7011C8ECBD600FA1D90 /* WriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71D7001C8ECBD600FA1D90 /* WriteCell.swift */; };
+		BD8E458C1C919E2900B59D6B /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8E45851C919E2900B59D6B /* TPKeyboardAvoidingCollectionView.m */; };
+		BD8E458D1C919E2900B59D6B /* TPKeyboardAvoidingScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8E45871C919E2900B59D6B /* TPKeyboardAvoidingScrollView.m */; };
+		BD8E458E1C919E2900B59D6B /* TPKeyboardAvoidingTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8E45891C919E2900B59D6B /* TPKeyboardAvoidingTableView.m */; };
+		BD8E458F1C919E2900B59D6B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8E458B1C919E2900B59D6B /* UIScrollView+TPKeyboardAvoidingAdditions.m */; };
+		BD8E45911C91B37B00B59D6B /* UIColor+Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD8E45901C91B37B00B59D6B /* UIColor+Notes.swift */; };
 		BD9AB9D41C87D472007C11FE /* SelectedFooterTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D31C87D472007C11FE /* SelectedFooterTableViewController.swift */; };
 		BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */; };
 		BD9AB9DA1C885F29007C11FE /* CopyFooterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */; };
@@ -108,6 +113,15 @@
 		BD5F33C71C8B09FD00223364 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		BD71D6FE1C8EC86800FA1D90 /* WriteTableViewDataSourceAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteTableViewDataSourceAndDelegate.swift; sourceTree = "<group>"; };
 		BD71D7001C8ECBD600FA1D90 /* WriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteCell.swift; sourceTree = "<group>"; };
+		BD8E45841C919E2900B59D6B /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
+		BD8E45851C919E2900B59D6B /* TPKeyboardAvoidingCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingCollectionView.m; sourceTree = "<group>"; };
+		BD8E45861C919E2900B59D6B /* TPKeyboardAvoidingScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingScrollView.h; sourceTree = "<group>"; };
+		BD8E45871C919E2900B59D6B /* TPKeyboardAvoidingScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingScrollView.m; sourceTree = "<group>"; };
+		BD8E45881C919E2900B59D6B /* TPKeyboardAvoidingTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingTableView.h; sourceTree = "<group>"; };
+		BD8E45891C919E2900B59D6B /* TPKeyboardAvoidingTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TPKeyboardAvoidingTableView.m; sourceTree = "<group>"; };
+		BD8E458A1C919E2900B59D6B /* UIScrollView+TPKeyboardAvoidingAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIScrollView+TPKeyboardAvoidingAdditions.h"; sourceTree = "<group>"; };
+		BD8E458B1C919E2900B59D6B /* UIScrollView+TPKeyboardAvoidingAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIScrollView+TPKeyboardAvoidingAdditions.m"; sourceTree = "<group>"; };
+		BD8E45901C91B37B00B59D6B /* UIColor+Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIColor+Notes.swift"; sourceTree = "<group>"; };
 		BD9AB9D31C87D472007C11FE /* SelectedFooterTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectedFooterTableViewController.swift; sourceTree = "<group>"; };
 		BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MarkdownTableViewController.swift; sourceTree = "<group>"; };
 		BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CopyFooterViewController.swift; sourceTree = "<group>"; };
@@ -213,6 +227,7 @@
 				BD0BEBCC1C867376005580EC /* LaunchScreen.storyboard */,
 				BD9E78B11C89D6A1006ED8CB /* Support */,
 				BD0BEBCF1C867376005580EC /* Info.plist */,
+				BD8E45921C91B38000B59D6B /* Extensions */,
 				BD9E78A91C89AE9E006ED8CB /* statement.html */,
 				BD0BEBF81C8675B3005580EC /* Framework */,
 				BD9E78AD1C89D68A006ED8CB /* Smartisan-Notes-Bridging-Header.h */,
@@ -280,6 +295,29 @@
 			name = Controller;
 			sourceTree = "<group>";
 		};
+		BD8E45831C919E2900B59D6B /* TPKeyboardAvoiding */ = {
+			isa = PBXGroup;
+			children = (
+				BD8E45841C919E2900B59D6B /* TPKeyboardAvoidingCollectionView.h */,
+				BD8E45851C919E2900B59D6B /* TPKeyboardAvoidingCollectionView.m */,
+				BD8E45861C919E2900B59D6B /* TPKeyboardAvoidingScrollView.h */,
+				BD8E45871C919E2900B59D6B /* TPKeyboardAvoidingScrollView.m */,
+				BD8E45881C919E2900B59D6B /* TPKeyboardAvoidingTableView.h */,
+				BD8E45891C919E2900B59D6B /* TPKeyboardAvoidingTableView.m */,
+				BD8E458A1C919E2900B59D6B /* UIScrollView+TPKeyboardAvoidingAdditions.h */,
+				BD8E458B1C919E2900B59D6B /* UIScrollView+TPKeyboardAvoidingAdditions.m */,
+			);
+			path = TPKeyboardAvoiding;
+			sourceTree = "<group>";
+		};
+		BD8E45921C91B38000B59D6B /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				BD8E45901C91B37B00B59D6B /* UIColor+Notes.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		BD9AB9D71C87D8DE007C11FE /* SettingsVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -300,6 +338,7 @@
 		BD9E78B11C89D6A1006ED8CB /* Support */ = {
 			isa = PBXGroup;
 			children = (
+				BD8E45831C919E2900B59D6B /* TPKeyboardAvoiding */,
 				BD9E78AE1C89D68A006ED8CB /* NSString+GetDeviceName.h */,
 				BD9E78AF1C89D68A006ED8CB /* NSString+GetDeviceName.m */,
 				BD5F33C51C8AFF0600223364 /* Async.swift */,
@@ -495,25 +534,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD8E458C1C919E2900B59D6B /* TPKeyboardAvoidingCollectionView.m in Sources */,
 				BD9E78AC1C89AF77006ED8CB /* UEAdjustmentViewController.swift in Sources */,
 				BD9AB9DA1C885F29007C11FE /* CopyFooterViewController.swift in Sources */,
 				BD9E788E1C893973006ED8CB /* Constants.swift in Sources */,
 				BD0BEC891C872486005580EC /* WriteViewController.swift in Sources */,
 				BD9AB9D41C87D472007C11FE /* SelectedFooterTableViewController.swift in Sources */,
 				BD0BEC781C8682D1005580EC /* HomeViewController.swift in Sources */,
+				BD8E45911C91B37B00B59D6B /* UIColor+Notes.swift in Sources */,
 				BD0BEC871C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift in Sources */,
 				BD4C3DD31C8744B7004DB2A4 /* AboutViewController.swift in Sources */,
 				BDCE36CB1C8915250080B664 /* ShareViewController.swift in Sources */,
 				BD0BEC7C1C8685AC005580EC /* Notes.swift in Sources */,
 				BD71D6FF1C8EC86800FA1D90 /* WriteTableViewDataSourceAndDelegate.swift in Sources */,
 				BD9ABA0E1C886280007C11FE /* SpringAnimation.swift in Sources */,
+				BD8E458D1C919E2900B59D6B /* TPKeyboardAvoidingScrollView.m in Sources */,
 				BD9E78A41C897EBE006ED8CB /* TouchID.swift in Sources */,
 				BD0BEBC41C867376005580EC /* AppDelegate.swift in Sources */,
 				BD0BEC841C86DC43005580EC /* NotesTableViewCell.swift in Sources */,
+				BD8E458F1C919E2900B59D6B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				BD5F33C61C8AFF0600223364 /* Async.swift in Sources */,
 				BD5F33C81C8B09FD00223364 /* Appearance.swift in Sources */,
 				BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */,
 				BD0BCFB81C8AF65F009D0B6F /* SubVENTouchLockSplashViewController.swift in Sources */,
+				BD8E458E1C919E2900B59D6B /* TPKeyboardAvoidingTableView.m in Sources */,
 				BD1003C01C8D9A9400C00C15 /* Helper.swift in Sources */,
 				BD9E78B01C89D68A006ED8CB /* NSString+GetDeviceName.m in Sources */,
 				BD71D7011C8ECBD600FA1D90 /* WriteCell.swift in Sources */,

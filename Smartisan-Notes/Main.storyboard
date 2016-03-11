@@ -249,7 +249,7 @@
                                     <constraint firstItem="Zgz-jh-8Dk" firstAttribute="leading" secondItem="nOS-db-ehi" secondAttribute="leading" constant="8" id="ygg-Tz-LAI"/>
                                 </constraints>
                             </view>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="265" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gxj-6b-xRk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" showsVerticalScrollIndicator="NO" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="265" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="gxj-6b-xRk" customClass="TPKeyboardAvoidingTableView">
                                 <rect key="frame" x="0.0" y="74" width="375" height="593"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -388,9 +388,11 @@
                         <outlet property="chosePhotoFooterView" destination="kfb-MI-Ncj" id="rsa-fx-B54"/>
                         <outlet property="doneAndShareButton" destination="d6H-6k-sFY" id="Erd-qG-ss6"/>
                         <outlet property="numberOfCharactersLabel" destination="CM8-km-aF6" id="7eh-2U-4NG"/>
+                        <outlet property="pickPhotoFromLibraryButton" destination="0A1-GQ-ME3" id="abW-dg-SJo"/>
                         <outlet property="staredButton" destination="laT-dF-ULg" id="T1d-PV-1PX"/>
                         <outlet property="tableView" destination="gxj-6b-xRk" id="ZoU-Wu-5Zg"/>
                         <outlet property="tableViewHeaderView" destination="zxv-Mq-9Iw" id="BgL-lk-tR9"/>
+                        <outlet property="takePicktureButton" destination="F6n-0m-LPI" id="wH2-b4-rW3"/>
                         <outlet property="timeLabel" destination="afn-YE-skn" id="pSn-WV-Rbm"/>
                     </connections>
                 </viewController>
@@ -409,7 +411,6 @@
                                     </state>
                                     <connections>
                                         <action selector="chosePhotoButtonDidPressed:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="Qr6-Lw-Ira"/>
-                                        <action selector="copyButtonDidPressed:" destination="geN-jV-dAs" eventType="touchUpInside" id="Qj5-GC-h2c"/>
                                     </connections>
                                 </button>
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="添加照片" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JMo-L1-cNA">
@@ -438,7 +439,6 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <action selector="copyButtonDidPressed:" destination="geN-jV-dAs" eventType="touchUpInside" id="SD1-xz-VlN"/>
                                         <action selector="takePictureButtonDidPressed:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="XfV-zX-isd"/>
                                     </connections>
                                 </button>

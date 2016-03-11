@@ -14,7 +14,7 @@ enum State: Int{
     case write = 0
     case view
 }
-class WriteViewController: UIViewController, WriteCellDelegate, UIImagePickerControllerDelegate,UINavigationControllerDelegate {
+class WriteViewController: UIViewController, WriteCellDelegate {
     
 
     // MARK:- IBOutlets
@@ -34,6 +34,8 @@ class WriteViewController: UIViewController, WriteCellDelegate, UIImagePickerCon
     
     // chose photo footerView
     @IBOutlet var chosePhotoFooterView: UIView!
+    @IBOutlet weak var pickPhotoFromLibraryButton: UIButton!
+    @IBOutlet weak var takePicktureButton: UIButton!
     
     let realm = try! Realm()
     var stared: Bool = false
@@ -58,6 +60,9 @@ class WriteViewController: UIViewController, WriteCellDelegate, UIImagePickerCon
         }
         return nil
     }
+    
+    private let kFooterViewHeight: CGFloat = 160
+
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -81,7 +86,7 @@ class WriteViewController: UIViewController, WriteCellDelegate, UIImagePickerCon
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
         
-        saveNote()
+        //saveNote()
     }
     
     // MARK: - IBAcitons
@@ -102,6 +107,7 @@ class WriteViewController: UIViewController, WriteCellDelegate, UIImagePickerCon
     @IBAction func cameraAndDeleteButtonDidPressed(sender: UIButton) {
         switch state{
         case .write:
+            self.textView?.resignFirstResponder()
             chosePhoto()
         case .view:
             deleteNote()
@@ -120,17 +126,10 @@ class WriteViewController: UIViewController, WriteCellDelegate, UIImagePickerCon
     
     // MARK: - chose photo footerView
     @IBAction func chosePhotoButtonDidPressed(sender: AnyObject) {
-        let imagePickerVC = UIImagePickerController()
-        imagePickerVC.delegate = self
-        self.presentViewController(imagePickerVC, animated: true, completion: nil)
-        imagePickerVC.takePicture()
+        pickMediaFromSource(.PhotoLibrary)
     }
-    // 这块应该检测设备是否支持拍摄
     @IBAction func takePictureButtonDidPressed(sender: AnyObject) {
-        let imagePickerVC = UIImagePickerController()
-        imagePickerVC.delegate = self
-        self.presentViewController(imagePickerVC, animated: true, completion: nil)
-        imagePickerVC.takePicture()
+        pickMediaFromSource(.Camera)
     }
     @IBAction func giveUpToAddPhoto(sender: AnyObject) {
         backToNormalState()
@@ -140,16 +139,51 @@ class WriteViewController: UIViewController, WriteCellDelegate, UIImagePickerCon
         backToNormalState()
     }
     func backToNormalState(){
+        spring(0.4) { () -> Void in
+            self.chosePhotoFooterView.transform = CGAffineTransformMakeTranslation(0, self.kFooterViewHeight)
+            self.backGroundShadowView.alpha = 0
+        }
         self.backGroundShadowView.hidden = true
+        self.backGroundShadowView.alpha = 1
         self.chosePhotoFooterView.hidden = true
+        self.chosePhotoFooterView.transform = CGAffineTransformIdentity
     }
     func chosePhoto(){
         
         self.backGroundShadowView.hidden = false
         self.chosePhotoFooterView.hidden = false
-        self.chosePhotoFooterView.frame = CGRect(x: 0, y: self.view.frame.height - 160, width: self.view.frame.width, height: 160)
+        self.chosePhotoFooterView.frame = CGRect(x: 0, y: self.view.frame.height - kFooterViewHeight, width: self.view.frame.width, height: kFooterViewHeight)
         self.view.addSubview(self.chosePhotoFooterView)
         
+        if !UIImagePickerController.isSourceTypeAvailable(.Camera){
+            self.takePicktureButton.enabled = false
+        }
+        
+        // animation
+        self.chosePhotoFooterView.transform = CGAffineTransformMakeTranslation(0, kFooterViewHeight)
+        spring(0.6) { () -> Void in
+            self.chosePhotoFooterView.transform = CGAffineTransformIdentity
+        }
+    }
+    
+    func pickMediaFromSource(sourceType: UIImagePickerControllerSourceType){
+        let mediaTypes = UIImagePickerController.availableMediaTypesForSourceType(sourceType)!
+        
+        if UIImagePickerController.isSourceTypeAvailable(sourceType) && mediaTypes.count > 0{
+            let picker = UIImagePickerController()
+            picker.mediaTypes = mediaTypes
+            picker.delegate = self
+            picker.allowsEditing = true
+            picker.sourceType = sourceType
+            presentViewController(picker, animated: true, completion: nil)
+        }else{
+            let alertController = UIAlertController(
+                title:"Error accessing media", message: "Unsupported media source.",
+                preferredStyle: UIAlertControllerStyle.Alert)
+            let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Cancel, handler: nil)
+            alertController.addAction(okAction)
+            presentViewController(alertController, animated: true, completion: nil)
+        }
     }
     
     func deleteNote(){
@@ -168,17 +202,25 @@ class WriteViewController: UIViewController, WriteCellDelegate, UIImagePickerCon
     func saveNote(){
         switch state{
         case .view:
-            try! realm.write({ () -> Void in
-                note.contents = (self.textView?.text)!
-            })
+            updateNoteInRealmDataBase()
         case .write:
-            try! realm.write({ () -> Void in
-                self.note = Notes(stared: stared, created: NSDate(), contents: (self.textView?.text)!, hasPhoto: false)
-                realm.add(self.note)
-            })
+            addNewNoteIntoRealmDataBase()
         }
     }
     
+    func updateNoteInRealmDataBase(){
+        var updatedNote = Notes()
+        updatedNote.contents = (self.textView?.text)!
+        updatedNote.stared = stared
+        updatedNote.created = self.note.created
+
+    }
+    func addNewNoteIntoRealmDataBase(){
+        try! realm.write({ () -> Void in
+            self.note = Notes(stared: stared, created: NSDate(), contents: (self.textView?.text)!, hasPhoto: false)
+            realm.add(self.note)
+        })
+    }
     func setUpUI(){
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
         self.tableView.backgroundColor = UIColor.clearColor()
@@ -208,12 +250,16 @@ class WriteViewController: UIViewController, WriteCellDelegate, UIImagePickerCon
         self.state = State.view
     }
     
-    // MARK: - UINavigationControllerDelegate-UIImagePickerControllerDelegate
+
+}
+
+// MARK: - UINavigationControllerDelegate-UIImagePickerControllerDelegate
+
+extension WriteViewController: UIImagePickerControllerDelegate,UINavigationControllerDelegate{
+    
     // if you want to become UIImagePickerController's delegat, you must conform the two above protocol at the same time
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
-        let image = info[UIImagePickerControllerOriginalImage] as! UIImage
         
         backToNormalState()
     }
 }
-
