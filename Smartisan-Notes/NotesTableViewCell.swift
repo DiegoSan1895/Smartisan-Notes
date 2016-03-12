@@ -8,6 +8,7 @@
 
 import UIKit
 import DateTools
+import RealmSwift
 
 protocol NotesTableViewCellDelegate: class {
     func slideToDelete(cell: NotesTableViewCell)
@@ -25,14 +26,23 @@ class NotesTableViewCell: UITableViewCell {
     @IBOutlet weak var cameraImageView: UIImageView!
     
     // MARK: - properties
+    
+    let realm = try! Realm()
+    
     var isStared: Bool = false {
         didSet{
             if isStared {
                 staredButton.setImage(UIImage(named: "star_big_selected"), forState: .Normal)
+
             }else {
                 staredButton.setImage(UIImage(named: "star_big_normal"), forState: .Normal)
+
             }
         }
+    }
+    
+    var id: String{
+        return (note?.id)!
     }
     
     var slided: Bool = false
@@ -138,6 +148,11 @@ class NotesTableViewCell: UITableViewCell {
     // MARK: - IBActions
     @IBAction func staredButtonDidPressed(sender: UIButton) {
         isStared = isStared == false ? true : false
+        
+        try! realm.write({ () -> Void in
+            
+            realm.create(Notes.self, value: ["id": id, "stared": isStared], update: true)
+        })
     }
     @IBAction func deleteButtonDidPressed(sender: UIButton) {
         self.delegate?.slideToDelete(self) 

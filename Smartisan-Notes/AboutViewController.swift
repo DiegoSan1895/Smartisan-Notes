@@ -112,7 +112,9 @@ class AboutViewController: UITableViewController {
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         addGestures()
+        
         self.tableView.tableFooterView = copyFooterView
         self.versionLabel.text = AppInfo.App_Version
     }
@@ -129,12 +131,14 @@ class AboutViewController: UITableViewController {
         }else{
             clockCanOpen = false
         }
+        
         // 2.
         if UIApplication.sharedApplication().canOpenURL(AppURL.syncURL){
             syncCanOpen = true
         }else{
             syncCanOpen = false
         }
+        
         // 3.
         if UIApplication.sharedApplication().canOpenURL(AppURL.calenderURL){
             calenderCanOpen = true
@@ -148,12 +152,9 @@ class AboutViewController: UITableViewController {
         self.webTableViewCell.addGestureRecognizer(tapGesture)
     }
     
-    /**
-     下面这个方法如果写成 private 会出现 unrecognizer selector exception
-     */
-    func tapToShowStoreWebsite(){
-        let sfVC = SFSafariViewController(URL: AppURL.smartisanWeb)
-        presentViewController(sfVC, animated: true, completion: nil)
+
+    @objc private func tapToShowStoreWebsite(){
+        note_openURL(AppURL.smartisanWeb)
     }
     
     func sendEmailForAdvices(){
@@ -266,7 +267,7 @@ extension AboutViewController: CopyFooterViewControllerDelegate{
         self.toastButton.center = CGPoint(x: self.view.center.x, y: self.tableView.contentSize.height - (UIScreen.mainScreen().bounds.height / 2))
         self.view.addSubview(toastButton)
         
-        delay(12) { () -> () in
+        Async.main(after: 1.6) { () -> Void in
             self.toastButton.removeFromSuperview()
         }
     }
