@@ -7,6 +7,7 @@ var str = "Hello, playground"
 let date = NSDate().dateBySubtractingDays(2)
 date.weekday()
 
+Int(date.timeIntervalSince1970)
 extension Int{
     func weekdayString() ->String{
         switch self{

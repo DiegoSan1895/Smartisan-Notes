@@ -22,13 +22,20 @@ extension WriteViewController: UITableViewDelegate, UITableViewDataSource{
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
         let cell = self.tableView.dequeueReusableCellWithIdentifier(contentCellIdentifier) as! WriteCell
-        cell.note = self.note
+        
+        switch state{
+        case.view:
+            cell.note = self.note
+        case.write:
+            cell.note = Notes()
+        }
+        
         return cell
     }
     
     
     // MARK:  - delegate
-
+    
     func tableView(tableView: UITableView, heightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat {
         
         // 为了不出现背景图片半截的情况，这里取到patternImage.height==38，然后设成38的整数倍
@@ -36,12 +43,9 @@ extension WriteViewController: UITableViewDelegate, UITableViewDataSource{
         let attributedString = NSAttributedString(string: note.contents)
         let textViewRect = SETextView.frameRectWithAttributtedString(attributedString, constraintSize: CGSize(width: 300, height: 300), lineSpacing: 17, font: UIFont.systemFontOfSize(15))
         let height:CGFloat = CGFloat(Int(textViewRect.height / 38) * 38)
-    
-        return height
+        
+        return max(height, 608)
     }
     
-    func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
-        let imageView = UIImageView(image: UIImage(named: "note_paper_bottom"))
-        return imageView
-    }
+
 }

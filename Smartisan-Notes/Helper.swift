@@ -63,3 +63,17 @@ extension UIView {
         
     }
 }
+
+extension String{
+    
+    static func randomNoteContent() -> String{
+        var string = "不顾一切的在平坦的路面上曲折前行"
+        let count = Int.random(1, 10)
+        
+        for _ in 0..<count {
+           string += string
+        }
+        
+        return string
+    }
+}

@@ -24,6 +24,8 @@ class HomeViewController: UIViewController {
         self.realm.objects(Notes).sorted("created", ascending: false)
     }()
     
+    var notificationToken: NotificationToken?
+    
     var alertView: CXAlertView!
     @IBOutlet weak var tableView: UITableView!
     
@@ -41,7 +43,7 @@ class HomeViewController: UIViewController {
     }
     @IBAction func checkToAgreeUEPlanButtonDidPressed(sender: UIButton) {
         
-
+        
         if !isChecked{
             checkButton.setImage(UIImage(named: "icon_check"), forState: .Normal)
             NSUserDefaults.standardUserDefaults().setBool(true, forKey: ueAgreeOrNot)
@@ -54,9 +56,14 @@ class HomeViewController: UIViewController {
     }
     
     @IBAction func aboutButtonDidPressed(sender: UIButton) {
+        
     }
     @IBAction func writeButtonDidPressed(sender: UIButton) {
-        performSegueWithIdentifier(writeSegueIdentifier, sender: self)
+        
+        let writeVC = storyboard?.instantiateViewControllerWithIdentifier("writeAndView") as! WriteViewController
+        writeVC.state = .write
+        
+        navigationController?.pushViewController(writeVC, animated: true)
     }
     // MARK: - LifeCycle
     override func viewDidLoad() {
@@ -66,12 +73,24 @@ class HomeViewController: UIViewController {
         populateDefaultNotes()
         
         self.tableView.panGestureRecognizer.addTarget(self, action: "startToScroll")
+        
+        // 在数据库变化的时候执行block里的代码
+        notificationToken = notes.addNotificationBlock({ (results, error) -> () in
+            self.tableView.reloadData()
+            //已经执行了删除row，这里就不需要再次reloadData了
+            
+        })
     }
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.tableView.reloadData()
+        
+    }
+    
+    override func viewWillDisappear(animated: Bool) {
+        super.viewWillDisappear(animated)
+        
     }
     
     override func viewDidAppear(animated: Bool) {
@@ -114,9 +133,15 @@ class HomeViewController: UIViewController {
             // 2.
             try! realm.write({ () -> Void in
                 // 3.
-                for _ in 0..<30 {
-                    let note = Notes(stared: false, created: NSDate(), contents: "不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行不顾一切的在平坦的路面上曲折前行")
-                    self.realm.add(note)
+                for _ in 0..<40 {
+                    
+                    let note = Notes()
+                    note.created = NSDate.randomWithinDaysBeforeToday(10)
+                    note.contents = String.randomNoteContent()
+                    note.hasPhoto = Bool.random()
+                    note.stared = Bool.random()
+                    
+                    realm.add(note)
                 }
                 
             })
@@ -143,7 +168,7 @@ class HomeViewController: UIViewController {
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return .LightContent
     }
-
+    
 }
 
 

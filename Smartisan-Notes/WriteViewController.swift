@@ -19,14 +19,9 @@ class WriteViewController: UIViewController, WriteCellDelegate {
 
     // MARK:- IBOutlets
 
-    @IBOutlet var tableViewHeaderView: UIView!
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backGroundShadowView: UIControl!
     
-    // tableViewHeaderView
-    @IBOutlet weak var timeLabel: UILabel!
-    @IBOutlet weak var numberOfCharactersLabel: UILabel!
-    @IBOutlet weak var staredButton: UIButton!
     
     // navigationBar
     @IBOutlet weak var cameraAndDeleteButton: UIButton!
@@ -81,7 +76,14 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
+        animateTableView()
         
+        switch state{
+        case .write:
+            self.textView?.becomeFirstResponder()
+        case .view:
+            self.textView?.resignFirstResponder()
+        }
     }
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
@@ -95,14 +97,6 @@ class WriteViewController: UIViewController, WriteCellDelegate {
         self.navigationController?.popViewControllerAnimated(true)
     }
     
-    @IBAction func staredButtonDidPressed(sender: UIButton) {
-        stared = !stared
-        if stared{
-            staredButton.setImage(UIImage(named: "star_big_selected"), forState: .Normal)
-        }else{
-            staredButton.setImage(UIImage(named: "star_big_normal"), forState: .Normal)
-        }
-    }
 
     @IBAction func cameraAndDeleteButtonDidPressed(sender: UIButton) {
         switch state{
@@ -189,16 +183,19 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     func deleteNote(){
         
     }
+    
     // MARK: - statusBar
+    
     override func prefersStatusBarHidden() -> Bool {
         return false
     }
+    
     override func preferredStatusBarStyle() -> UIStatusBarStyle {
         return UIStatusBarStyle.LightContent
     }
     
     
-    // 
+    // MARK: Realm
     func saveNote(){
         switch state{
         case .view:
@@ -209,32 +206,37 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     }
     
     func updateNoteInRealmDataBase(){
-        var updatedNote = Notes()
-        updatedNote.contents = (self.textView?.text)!
-        updatedNote.stared = stared
-        updatedNote.created = self.note.created
+
+        
 
     }
+    
     func addNewNoteIntoRealmDataBase(){
-        try! realm.write({ () -> Void in
-            self.note = Notes(stared: stared, created: NSDate(), contents: (self.textView?.text)!, hasPhoto: false)
-            realm.add(self.note)
-        })
+        
     }
+    
+    // MARK: - UI
     func setUpUI(){
+        
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
         self.tableView.backgroundColor = UIColor.clearColor()
-        self.timeLabel.text = "        \(NSDate().description)"
-        
-        self.tableView.estimatedRowHeight = 500
-        //self.tableView.rowHeight = UITableViewAutomaticDimension
-        
+    
     }
+    
+    func animateTableView(){
+        self.tableView.transform = CGAffineTransformMakeScale(0.9, 0.9)
+        
+        spring(0.4) { () -> Void in
+            self.tableView.transform = CGAffineTransformIdentity
+        }
+    }
+    
     func navigationBarChangeToStateView(){
         self.cameraAndDeleteButton.setImage(UIImage(named: "btn_delete"), forState: .Normal)
         self.cameraAndDeleteButton.setBackgroundImage(UIImage(named: "btn_red_bg_n"), forState: .Normal)
         self.doneAndShareButton.setImage(UIImage(named: "btn_send"), forState: .Normal)
     }
+    
     func navigationBarChangeToStateWrite(){
         
         self.cameraAndDeleteButton.setImage(UIImage(named: "btn_camera"), forState: .Normal)
@@ -243,9 +245,11 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     }
     
     // MARK: - WriteCellDelegate
+    
     func stateBecomeWrite() {
         self.state = State.write
     }
+    
     func stateBecomeView() {
         self.state = State.view
     }

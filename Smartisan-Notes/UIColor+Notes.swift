@@ -13,6 +13,11 @@ extension UIColor{
     class func noteTextColor() -> UIColor{
         return UIColor(red:0.49, green:0.31, blue:0.1, alpha:1)
     }
+    
+    class func noteSubTextColor() -> UIColor{
+        return UIColor.noteTextColor().colorWithAlphaComponent(0.7)
+    }
+    
     // 反色
     var note_inverseColor: UIColor{
         var red: CGFloat = 0

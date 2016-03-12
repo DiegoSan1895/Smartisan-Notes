@@ -14,22 +14,21 @@
 		BD0BEBCE1C867376005580EC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0BEBCC1C867376005580EC /* LaunchScreen.storyboard */; };
 		BD0BEBD91C867376005580EC /* Smartisan_NotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEBD81C867376005580EC /* Smartisan_NotesTests.swift */; };
 		BD0BEBE41C867376005580EC /* Smartisan_NotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEBE31C867376005580EC /* Smartisan_NotesUITests.swift */; };
-		BD0BEBF31C8675A1005580EC /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0BEBF11C8675A1005580EC /* Realm.framework */; };
-		BD0BEBF41C8675A1005580EC /* Realm.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD0BEBF11C8675A1005580EC /* Realm.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		BD0BEBF51C8675A1005580EC /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD0BEBF21C8675A1005580EC /* RealmSwift.framework */; };
-		BD0BEBF61C8675A1005580EC /* RealmSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BD0BEBF21C8675A1005580EC /* RealmSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BD0BEC761C867CDB005580EC /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BD0BEC751C867CDB005580EC /* Main.storyboard */; };
 		BD0BEC781C8682D1005580EC /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC771C8682D1005580EC /* HomeViewController.swift */; };
-		BD0BEC7C1C8685AC005580EC /* Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC7B1C8685AC005580EC /* Notes.swift */; };
+		BD0BEC7C1C8685AC005580EC /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC7B1C8685AC005580EC /* Model.swift */; };
 		BD0BEC841C86DC43005580EC /* NotesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC821C86DC43005580EC /* NotesTableViewCell.swift */; };
 		BD0BEC851C86DC43005580EC /* NotesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0BEC831C86DC43005580EC /* NotesTableViewCell.xib */; };
 		BD0BEC871C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC861C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift */; };
 		BD0BEC891C872486005580EC /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0BEC881C872486005580EC /* WriteViewController.swift */; };
 		BD1003BE1C8D99F500C00C15 /* UEAdjustmentViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1003BD1C8D99F500C00C15 /* UEAdjustmentViewController2.swift */; };
 		BD1003C01C8D9A9400C00C15 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1003BF1C8D9A9400C00C15 /* Helper.swift */; };
+		BD2A81C41C92F8020074274B /* UIViewController+Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2A81C31C92F8020074274B /* UIViewController+Notes.swift */; };
+		BD2A81CB1C9314BC0074274B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD2A81CD1C9314BC0074274B /* Localizable.strings */; };
 		BD4C3DD31C8744B7004DB2A4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */; };
 		BD5F33C61C8AFF0600223364 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C51C8AFF0600223364 /* Async.swift */; };
 		BD5F33C81C8B09FD00223364 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C71C8B09FD00223364 /* Appearance.swift */; };
+		BD63A02A1C93FB6600EE680B /* Randoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63A0291C93FB6600EE680B /* Randoms.swift */; };
 		BD71D6FF1C8EC86800FA1D90 /* WriteTableViewDataSourceAndDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71D6FE1C8EC86800FA1D90 /* WriteTableViewDataSourceAndDelegate.swift */; };
 		BD71D7011C8ECBD600FA1D90 /* WriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD71D7001C8ECBD600FA1D90 /* WriteCell.swift */; };
 		BD8E458C1C919E2900B59D6B /* TPKeyboardAvoidingCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = BD8E45851C919E2900B59D6B /* TPKeyboardAvoidingCollectionView.m */; };
@@ -74,8 +73,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				BD0BEBF61C8675A1005580EC /* RealmSwift.framework in Embed Frameworks */,
-				BD0BEBF41C8675A1005580EC /* Realm.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -96,11 +93,9 @@
 		BD0BEBDF1C867376005580EC /* Smartisan-NotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Smartisan-NotesUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD0BEBE31C867376005580EC /* Smartisan_NotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Smartisan_NotesUITests.swift; sourceTree = "<group>"; };
 		BD0BEBE51C867376005580EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BD0BEBF11C8675A1005580EC /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
-		BD0BEBF21C8675A1005580EC /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		BD0BEC751C867CDB005580EC /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		BD0BEC771C8682D1005580EC /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
-		BD0BEC7B1C8685AC005580EC /* Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Notes.swift; sourceTree = "<group>"; };
+		BD0BEC7B1C8685AC005580EC /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
 		BD0BEC821C86DC43005580EC /* NotesTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesTableViewCell.swift; sourceTree = "<group>"; };
 		BD0BEC831C86DC43005580EC /* NotesTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NotesTableViewCell.xib; sourceTree = "<group>"; };
 		BD0BEC861C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeVCDataSourceAndDelegate.swift; sourceTree = "<group>"; };
@@ -108,9 +103,15 @@
 		BD1003BD1C8D99F500C00C15 /* UEAdjustmentViewController2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UEAdjustmentViewController2.swift; sourceTree = "<group>"; };
 		BD1003BF1C8D9A9400C00C15 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		BD1003C11C8DCEEF00C00C15 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; };
+		BD2A81C31C92F8020074274B /* UIViewController+Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Notes.swift"; sourceTree = "<group>"; };
+		BD2A81C71C9310050074274B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BD2A81C81C9311820074274B /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		BD2A81CF1C9314C20074274B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		BD2A81D11C93155A0074274B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
 		BD5F33C51C8AFF0600223364 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		BD5F33C71C8B09FD00223364 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
+		BD63A0291C93FB6600EE680B /* Randoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randoms.swift; sourceTree = "<group>"; };
 		BD71D6FE1C8EC86800FA1D90 /* WriteTableViewDataSourceAndDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteTableViewDataSourceAndDelegate.swift; sourceTree = "<group>"; };
 		BD71D7001C8ECBD600FA1D90 /* WriteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WriteCell.swift; sourceTree = "<group>"; };
 		BD8E45841C919E2900B59D6B /* TPKeyboardAvoidingCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TPKeyboardAvoidingCollectionView.h; sourceTree = "<group>"; };
@@ -144,8 +145,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD0BEBF51C8675A1005580EC /* RealmSwift.framework in Frameworks */,
-				BD0BEBF31C8675A1005580EC /* Realm.framework in Frameworks */,
 				3A99F69C9325E351218F4C49 /* Pods_Smartisan_Notes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,7 +220,7 @@
 				BD0BEBC31C867376005580EC /* AppDelegate.swift */,
 				BD0BEC811C86CC5A005580EC /* Controller */,
 				BD0BEC7F1C86CA2D005580EC /* View */,
-				BD0BEC801C86CA34005580EC /* Model */,
+				BD0BEC801C86CA34005580EC /* Realm */,
 				BD0BEC751C867CDB005580EC /* Main.storyboard */,
 				BD0BEBCA1C867376005580EC /* Assets.xcassets */,
 				BD0BEBCC1C867376005580EC /* LaunchScreen.storyboard */,
@@ -229,6 +228,7 @@
 				BD0BEBCF1C867376005580EC /* Info.plist */,
 				BD8E45921C91B38000B59D6B /* Extensions */,
 				BD9E78A91C89AE9E006ED8CB /* statement.html */,
+				BD2A81CD1C9314BC0074274B /* Localizable.strings */,
 				BD0BEBF81C8675B3005580EC /* Framework */,
 				BD9E78AD1C89D68A006ED8CB /* Smartisan-Notes-Bridging-Header.h */,
 			);
@@ -256,8 +256,6 @@
 		BD0BEBF81C8675B3005580EC /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				BD0BEBF11C8675A1005580EC /* Realm.framework */,
-				BD0BEBF21C8675A1005580EC /* RealmSwift.framework */,
 			);
 			name = Framework;
 			path = ..;
@@ -275,24 +273,40 @@
 			name = View;
 			sourceTree = "<group>";
 		};
-		BD0BEC801C86CA34005580EC /* Model */ = {
+		BD0BEC801C86CA34005580EC /* Realm */ = {
 			isa = PBXGroup;
 			children = (
-				BD0BEC7B1C8685AC005580EC /* Notes.swift */,
+				BD0BEC7B1C8685AC005580EC /* Model.swift */,
 			);
-			name = Model;
+			name = Realm;
 			sourceTree = "<group>";
 		};
 		BD0BEC811C86CC5A005580EC /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				BD0BEC771C8682D1005580EC /* HomeViewController.swift */,
-				BD0BEC861C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift */,
-				BD0BEC881C872486005580EC /* WriteViewController.swift */,
-				BD71D6FE1C8EC86800FA1D90 /* WriteTableViewDataSourceAndDelegate.swift */,
-				BD9AB9D71C87D8DE007C11FE /* SettingsVC */,
+				BD2A81C51C92FD540074274B /* Home */,
+				BD2A81C61C92FD5F0074274B /* WriteAndView */,
+				BD9AB9D71C87D8DE007C11FE /* Settings */,
 			);
 			name = Controller;
+			sourceTree = "<group>";
+		};
+		BD2A81C51C92FD540074274B /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BEC771C8682D1005580EC /* HomeViewController.swift */,
+				BD0BEC861C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift */,
+			);
+			name = Home;
+			sourceTree = "<group>";
+		};
+		BD2A81C61C92FD5F0074274B /* WriteAndView */ = {
+			isa = PBXGroup;
+			children = (
+				BD0BEC881C872486005580EC /* WriteViewController.swift */,
+				BD71D6FE1C8EC86800FA1D90 /* WriteTableViewDataSourceAndDelegate.swift */,
+			);
+			name = WriteAndView;
 			sourceTree = "<group>";
 		};
 		BD8E45831C919E2900B59D6B /* TPKeyboardAvoiding */ = {
@@ -314,11 +328,12 @@
 			isa = PBXGroup;
 			children = (
 				BD8E45901C91B37B00B59D6B /* UIColor+Notes.swift */,
+				BD2A81C31C92F8020074274B /* UIViewController+Notes.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
 		};
-		BD9AB9D71C87D8DE007C11FE /* SettingsVC */ = {
+		BD9AB9D71C87D8DE007C11FE /* Settings */ = {
 			isa = PBXGroup;
 			children = (
 				BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */,
@@ -332,7 +347,7 @@
 				BD1003BD1C8D99F500C00C15 /* UEAdjustmentViewController2.swift */,
 				BD0BCFB61C8A6724009D0B6F /* TouchID and KeyChain */,
 			);
-			name = SettingsVC;
+			name = Settings;
 			sourceTree = "<group>";
 		};
 		BD9E78B11C89D6A1006ED8CB /* Support */ = {
@@ -343,6 +358,7 @@
 				BD9E78AF1C89D68A006ED8CB /* NSString+GetDeviceName.m */,
 				BD5F33C51C8AFF0600223364 /* Async.swift */,
 				BD1003BF1C8D9A9400C00C15 /* Helper.swift */,
+				BD63A0291C93FB6600EE680B /* Randoms.swift */,
 				BD1003C11C8DCEEF00C00C15 /* MyPlayground.playground */,
 			);
 			name = Support;
@@ -439,6 +455,8 @@
 			knownRegions = (
 				en,
 				Base,
+				"zh-Hans",
+				"zh-Hant",
 			);
 			mainGroup = BD0BEBB71C867376005580EC;
 			productRefGroup = BD0BEBC11C867376005580EC /* Products */;
@@ -458,6 +476,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD0BEC761C867CDB005580EC /* Main.storyboard in Resources */,
+				BD2A81CB1C9314BC0074274B /* Localizable.strings in Resources */,
 				BD0BEBCE1C867376005580EC /* LaunchScreen.storyboard in Resources */,
 				BD0BEBCB1C867376005580EC /* Assets.xcassets in Resources */,
 				BD0BEC851C86DC43005580EC /* NotesTableViewCell.xib in Resources */,
@@ -545,7 +564,7 @@
 				BD0BEC871C86FB25005580EC /* HomeVCDataSourceAndDelegate.swift in Sources */,
 				BD4C3DD31C8744B7004DB2A4 /* AboutViewController.swift in Sources */,
 				BDCE36CB1C8915250080B664 /* ShareViewController.swift in Sources */,
-				BD0BEC7C1C8685AC005580EC /* Notes.swift in Sources */,
+				BD0BEC7C1C8685AC005580EC /* Model.swift in Sources */,
 				BD71D6FF1C8EC86800FA1D90 /* WriteTableViewDataSourceAndDelegate.swift in Sources */,
 				BD9ABA0E1C886280007C11FE /* SpringAnimation.swift in Sources */,
 				BD8E458D1C919E2900B59D6B /* TPKeyboardAvoidingScrollView.m in Sources */,
@@ -558,8 +577,10 @@
 				BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */,
 				BD0BCFB81C8AF65F009D0B6F /* SubVENTouchLockSplashViewController.swift in Sources */,
 				BD8E458E1C919E2900B59D6B /* TPKeyboardAvoidingTableView.m in Sources */,
+				BD2A81C41C92F8020074274B /* UIViewController+Notes.swift in Sources */,
 				BD1003C01C8D9A9400C00C15 /* Helper.swift in Sources */,
 				BD9E78B01C89D68A006ED8CB /* NSString+GetDeviceName.m in Sources */,
+				BD63A02A1C93FB6600EE680B /* Randoms.swift in Sources */,
 				BD71D7011C8ECBD600FA1D90 /* WriteCell.swift in Sources */,
 				BD1003BE1C8D99F500C00C15 /* UEAdjustmentViewController2.swift in Sources */,
 				BD9E78A61C898094006ED8CB /* SetCodeViewController.swift in Sources */,
@@ -602,8 +623,19 @@
 			isa = PBXVariantGroup;
 			children = (
 				BD0BEBCD1C867376005580EC /* Base */,
+				BD2A81C71C9310050074274B /* zh-Hans */,
+				BD2A81C81C9311820074274B /* zh-Hant */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		BD2A81CD1C9314BC0074274B /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				BD2A81CF1C9314C20074274B /* zh-Hans */,
+				BD2A81D11C93155A0074274B /* en */,
+			);
+			name = Localizable.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

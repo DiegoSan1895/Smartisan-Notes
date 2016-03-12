@@ -49,6 +49,8 @@ extension HomeViewController: NotesTableViewCellDelegate {
         try! realm.write { () -> Void in
             realm.delete(notes[indexPath.row])
         }
+        
+        // 3.
         self.tableView.deleteRowsAtIndexPaths([indexPath], withRowAnimation: .Automatic)
     }
     func longPressureGestureStart(cell: NotesTableViewCell) {
