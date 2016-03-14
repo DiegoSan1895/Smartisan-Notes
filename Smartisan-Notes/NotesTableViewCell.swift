@@ -42,7 +42,7 @@ class NotesTableViewCell: UITableViewCell {
     }
     
     var id: Int{
-        return (note?.id)!
+        return 10
     }
     
     var slided: Bool = false

@@ -5,11 +5,6 @@ PODS:
   - IBAnimatable (1.2)
   - IQKeyboardManagerSwift (4.0.0)
   - MonkeyKing (0.9.1)
-  - Realm (0.98.4):
-    - Realm/Headers (= 0.98.4)
-  - Realm/Headers (0.98.4)
-  - RealmSwift (0.98.4):
-    - Realm (= 0.98.4)
   - SECoreTextView (0.8.5)
   - SSKeychain (1.4.0)
   - VENTouchLock (1.11.0):
@@ -22,7 +17,6 @@ DEPENDENCIES:
   - IBAnimatable
   - IQKeyboardManagerSwift
   - MonkeyKing
-  - RealmSwift
   - SECoreTextView
   - VENTouchLock
 
@@ -33,8 +27,6 @@ SPEC CHECKSUMS:
   IBAnimatable: bcebfaf34b041949da5ed668ac5ab2e28a4b2357
   IQKeyboardManagerSwift: ede2a27b4e1ce053d03073b9c7fa439322f5e405
   MonkeyKing: 84d0f711a0e20eb104616d0b393a74efd5d9d9ad
-  Realm: 7745674cb1b7cb2a84a655bfd420b86efdaad36e
-  RealmSwift: 18742f4f13f98117aeec53b92058918ac93bf38f
   SECoreTextView: 5f3bedc0c9ffc2f4c109c37142f25c12f37368dd
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   VENTouchLock: f3145d6fbff243d6692dfb1107b88db06dc216c9
