@@ -10,7 +10,7 @@ import UIKit
 import SafariServices
 import MessageUI
 import VENTouchLock
-import StoreKit
+
 
 class AboutViewController: UITableViewController {
     
@@ -120,7 +120,7 @@ class AboutViewController: UITableViewController {
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        //setSmartisanAppsOpenOrGetButtons()
+        setSmartisanAppsOpenOrGetButtons()
         
 
     }
@@ -180,7 +180,7 @@ class AboutViewController: UITableViewController {
 
 // MARK: - DataSourceAndDelegate
 // MARK: - ---------------------
-extension AboutViewController: SKStoreProductViewControllerDelegate {
+extension AboutViewController {
     override func tableView(tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
         if section == 6 {
             let footerView = UIView(frame: CGRect(origin: CGPointZero, size: CGSize(width: self.tableView.bounds.width, height: 160)))
@@ -203,32 +203,19 @@ extension AboutViewController: SKStoreProductViewControllerDelegate {
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         if indexPath.section == 3{
             if indexPath.row == 1{
-                let storeProductVC = SKStoreProductViewController()
-                storeProductVC.delegate = self
+                let rateURL = NSURL(string: "itms-apps://ax.itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=\(AppID.notesID)")!
                 
-                storeProductVC.loadProductWithParameters([SKStoreProductParameterITunesItemIdentifier: 867934588], completionBlock: { (success, error) -> Void in
-                    
-                    if success {
-                        self.presentViewController(storeProductVC, animated: false, completion: nil)
-                    }
-                })
+                UIApplication.sharedApplication().openURL(rateURL)
             }
+            
             if indexPath.row == 2{
                 sendEmailForAdvices()
             }
         }
+        
+        tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
-    
-    override func tableView(tableView: UITableView, willDeselectRowAtIndexPath indexPath: NSIndexPath) -> NSIndexPath? {
-        tableView.deselectRowAtIndexPath(indexPath, animated: false)
-        return nil
-    }
-    
-    func productViewControllerDidFinish(viewController: SKStoreProductViewController) {
-        viewController.dismissViewControllerAnimated(true) { () -> Void in
-            
-        }
-    }
+
 }
 
 // MARK：- 关注我们
@@ -276,26 +263,7 @@ extension AboutViewController: CopyFooterViewControllerDelegate{
 // MARK: - MailComposeVC Delegate
 extension AboutViewController: MFMailComposeViewControllerDelegate{
     func mailComposeController(controller: MFMailComposeViewController, didFinishWithResult result: MFMailComposeResult, error: NSError?) {
-        switch result{
-        case MFMailComposeResultSent, MFMailComposeResultFailed, MFMailComposeResultSaved:
-            controller.dismissViewControllerAnimated(true, completion: nil)
-        case MFMailComposeResultCancelled:
-            // 1.
-            let alertController = UIAlertController(title: "取消选项", message: "message", preferredStyle: .ActionSheet)
-            // 2.
-            let action1 = UIAlertAction(title: "存储草稿", style: UIAlertActionStyle.Default, handler: { (action) -> Void in
-                controller.dismissViewControllerAnimated(true, completion: nil)
-            })
-            let action2 = UIAlertAction(title: "删除草稿", style: UIAlertActionStyle.Destructive, handler: { (action) -> Void in
-                controller.dismissViewControllerAnimated(true, completion: nil)
-            })
-            // 3.
-            alertController.addAction(action1)
-            alertController.addAction(action2)
-            // 4.
-            self.presentViewController(alertController, animated: true, completion: nil)
-        default:
-            break
-        }
+        
+        dismissViewControllerAnimated(true, completion: nil)
     }
 }

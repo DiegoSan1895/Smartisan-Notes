@@ -41,7 +41,7 @@ class NotesTableViewCell: UITableViewCell {
         }
     }
     
-    var id: String{
+    var id: Int{
         return (note?.id)!
     }
     

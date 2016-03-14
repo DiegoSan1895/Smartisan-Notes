@@ -42,7 +42,6 @@
 		BD9ABA0E1C886280007C11FE /* SpringAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9ABA0D1C886280007C11FE /* SpringAnimation.swift */; };
 		BD9E788E1C893973006ED8CB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E788D1C893973006ED8CB /* Constants.swift */; };
 		BD9E78A41C897EBE006ED8CB /* TouchID.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78A31C897EBE006ED8CB /* TouchID.swift */; };
-		BD9E78A61C898094006ED8CB /* SetCodeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78A51C898094006ED8CB /* SetCodeViewController.swift */; };
 		BD9E78AA1C89AE9E006ED8CB /* statement.html in Resources */ = {isa = PBXBuildFile; fileRef = BD9E78A91C89AE9E006ED8CB /* statement.html */; };
 		BD9E78AC1C89AF77006ED8CB /* UEAdjustmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */; };
 		BD9E78B01C89D68A006ED8CB /* NSString+GetDeviceName.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78AF1C89D68A006ED8CB /* NSString+GetDeviceName.m */; };
@@ -129,7 +128,6 @@
 		BD9ABA0D1C886280007C11FE /* SpringAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SpringAnimation.swift; sourceTree = "<group>"; };
 		BD9E788D1C893973006ED8CB /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		BD9E78A31C897EBE006ED8CB /* TouchID.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TouchID.swift; sourceTree = "<group>"; };
-		BD9E78A51C898094006ED8CB /* SetCodeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCodeViewController.swift; sourceTree = "<group>"; };
 		BD9E78A91C89AE9E006ED8CB /* statement.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = statement.html; sourceTree = "<group>"; };
 		BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UEAdjustmentViewController.swift; sourceTree = "<group>"; };
 		BD9E78AD1C89D68A006ED8CB /* Smartisan-Notes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smartisan-Notes-Bridging-Header.h"; sourceTree = "<group>"; };
@@ -342,7 +340,6 @@
 				BD9AB9D51C87D8CC007C11FE /* MarkdownTableViewController.swift */,
 				BD9AB9D91C885F29007C11FE /* CopyFooterViewController.swift */,
 				BDCE36CA1C8915250080B664 /* ShareViewController.swift */,
-				BD9E78A51C898094006ED8CB /* SetCodeViewController.swift */,
 				BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */,
 				BD1003BD1C8D99F500C00C15 /* UEAdjustmentViewController2.swift */,
 				BD0BCFB61C8A6724009D0B6F /* TouchID and KeyChain */,
@@ -583,7 +580,6 @@
 				BD63A02A1C93FB6600EE680B /* Randoms.swift in Sources */,
 				BD71D7011C8ECBD600FA1D90 /* WriteCell.swift in Sources */,
 				BD1003BE1C8D99F500C00C15 /* UEAdjustmentViewController2.swift in Sources */,
-				BD9E78A61C898094006ED8CB /* SetCodeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
