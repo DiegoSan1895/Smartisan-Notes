@@ -18,7 +18,7 @@ let showUEVCIdentifire = "showUEVC"
 class HomeViewController: UIViewController {
     
     // MARK: - properties
-    let realm = try! Realm()
+    let realm: Realm = (UIApplication.sharedApplication().delegate as! AppDelegate).realm
     
     lazy var notes: Results<Notes> = {
         self.realm.objects(Notes).sorted("created", ascending: false)
@@ -39,7 +39,7 @@ class HomeViewController: UIViewController {
         // 1.
         alertView.dismiss()
         // 2.
-        self.performSegueWithIdentifier(showUEVCIdentifire, sender: self)
+        performSegueWithIdentifier(showUEVCIdentifire, sender: self)
     }
     @IBAction func checkToAgreeUEPlanButtonDidPressed(sender: UIButton) {
         
@@ -62,6 +62,7 @@ class HomeViewController: UIViewController {
         
         let writeVC = storyboard?.instantiateViewControllerWithIdentifier("writeAndView") as! WriteViewController
         writeVC.state = .write
+        writeVC.note = Notes()
         
         navigationController?.pushViewController(writeVC, animated: true)
     }
@@ -76,7 +77,7 @@ class HomeViewController: UIViewController {
         
         // 在数据库变化的时候执行block里的代码
         notificationToken = notes.addNotificationBlock({ (results, error) -> () in
-            self.tableView.reloadData()
+            //self.tableView.reloadData()
             //已经执行了删除row，这里就不需要再次reloadData了
             
         })
@@ -85,7 +86,7 @@ class HomeViewController: UIViewController {
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        
+        tableView.reloadData()
     }
     
     override func viewWillDisappear(animated: Bool) {

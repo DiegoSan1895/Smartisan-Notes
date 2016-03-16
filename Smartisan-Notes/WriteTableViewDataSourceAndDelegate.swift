@@ -23,13 +23,8 @@ extension WriteViewController: UITableViewDelegate, UITableViewDataSource{
         
         let cell = self.tableView.dequeueReusableCellWithIdentifier(contentCellIdentifier) as! WriteCell
         
-        switch state{
-        case.view:
-            cell.note = self.note
-        case.write:
-            cell.note = Notes()
-        }
-        
+        cell.note = self.note
+    
         return cell
     }
     

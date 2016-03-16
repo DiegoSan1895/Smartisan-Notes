@@ -300,7 +300,7 @@
                                                     </constraints>
                                                 </view>
                                                 <view tag="10" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uPg-Wr-uYH" customClass="SETextView">
-                                                    <rect key="frame" x="26" y="50" width="329" height="442"/>
+                                                    <rect key="frame" x="26" y="50" width="329" height="462"/>
                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                                     <constraints>
                                                         <constraint firstAttribute="height" constant="500" id="gkM-Yy-H2N"/>
@@ -311,32 +311,19 @@
                                                         </mask>
                                                     </variation>
                                                 </view>
-                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="note_paper_bottom" translatesAutoresizingMaskIntoConstraints="NO" id="VTL-OB-uwz">
-                                                    <rect key="frame" x="0.0" y="492" width="375" height="58"/>
-                                                    <constraints>
-                                                        <constraint firstAttribute="height" constant="58" id="PsT-da-3MG"/>
-                                                    </constraints>
-                                                </imageView>
                                             </subviews>
                                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                             <constraints>
-                                                <constraint firstAttribute="trailing" secondItem="VTL-OB-uwz" secondAttribute="trailing" id="3IG-iN-1W1"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="uPg-Wr-uYH" secondAttribute="bottom" id="BE0-F3-Jjl"/>
                                                 <constraint firstItem="uPg-Wr-uYH" firstAttribute="leading" secondItem="ey0-xK-Jqg" secondAttribute="leading" constant="30" id="EsZ-Kh-Q9W"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="VTL-OB-uwz" secondAttribute="bottom" id="HRR-zp-gmL"/>
                                                 <constraint firstAttribute="trailing" secondItem="uPg-Wr-uYH" secondAttribute="trailing" constant="20" id="LBo-mm-NNC"/>
-                                                <constraint firstItem="VTL-OB-uwz" firstAttribute="leading" secondItem="ey0-xK-Jqg" secondAttribute="leadingMargin" id="Ltp-5U-vNy"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="VTL-OB-uwz" secondAttribute="trailing" id="N36-XZ-743"/>
                                                 <constraint firstItem="uPg-Wr-uYH" firstAttribute="top" secondItem="ey0-xK-Jqg" secondAttribute="top" constant="20" id="OpL-74-HYi"/>
                                                 <constraint firstAttribute="bottom" secondItem="uPg-Wr-uYH" secondAttribute="bottom" id="Rur-Vk-Rvw"/>
-                                                <constraint firstItem="VTL-OB-uwz" firstAttribute="leading" secondItem="ey0-xK-Jqg" secondAttribute="leading" id="YAV-xz-aF8"/>
                                                 <constraint firstItem="uPg-Wr-uYH" firstAttribute="leading" secondItem="u4X-MY-wMz" secondAttribute="leading" id="bnc-EL-qJt"/>
                                                 <constraint firstItem="u4X-MY-wMz" firstAttribute="top" secondItem="ey0-xK-Jqg" secondAttribute="top" id="clR-nO-28h"/>
                                                 <constraint firstAttribute="trailing" secondItem="u4X-MY-wMz" secondAttribute="trailing" constant="20" id="haG-9f-tKq"/>
                                                 <constraint firstAttribute="bottomMargin" secondItem="uPg-Wr-uYH" secondAttribute="bottom" constant="58" id="iEu-oF-jOD"/>
-                                                <constraint firstItem="VTL-OB-uwz" firstAttribute="top" secondItem="uPg-Wr-uYH" secondAttribute="bottom" id="kSb-r8-E3u"/>
-                                                <constraint firstItem="uPg-Wr-uYH" firstAttribute="top" secondItem="VTL-OB-uwz" secondAttribute="bottom" constant="-264" id="laO-BP-WYA"/>
-                                                <constraint firstItem="uPg-Wr-uYH" firstAttribute="top" secondItem="VTL-OB-uwz" secondAttribute="bottom" id="oI5-26-KJK"/>
+                                                <constraint firstAttribute="bottomMargin" secondItem="uPg-Wr-uYH" secondAttribute="bottom" constant="38" id="rZI-6d-f2Q"/>
                                                 <constraint firstItem="uPg-Wr-uYH" firstAttribute="trailing" secondItem="u4X-MY-wMz" secondAttribute="trailing" id="tF1-ih-nGO"/>
                                                 <constraint firstItem="uPg-Wr-uYH" firstAttribute="top" secondItem="u4X-MY-wMz" secondAttribute="bottom" constant="12" id="tfb-Ar-myV"/>
                                                 <constraint firstItem="u4X-MY-wMz" firstAttribute="leading" secondItem="ey0-xK-Jqg" secondAttribute="leading" constant="26" id="vmb-Xy-BDM"/>
@@ -349,10 +336,6 @@
                                                     <exclude reference="OpL-74-HYi"/>
                                                     <exclude reference="Rur-Vk-Rvw"/>
                                                     <exclude reference="iEu-oF-jOD"/>
-                                                    <exclude reference="laO-BP-WYA"/>
-                                                    <exclude reference="oI5-26-KJK"/>
-                                                    <exclude reference="Ltp-5U-vNy"/>
-                                                    <exclude reference="N36-XZ-743"/>
                                                 </mask>
                                             </variation>
                                         </tableViewCellContentView>
@@ -1752,7 +1735,6 @@
         <image name="iOSbtnBg" width="100" height="62"/>
         <image name="icon_check" width="40" height="40"/>
         <image name="line1" width="50" height="1"/>
-        <image name="note_paper_bottom" width="324" height="51"/>
         <image name="pyq" width="57" height="57"/>
         <image name="qzone" width="57" height="57"/>
         <image name="star_big_normal" width="44" height="37"/>

@@ -78,7 +78,9 @@ class WriteCell: UITableViewCell, SETextViewDelegate{
         self.charactersCountLabel.textColor = Colors.timeLabelColor
         
         // 3. set cell's backgroungColor
-        self.backgroundColor = UIColor(patternImage: UIImage(named: "note_paper_middle")!)
+        let image = UIImage(named: "note_paper_middle")!
+        let resizableImage = image.resizableImageWithCapInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 300), resizingMode: .Stretch)
+        self.backgroundColor = UIColor(patternImage: resizableImage)
         
 
         

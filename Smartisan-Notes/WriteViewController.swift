@@ -16,9 +16,9 @@ enum State: Int{
 }
 class WriteViewController: UIViewController, WriteCellDelegate {
     
-
+    
     // MARK:- IBOutlets
-
+    
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var backGroundShadowView: UIControl!
     
@@ -32,18 +32,19 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     @IBOutlet weak var pickPhotoFromLibraryButton: UIButton!
     @IBOutlet weak var takePicktureButton: UIButton!
     
-    let realm = try! Realm()
+    let realm: Realm = (UIApplication.sharedApplication().delegate as! AppDelegate).realm
+    
     var stared: Bool = false
     
     var state: State = State.view{
         didSet{
-           
-                switch state{
-                case .write:
-                    navigationBarChangeToStateWrite()
-                case .view:
-                    navigationBarChangeToStateView()
-                }
+            switch state{
+            case .write:
+                //navigationBarChangeToStateWrite()
+                break
+            case .view:
+                navigationBarChangeToStateView()
+            }
         }
     }
     var stateHelper: Int = 0
@@ -57,7 +58,7 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     }
     
     private let kFooterViewHeight: CGFloat = 160
-
+    
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -72,11 +73,15 @@ class WriteViewController: UIViewController, WriteCellDelegate {
         }else{
             self.state = State.write
         }
+        
+        self.tableView.transform = CGAffineTransformMakeScale(0.95, 0.95)
     }
     override func viewDidAppear(animated: Bool) {
         super.viewDidAppear(animated)
         
-        animateTableView()
+        spring(0.3) { () -> Void in
+            self.tableView.transform = CGAffineTransformIdentity
+        }
         
         switch state{
         case .write:
@@ -93,29 +98,47 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     
     // MARK: - IBAcitons
     @IBAction func listBackButtonDidPressed(sender: UIButton) {
-        saveNote()
+        switch state{
+        case .view:
+            break
+        case .write:
+            if textView?.text.characters.count > 0{
+                note.contents = (textView?.text)!
+                note.stared = stared
+                
+                realm.beginWrite()
+                realm.add(note)
+                try! realm.commitWrite()
+                
+            }else{
+                break
+            }
+        }
         self.navigationController?.popViewControllerAnimated(true)
     }
     
-
+    
     @IBAction func cameraAndDeleteButtonDidPressed(sender: UIButton) {
         switch state{
+            
         case .write:
             self.textView?.resignFirstResponder()
             chosePhoto()
         case .view:
             deleteNote()
+            
+            
         }
     }
     
     @IBAction func doneAndShareButton(sender: UIButton) {
-            switch state{
-            case .view:
-                break
-            case .write:
-                self.textView?.resignFirstResponder()
-            }
-
+        switch state{
+        case .view:
+            break
+        case .write:
+            self.textView?.resignFirstResponder()
+        }
+        
     }
     
     // MARK: - chose photo footerView
@@ -128,7 +151,7 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     @IBAction func giveUpToAddPhoto(sender: AnyObject) {
         backToNormalState()
     }
-
+    
     @IBAction func backGroundViewTouched(sender: AnyObject) {
         backToNormalState()
     }
@@ -206,9 +229,9 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     }
     
     func updateNoteInRealmDataBase(){
-
         
-
+        
+        
     }
     
     func addNewNoteIntoRealmDataBase(){
@@ -220,15 +243,7 @@ class WriteViewController: UIViewController, WriteCellDelegate {
         
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
         self.tableView.backgroundColor = UIColor.clearColor()
-    
-    }
-    
-    func animateTableView(){
-        self.tableView.transform = CGAffineTransformMakeScale(0.9, 0.9)
         
-        spring(0.4) { () -> Void in
-            self.tableView.transform = CGAffineTransformIdentity
-        }
     }
     
     func navigationBarChangeToStateView(){
@@ -254,7 +269,7 @@ class WriteViewController: UIViewController, WriteCellDelegate {
         self.state = State.view
     }
     
-
+    
 }
 
 // MARK: - UINavigationControllerDelegate-UIImagePickerControllerDelegate

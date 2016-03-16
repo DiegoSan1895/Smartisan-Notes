@@ -25,8 +25,8 @@
 		BD1003C01C8D9A9400C00C15 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1003BF1C8D9A9400C00C15 /* Helper.swift */; };
 		BD2A81C41C92F8020074274B /* UIViewController+Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2A81C31C92F8020074274B /* UIViewController+Notes.swift */; };
 		BD2A81CB1C9314BC0074274B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD2A81CD1C9314BC0074274B /* Localizable.strings */; };
-		BD394D491C96A0EF0097B5C9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD394D471C96A0EF0097B5C9 /* Realm.framework */; };
-		BD394D4A1C96A0EF0097B5C9 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD394D481C96A0EF0097B5C9 /* RealmSwift.framework */; };
+		BD394D4B1C96A24F0097B5C9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD394D471C96A0EF0097B5C9 /* Realm.framework */; };
+		BD394D4D1C96A24F0097B5C9 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD394D481C96A0EF0097B5C9 /* RealmSwift.framework */; };
 		BD4C3DD31C8744B7004DB2A4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */; };
 		BD5F33C61C8AFF0600223364 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C51C8AFF0600223364 /* Async.swift */; };
 		BD5F33C81C8B09FD00223364 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C71C8B09FD00223364 /* Appearance.swift */; };
@@ -66,19 +66,6 @@
 			remoteInfo = "Smartisan-Notes";
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		BD0BEBF71C8675A1005580EC /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		282BD89D0EBFFDEFDBDFA09D /* Pods-Smartisan-Notes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smartisan-Notes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smartisan-Notes/Pods-Smartisan-Notes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,9 +134,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BD394D491C96A0EF0097B5C9 /* Realm.framework in Frameworks */,
+				BD394D4B1C96A24F0097B5C9 /* Realm.framework in Frameworks */,
+				BD394D4D1C96A24F0097B5C9 /* RealmSwift.framework in Frameworks */,
 				3A99F69C9325E351218F4C49 /* Pods_Smartisan_Notes.framework in Frameworks */,
-				BD394D4A1C96A0EF0097B5C9 /* RealmSwift.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -380,7 +367,6 @@
 				BD0BEBBC1C867376005580EC /* Sources */,
 				BD0BEBBD1C867376005580EC /* Frameworks */,
 				BD0BEBBE1C867376005580EC /* Resources */,
-				BD0BEBF71C8675A1005580EC /* Embed Frameworks */,
 				0E06CF9D3DD3736B1E74B5DD /* Embed Pods Frameworks */,
 				EE2CB70114B76977DD29256D /* Copy Pods Resources */,
 			);
