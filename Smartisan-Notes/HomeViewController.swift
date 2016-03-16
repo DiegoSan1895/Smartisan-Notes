@@ -61,7 +61,7 @@ class HomeViewController: UIViewController {
     @IBAction func writeButtonDidPressed(sender: UIButton) {
         
         let writeVC = storyboard?.instantiateViewControllerWithIdentifier("writeAndView") as! WriteViewController
-        writeVC.state = .write
+        writeVC.stateHelper = 1
         writeVC.note = Notes()
         
         navigationController?.pushViewController(writeVC, animated: true)

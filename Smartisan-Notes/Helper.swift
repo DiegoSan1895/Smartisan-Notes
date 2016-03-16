@@ -10,9 +10,22 @@ import UIKit
 
 func loadHTMLForWebView(webView: UIWebView){
     
-    let mainHTML = NSBundle.mainBundle().URLForResource("statement", withExtension: "html")
+    var mainHTML: NSURL{
+        let languages = ["zh-Hans-US", "en-US", "zh-Hant-US"]
+        
+        if NSLocale.preferredLanguages().first == languages[0]{
+            return NSBundle.mainBundle().URLForResource("statement", withExtension: "html")!
+        }else if NSLocale.preferredLanguages().first == languages[1]{
+            return NSBundle.mainBundle().URLForResource("statement_en", withExtension: "html")!
+        }else if NSLocale.preferredLanguages().first == languages[2]{
+            return NSBundle.mainBundle().URLForResource("statement_tw", withExtension: "html")!
+        }else{
+            return NSBundle.mainBundle().URLForResource("statement_en", withExtension: "html")!
+        }
+    }
+    
     do {
-        let contents = try NSString(contentsOfURL: mainHTML!, encoding: NSUTF8StringEncoding)
+        let contents = try NSString(contentsOfURL: mainHTML, encoding: NSUTF8StringEncoding)
         // use this method to load local HTML file, don't use loadRequest:
         webView.loadHTMLString(contents as String, baseURL: NSBundleURL)
         webView.scrollView.backgroundColor = UIColor(red:0.4, green:0.45, blue:0.49, alpha:1)

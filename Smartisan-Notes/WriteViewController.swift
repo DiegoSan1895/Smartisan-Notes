@@ -9,6 +9,7 @@
 import UIKit
 import RealmSwift
 import SECoreTextView
+import Proposer
 
 enum State: Int{
     case write = 0
@@ -32,9 +33,12 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     @IBOutlet weak var pickPhotoFromLibraryButton: UIButton!
     @IBOutlet weak var takePicktureButton: UIButton!
     
-    let realm: Realm = (UIApplication.sharedApplication().delegate as! AppDelegate).realm
+    // shareFooterView
+    @IBOutlet var shareFooterView: UIView!
     
-    var stared: Bool = false
+    
+    
+    let realm: Realm = (UIApplication.sharedApplication().delegate as! AppDelegate).realm
     
     var state: State = State.view{
         didSet{
@@ -47,7 +51,7 @@ class WriteViewController: UIViewController, WriteCellDelegate {
             }
         }
     }
-    var stateHelper: Int = 0
+    var stateHelper: Int!
     var note:Notes!
     
     var textView: SETextView?{
@@ -58,12 +62,20 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     }
     
     private let kFooterViewHeight: CGFloat = 160
+    private let kShareFooterVieweHeight: CGFloat = 266
     
     // MARK: - LifeCycle
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setUpUI()
+        
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "navigationBarChangeToStateView", name: UIKeyboardWillHideNotification, object: nil)
+        NSNotificationCenter.defaultCenter().addObserver(self, selector: "navigationBarChangeToStateWrite", name: UIKeyboardWillShowNotification, object: nil)
+        
+        let screenEdgePanGesture = UIScreenEdgePanGestureRecognizer(target: self, action: "listBackButtonDidPressed:")
+        screenEdgePanGesture.edges = UIRectEdge.Left
+        view.addGestureRecognizer(screenEdgePanGesture)
     }
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
@@ -104,7 +116,6 @@ class WriteViewController: UIViewController, WriteCellDelegate {
         case .write:
             if textView?.text.characters.count > 0{
                 note.contents = (textView?.text)!
-                note.stared = stared
                 
                 realm.beginWrite()
                 realm.add(note)
@@ -134,11 +145,15 @@ class WriteViewController: UIViewController, WriteCellDelegate {
     @IBAction func doneAndShareButton(sender: UIButton) {
         switch state{
         case .view:
-            break
+            share()
         case .write:
             self.textView?.resignFirstResponder()
         }
         
+    }
+    
+    @IBAction func backGroundViewTouched(sender: AnyObject) {
+        backToNormalState()
     }
     
     // MARK: - chose photo footerView
@@ -152,19 +167,63 @@ class WriteViewController: UIViewController, WriteCellDelegate {
         backToNormalState()
     }
     
-    @IBAction func backGroundViewTouched(sender: AnyObject) {
-        backToNormalState()
+    
+    // MARK: - share
+    
+    @IBAction func shareByWords(sender: UIButton) {
+        
     }
-    func backToNormalState(){
-        spring(0.4) { () -> Void in
-            self.chosePhotoFooterView.transform = CGAffineTransformMakeTranslation(0, self.kFooterViewHeight)
-            self.backGroundShadowView.alpha = 0
+    
+    @IBAction func generateImageAndSaveToPhotes(sender: UIButton) {
+        
+    }
+    @IBAction func sendEmail(sender: UIButton) {
+    }
+    @IBAction func shareByWeb(sender: UIButton) {
+    }
+    
+    func share() {
+        
+        self.backGroundShadowView.hidden = false
+        self.shareFooterView.hidden = false
+        self.shareFooterView.frame = CGRect(x: 0, y: self.view.frame.height - kShareFooterVieweHeight, width: self.view.frame.width, height: kShareFooterVieweHeight)
+        self.view.addSubview(self.shareFooterView)
+        
+        
+        // animation
+        self.shareFooterView.transform = CGAffineTransformMakeTranslation(0, kShareFooterVieweHeight)
+        spring(0.6) { () -> Void in
+            self.shareFooterView.transform = CGAffineTransformIdentity
         }
+
+    }
+    
+    func backToNormalState(){
+        springWithCompletion(0.4, animations: { () -> Void in
+            self.chosePhotoFooterView.transform = CGAffineTransformMakeTranslation(0, self.kFooterViewHeight)
+            self.shareFooterView.transform = CGAffineTransformMakeTranslation(0, self.kShareFooterVieweHeight)
+            self.backGroundShadowView.alpha = 0
+            }) { (success) -> Void in
+                
+                self.backGroundShadowView.hidden = true
+                self.backGroundShadowView.alpha = 1
+                self.chosePhotoFooterView.hidden = true
+                self.chosePhotoFooterView.transform = CGAffineTransformIdentity
+                
+                self.shareFooterView.hidden = true
+                self.shareFooterView.transform = CGAffineTransformIdentity
+        }
+        
+        
         self.backGroundShadowView.hidden = true
         self.backGroundShadowView.alpha = 1
         self.chosePhotoFooterView.hidden = true
         self.chosePhotoFooterView.transform = CGAffineTransformIdentity
+        
+        shareFooterView.hidden = true
+        shareFooterView.transform = CGAffineTransformIdentity
     }
+    
     func chosePhoto(){
         
         self.backGroundShadowView.hidden = false

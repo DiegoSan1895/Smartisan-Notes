@@ -22,7 +22,8 @@ class WriteCell: UITableViewCell, SETextViewDelegate{
     @IBOutlet weak var charactersCountLabel: UILabel!
     
     @IBAction func starButtonDidPressed(sender: UIButton) {
-        
+        isStared = isStared == false ? true : false
+        note.stared = isStared
     }
     
     @IBOutlet weak var delegate: WriteCellDelegate?
@@ -61,6 +62,17 @@ class WriteCell: UITableViewCell, SETextViewDelegate{
         }
     }
     
+    var isStared: Bool = false {
+        didSet{
+            if isStared {
+                starButton.setImage(UIImage(named: "star_big_selected"), forState: .Normal)
+                
+            }else {
+                starButton.setImage(UIImage(named: "star_big_normal"), forState: .Normal)
+            }
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
