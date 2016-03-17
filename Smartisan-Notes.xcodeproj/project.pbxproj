@@ -28,6 +28,7 @@
 		BD394D4B1C96A24F0097B5C9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD394D471C96A0EF0097B5C9 /* Realm.framework */; };
 		BD394D4D1C96A24F0097B5C9 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD394D481C96A0EF0097B5C9 /* RealmSwift.framework */; };
 		BD4C3DD31C8744B7004DB2A4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */; };
+		BD57F7491C9A41DB00550E30 /* UIButton+Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD57F7481C9A41DB00550E30 /* UIButton+Notes.swift */; };
 		BD5F33C61C8AFF0600223364 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C51C8AFF0600223364 /* Async.swift */; };
 		BD5F33C81C8B09FD00223364 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C71C8B09FD00223364 /* Appearance.swift */; };
 		BD63A02A1C93FB6600EE680B /* Randoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63A0291C93FB6600EE680B /* Randoms.swift */; };
@@ -103,6 +104,7 @@
 		BD394D471C96A0EF0097B5C9 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
 		BD394D481C96A0EF0097B5C9 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		BD57F7481C9A41DB00550E30 /* UIButton+Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Notes.swift"; sourceTree = "<group>"; };
 		BD5F33C51C8AFF0600223364 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		BD5F33C71C8B09FD00223364 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		BD63A0291C93FB6600EE680B /* Randoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randoms.swift; sourceTree = "<group>"; };
@@ -332,6 +334,7 @@
 			children = (
 				BD8E45901C91B37B00B59D6B /* UIColor+Notes.swift */,
 				BD2A81C31C92F8020074274B /* UIViewController+Notes.swift */,
+				BD57F7481C9A41DB00550E30 /* UIButton+Notes.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -583,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD8E458C1C919E2900B59D6B /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				BD57F7491C9A41DB00550E30 /* UIButton+Notes.swift in Sources */,
 				BD9E78AC1C89AF77006ED8CB /* UEAdjustmentViewController.swift in Sources */,
 				BD9AB9DA1C885F29007C11FE /* CopyFooterViewController.swift in Sources */,
 				BD9E788E1C893973006ED8CB /* Constants.swift in Sources */,

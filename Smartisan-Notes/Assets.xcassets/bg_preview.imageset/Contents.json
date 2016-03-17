@@ -9,14 +9,14 @@
         "mode" : "9-part",
         "center" : {
           "mode" : "tile",
-          "width" : 1,
-          "height" : 1
+          "width" : 469,
+          "height" : 72
         },
         "cap-insets" : {
-          "bottom" : 42,
+          "bottom" : 209,
           "top" : 42,
           "right" : 81,
-          "left" : 563
+          "left" : 94
         }
       },
       "idiom" : "universal",

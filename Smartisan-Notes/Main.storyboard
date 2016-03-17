@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="MmS-DO-51m">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9532" systemVersion="15D21" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="GHI-2R-k3s">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9530"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
@@ -179,7 +179,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2440.5" y="-377.5"/>
+            <point key="canvasLocation" x="2432.5" y="17.5"/>
         </scene>
         <!--Write View Controller-->
         <scene sceneID="Lre-kU-kiP">
@@ -499,7 +499,6 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <action selector="chosePhotoButtonDidPressed:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="bRg-XB-WcQ"/>
                                         <action selector="generateImageAndSaveToPhotes:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="kLD-2m-2D8"/>
                                     </connections>
                                 </button>
@@ -529,7 +528,6 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <action selector="sendEmail:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="4XL-qg-Vl2"/>
                                         <action selector="takePictureButtonDidPressed:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="zOC-HX-LOx"/>
                                     </connections>
                                 </button>
@@ -539,7 +537,6 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <action selector="chosePhotoButtonDidPressed:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="Kc9-D7-V70"/>
                                         <action selector="shareByWords:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="7qH-Gx-oWF"/>
                                     </connections>
                                 </button>
@@ -549,7 +546,6 @@
                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     </state>
                                     <connections>
-                                        <action selector="chosePhotoButtonDidPressed:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="9Lf-nn-wh8"/>
                                         <action selector="shareByWeb:" destination="NnY-Ur-g5t" eventType="touchUpInside" id="1TU-Eh-iJo"/>
                                     </connections>
                                 </button>
@@ -614,7 +610,7 @@
                     </constraints>
                 </view>
             </objects>
-            <point key="canvasLocation" x="2945.5" y="-377.5"/>
+            <point key="canvasLocation" x="3107.5" y="17.5"/>
         </scene>
         <!--Generate Imaeg Preview View Controller-->
         <scene sceneID="QHj-HF-ILZ">
@@ -644,7 +640,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9Pd-r3-zWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3799.5" y="-360.5"/>
+            <point key="canvasLocation" x="3782.5" y="17.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="NsO-pm-gik">
@@ -663,7 +659,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="N2b-sP-cQz" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1996.5" y="-377.5"/>
+            <point key="canvasLocation" x="1989.5" y="22.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="qaT-eO-93E">
@@ -699,7 +695,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5Ox-uN-11H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2445.5" y="-1841.5"/>
+            <point key="canvasLocation" x="2077.5" y="-1998.5"/>
         </scene>
         <!--用户体验改进计划-->
         <scene sceneID="We3-rx-v1A">
@@ -796,7 +792,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ROA-LD-aeP" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2908.5" y="-1841.5"/>
+            <point key="canvasLocation" x="2905.5" y="-1998.5"/>
         </scene>
         <!--设置-->
         <scene sceneID="Bh0-JR-DUw">
@@ -1369,7 +1365,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="IcB-J3-v32" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3397.5" y="-1854.5"/>
+            <point key="canvasLocation" x="3428.5" y="-1998.5"/>
         </scene>
         <!--Copy Footer View Controller-->
         <scene sceneID="P1q-Oq-9Gs">
@@ -1853,7 +1849,7 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jQT-G5-qyT" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <exit id="ZK0-Vj-db4" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2881.5" y="384.5"/>
+            <point key="canvasLocation" x="2918.5" y="793.5"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="23Z-jY-mpD">
@@ -1871,7 +1867,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="RHY-7g-fam" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2440.5" y="384.5"/>
+            <point key="canvasLocation" x="2440.5" y="793.5"/>
         </scene>
     </scenes>
     <resources>
@@ -1880,7 +1876,7 @@
         <image name="Cloud_icon" width="60" height="60"/>
         <image name="SmartisanNotes" width="289" height="98"/>
         <image name="SomeNotes" width="289" height="98"/>
-        <image name="bg_preview" width="540" height="167"/>
+        <image name="bg_preview" width="322" height="161"/>
         <image name="btn_about" width="44" height="30"/>
         <image name="btn_bg_n" width="44" height="44"/>
         <image name="btn_delete" width="44" height="30"/>
