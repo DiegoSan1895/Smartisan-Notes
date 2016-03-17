@@ -22,7 +22,8 @@ class WriteCell: UITableViewCell, SETextViewDelegate{
     @IBOutlet weak var charactersCountLabel: UILabel!
     
     @IBAction func starButtonDidPressed(sender: UIButton) {
-        
+        isStared = isStared == false ? true : false
+        note.stared = isStared
     }
     
     @IBOutlet weak var delegate: WriteCellDelegate?
@@ -61,6 +62,17 @@ class WriteCell: UITableViewCell, SETextViewDelegate{
         }
     }
     
+    var isStared: Bool = false {
+        didSet{
+            if isStared {
+                starButton.setImage(UIImage(named: "star_big_selected"), forState: .Normal)
+                
+            }else {
+                starButton.setImage(UIImage(named: "star_big_normal"), forState: .Normal)
+            }
+        }
+    }
+
     override func awakeFromNib() {
         super.awakeFromNib()
         
@@ -78,7 +90,9 @@ class WriteCell: UITableViewCell, SETextViewDelegate{
         self.charactersCountLabel.textColor = Colors.timeLabelColor
         
         // 3. set cell's backgroungColor
-        self.backgroundColor = UIColor(patternImage: UIImage(named: "note_paper_middle")!)
+        let image = UIImage(named: "note_paper_middle")!
+        let resizableImage = image.resizableImageWithCapInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 300), resizingMode: .Stretch)
+        self.backgroundColor = UIColor(patternImage: resizableImage)
         
 
         

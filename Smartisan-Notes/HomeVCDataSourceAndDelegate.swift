@@ -75,7 +75,6 @@ extension HomeViewController{
         if segue.identifier == contentSequeIdentifier{
             if let writeVC = segue.destinationViewController as? WriteViewController{
                 writeVC.note = selectedCell?.note
-                
                 writeVC.stateHelper = 0
             }
         }
