@@ -25,7 +25,10 @@
 		BD1003C01C8D9A9400C00C15 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD1003BF1C8D9A9400C00C15 /* Helper.swift */; };
 		BD2A81C41C92F8020074274B /* UIViewController+Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD2A81C31C92F8020074274B /* UIViewController+Notes.swift */; };
 		BD2A81CB1C9314BC0074274B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = BD2A81CD1C9314BC0074274B /* Localizable.strings */; };
+		BD394D4B1C96A24F0097B5C9 /* Realm.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD394D471C96A0EF0097B5C9 /* Realm.framework */; };
+		BD394D4D1C96A24F0097B5C9 /* RealmSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BD394D481C96A0EF0097B5C9 /* RealmSwift.framework */; };
 		BD4C3DD31C8744B7004DB2A4 /* AboutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */; };
+		BD57F7491C9A41DB00550E30 /* UIButton+Notes.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD57F7481C9A41DB00550E30 /* UIButton+Notes.swift */; };
 		BD5F33C61C8AFF0600223364 /* Async.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C51C8AFF0600223364 /* Async.swift */; };
 		BD5F33C81C8B09FD00223364 /* Appearance.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5F33C71C8B09FD00223364 /* Appearance.swift */; };
 		BD63A02A1C93FB6600EE680B /* Randoms.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD63A0291C93FB6600EE680B /* Randoms.swift */; };
@@ -46,6 +49,10 @@
 		BD9E78AC1C89AF77006ED8CB /* UEAdjustmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */; };
 		BD9E78B01C89D68A006ED8CB /* NSString+GetDeviceName.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78AF1C89D68A006ED8CB /* NSString+GetDeviceName.m */; };
 		BDCE36CB1C8915250080B664 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE36CA1C8915250080B664 /* ShareViewController.swift */; };
+		BDF1647C1C98FAE400489F5F /* GenerateImaegPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1647B1C98FAE400489F5F /* GenerateImaegPreviewViewController.swift */; };
+		BDF1647E1C98FB0500489F5F /* NotesBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1647D1C98FB0500489F5F /* NotesBaseViewController.swift */; };
+		BDF164821C98FE7700489F5F /* statement_en.html in Resources */ = {isa = PBXBuildFile; fileRef = BDF164801C98FE7700489F5F /* statement_en.html */; };
+		BDF164831C98FE7700489F5F /* statement_tw.html in Resources */ = {isa = PBXBuildFile; fileRef = BDF164811C98FE7700489F5F /* statement_tw.html */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,19 +71,6 @@
 			remoteInfo = "Smartisan-Notes";
 		};
 /* End PBXContainerItemProxy section */
-
-/* Begin PBXCopyFilesBuildPhase section */
-		BD0BEBF71C8675A1005580EC /* Embed Frameworks */ = {
-			isa = PBXCopyFilesBuildPhase;
-			buildActionMask = 2147483647;
-			dstPath = "";
-			dstSubfolderSpec = 10;
-			files = (
-			);
-			name = "Embed Frameworks";
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		282BD89D0EBFFDEFDBDFA09D /* Pods-Smartisan-Notes.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smartisan-Notes.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smartisan-Notes/Pods-Smartisan-Notes.debug.xcconfig"; sourceTree = "<group>"; };
@@ -107,7 +101,10 @@
 		BD2A81C81C9311820074274B /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		BD2A81CF1C9314C20074274B /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		BD2A81D11C93155A0074274B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		BD394D471C96A0EF0097B5C9 /* Realm.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = Realm.framework; sourceTree = "<group>"; };
+		BD394D481C96A0EF0097B5C9 /* RealmSwift.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = RealmSwift.framework; sourceTree = "<group>"; };
 		BD4C3DD21C8744B7004DB2A4 /* AboutViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AboutViewController.swift; sourceTree = "<group>"; };
+		BD57F7481C9A41DB00550E30 /* UIButton+Notes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIButton+Notes.swift"; sourceTree = "<group>"; };
 		BD5F33C51C8AFF0600223364 /* Async.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Async.swift; sourceTree = "<group>"; };
 		BD5F33C71C8B09FD00223364 /* Appearance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Appearance.swift; sourceTree = "<group>"; };
 		BD63A0291C93FB6600EE680B /* Randoms.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Randoms.swift; sourceTree = "<group>"; };
@@ -134,6 +131,10 @@
 		BD9E78AE1C89D68A006ED8CB /* NSString+GetDeviceName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GetDeviceName.h"; sourceTree = "<group>"; };
 		BD9E78AF1C89D68A006ED8CB /* NSString+GetDeviceName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GetDeviceName.m"; sourceTree = "<group>"; };
 		BDCE36CA1C8915250080B664 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
+		BDF1647B1C98FAE400489F5F /* GenerateImaegPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateImaegPreviewViewController.swift; sourceTree = "<group>"; };
+		BDF1647D1C98FB0500489F5F /* NotesBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesBaseViewController.swift; sourceTree = "<group>"; };
+		BDF164801C98FE7700489F5F /* statement_en.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = statement_en.html; sourceTree = "<group>"; };
+		BDF164811C98FE7700489F5F /* statement_tw.html */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.html; path = statement_tw.html; sourceTree = "<group>"; };
 		F89A51B24F5A0C18838532CB /* Pods_Smartisan_Notes.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smartisan_Notes.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F9985CC0FB0F5A1A01B69947 /* Pods-Smartisan-Notes.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smartisan-Notes.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smartisan-Notes/Pods-Smartisan-Notes.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -143,6 +144,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BD394D4B1C96A24F0097B5C9 /* Realm.framework in Frameworks */,
+				BD394D4D1C96A24F0097B5C9 /* RealmSwift.framework in Frameworks */,
 				3A99F69C9325E351218F4C49 /* Pods_Smartisan_Notes.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,10 +225,10 @@
 				BD0BEC751C867CDB005580EC /* Main.storyboard */,
 				BD0BEBCA1C867376005580EC /* Assets.xcassets */,
 				BD0BEBCC1C867376005580EC /* LaunchScreen.storyboard */,
-				BD9E78B11C89D6A1006ED8CB /* Support */,
+				BD9E78B11C89D6A1006ED8CB /* Helper */,
 				BD0BEBCF1C867376005580EC /* Info.plist */,
 				BD8E45921C91B38000B59D6B /* Extensions */,
-				BD9E78A91C89AE9E006ED8CB /* statement.html */,
+				BDF164841C98FE9000489F5F /* Support */,
 				BD2A81CD1C9314BC0074274B /* Localizable.strings */,
 				BD0BEBF81C8675B3005580EC /* Framework */,
 				BD9E78AD1C89D68A006ED8CB /* Smartisan-Notes-Bridging-Header.h */,
@@ -254,6 +257,8 @@
 		BD0BEBF81C8675B3005580EC /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				BD394D471C96A0EF0097B5C9 /* Realm.framework */,
+				BD394D481C96A0EF0097B5C9 /* RealmSwift.framework */,
 			);
 			name = Framework;
 			path = ..;
@@ -285,6 +290,8 @@
 				BD2A81C51C92FD540074274B /* Home */,
 				BD2A81C61C92FD5F0074274B /* WriteAndView */,
 				BD9AB9D71C87D8DE007C11FE /* Settings */,
+				BDF1647F1C98FB2C00489F5F /* Share */,
+				BDF1647D1C98FB0500489F5F /* NotesBaseViewController.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -327,6 +334,7 @@
 			children = (
 				BD8E45901C91B37B00B59D6B /* UIColor+Notes.swift */,
 				BD2A81C31C92F8020074274B /* UIViewController+Notes.swift */,
+				BD57F7481C9A41DB00550E30 /* UIButton+Notes.swift */,
 			);
 			name = Extensions;
 			sourceTree = "<group>";
@@ -347,7 +355,7 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
-		BD9E78B11C89D6A1006ED8CB /* Support */ = {
+		BD9E78B11C89D6A1006ED8CB /* Helper */ = {
 			isa = PBXGroup;
 			children = (
 				BD8E45831C919E2900B59D6B /* TPKeyboardAvoiding */,
@@ -358,7 +366,33 @@
 				BD63A0291C93FB6600EE680B /* Randoms.swift */,
 				BD1003C11C8DCEEF00C00C15 /* MyPlayground.playground */,
 			);
+			name = Helper;
+			sourceTree = "<group>";
+		};
+		BDF1647F1C98FB2C00489F5F /* Share */ = {
+			isa = PBXGroup;
+			children = (
+				BDF1647B1C98FAE400489F5F /* GenerateImaegPreviewViewController.swift */,
+			);
+			name = Share;
+			sourceTree = "<group>";
+		};
+		BDF164841C98FE9000489F5F /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				BDF164851C98FE9900489F5F /* Statement */,
+			);
 			name = Support;
+			sourceTree = "<group>";
+		};
+		BDF164851C98FE9900489F5F /* Statement */ = {
+			isa = PBXGroup;
+			children = (
+				BD9E78A91C89AE9E006ED8CB /* statement.html */,
+				BDF164801C98FE7700489F5F /* statement_en.html */,
+				BDF164811C98FE7700489F5F /* statement_tw.html */,
+			);
+			name = Statement;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -372,7 +406,6 @@
 				BD0BEBBC1C867376005580EC /* Sources */,
 				BD0BEBBD1C867376005580EC /* Frameworks */,
 				BD0BEBBE1C867376005580EC /* Resources */,
-				BD0BEBF71C8675A1005580EC /* Embed Frameworks */,
 				0E06CF9D3DD3736B1E74B5DD /* Embed Pods Frameworks */,
 				EE2CB70114B76977DD29256D /* Copy Pods Resources */,
 			);
@@ -474,6 +507,8 @@
 			files = (
 				BD0BEC761C867CDB005580EC /* Main.storyboard in Resources */,
 				BD2A81CB1C9314BC0074274B /* Localizable.strings in Resources */,
+				BDF164821C98FE7700489F5F /* statement_en.html in Resources */,
+				BDF164831C98FE7700489F5F /* statement_tw.html in Resources */,
 				BD0BEBCE1C867376005580EC /* LaunchScreen.storyboard in Resources */,
 				BD0BEBCB1C867376005580EC /* Assets.xcassets in Resources */,
 				BD0BEC851C86DC43005580EC /* NotesTableViewCell.xib in Resources */,
@@ -551,6 +586,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD8E458C1C919E2900B59D6B /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				BD57F7491C9A41DB00550E30 /* UIButton+Notes.swift in Sources */,
 				BD9E78AC1C89AF77006ED8CB /* UEAdjustmentViewController.swift in Sources */,
 				BD9AB9DA1C885F29007C11FE /* CopyFooterViewController.swift in Sources */,
 				BD9E788E1C893973006ED8CB /* Constants.swift in Sources */,
@@ -573,9 +609,11 @@
 				BD5F33C81C8B09FD00223364 /* Appearance.swift in Sources */,
 				BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */,
 				BD0BCFB81C8AF65F009D0B6F /* SubVENTouchLockSplashViewController.swift in Sources */,
+				BDF1647C1C98FAE400489F5F /* GenerateImaegPreviewViewController.swift in Sources */,
 				BD8E458E1C919E2900B59D6B /* TPKeyboardAvoidingTableView.m in Sources */,
 				BD2A81C41C92F8020074274B /* UIViewController+Notes.swift in Sources */,
 				BD1003C01C8D9A9400C00C15 /* Helper.swift in Sources */,
+				BDF1647E1C98FB0500489F5F /* NotesBaseViewController.swift in Sources */,
 				BD9E78B01C89D68A006ED8CB /* NSString+GetDeviceName.m in Sources */,
 				BD63A02A1C93FB6600EE680B /* Randoms.swift in Sources */,
 				BD71D7011C8ECBD600FA1D90 /* WriteCell.swift in Sources */,

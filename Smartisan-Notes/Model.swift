@@ -15,23 +15,18 @@ let realmQueue = dispatch_queue_create("com.Smartisan.Queue", dispatch_queue_att
 
 class Notes: Object {
     
-    dynamic var id = Int(NSDate().timeIntervalSince1970)
+    dynamic var id = "\(Int(NSDate().timeIntervalSince1970) - 1457943000)"
     dynamic var created = NSDate()
     dynamic var stared = false
     dynamic var contents = ""
     dynamic var hasPhoto = false
     
     // indexed properties
-    override static func indexedProperties() -> [String]{
-        return ["created"]
-    }
-    
-    override static func primaryKey() -> String? {
-        return "id"
-    }
-}
-
-class Image: Object {
-    
-    
+//    override static func indexedProperties() -> [String]{
+//        return ["created"]
+//    }
+//    
+//    override class func primaryKey() -> String? {
+//        return "id"
+//    }
 }

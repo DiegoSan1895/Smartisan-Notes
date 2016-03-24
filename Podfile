@@ -15,7 +15,8 @@ target 'Smartisan-Notes' do
     pod 'DateTools'
     pod 'SECoreTextView'
     #pod 'UITableView+FDTemplateLayoutCell'
-    pod 'RealmSwift'
+    #pod 'RealmSwift'
+    pod 'Proposer'
 end
 
 target 'Smartisan-NotesTests' do

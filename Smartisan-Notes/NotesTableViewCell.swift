@@ -36,14 +36,10 @@ class NotesTableViewCell: UITableViewCell {
 
             }else {
                 staredButton.setImage(UIImage(named: "star_big_normal"), forState: .Normal)
-
             }
         }
     }
     
-    var id: Int{
-        return (note?.id)!
-    }
     
     var slided: Bool = false
     
@@ -151,7 +147,7 @@ class NotesTableViewCell: UITableViewCell {
         
         try! realm.write({ () -> Void in
             
-            realm.create(Notes.self, value: ["id": id, "stared": isStared], update: true)
+            //realm.create(Notes.self, value: ["id": id, "stared": isStared], update: true)
         })
     }
     @IBAction func deleteButtonDidPressed(sender: UIButton) {
