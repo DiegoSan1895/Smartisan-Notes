@@ -94,6 +94,7 @@ if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_framework "Pods-Smartisan-Notes/SECoreTextView.framework"
   install_framework "Pods-Smartisan-Notes/SSKeychain.framework"
   install_framework "Pods-Smartisan-Notes/VENTouchLock.framework"
+  install_framework "Pods-Smartisan-Notes/YYText.framework"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Smartisan-Notes/CXAlertView.framework"
@@ -106,4 +107,5 @@ if [[ "$CONFIGURATION" == "Release" ]]; then
   install_framework "Pods-Smartisan-Notes/SECoreTextView.framework"
   install_framework "Pods-Smartisan-Notes/SSKeychain.framework"
   install_framework "Pods-Smartisan-Notes/VENTouchLock.framework"
+  install_framework "Pods-Smartisan-Notes/YYText.framework"
 fi

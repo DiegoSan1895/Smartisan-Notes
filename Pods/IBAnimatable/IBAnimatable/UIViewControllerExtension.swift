@@ -5,11 +5,12 @@
 
 import UIKit
 
+// MARK: - UIStoryboardSegue
 public extension UIViewController {
   @IBAction public func unwindToViewController(sender: UIStoryboardSegue) {
   }
   
   @IBAction public func dismissCurrentViewController(sender: UIStoryboardSegue) {
-    sender.sourceViewController.presentingViewController?.dismissViewControllerAnimated(true, completion: nil)
+    sender.sourceViewController.dismissViewControllerAnimated(true, completion: nil)
   }
 }

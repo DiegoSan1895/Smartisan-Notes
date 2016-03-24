@@ -2,7 +2,7 @@ PODS:
   - CXAlertView (1.1.0)
   - DateTools (1.7.0)
   - HPReorderTableView (0.2)
-  - IBAnimatable (1.2)
+  - IBAnimatable (2.0)
   - IQKeyboardManagerSwift (4.0.0)
   - MonkeyKing (0.9.1)
   - Proposer (0.7.1)
@@ -10,6 +10,7 @@ PODS:
   - SSKeychain (1.4.0)
   - VENTouchLock (1.11.0):
     - SSKeychain (~> 1.0)
+  - YYText (1.0.3)
 
 DEPENDENCIES:
   - CXAlertView
@@ -21,17 +22,19 @@ DEPENDENCIES:
   - Proposer
   - SECoreTextView
   - VENTouchLock
+  - YYText
 
 SPEC CHECKSUMS:
   CXAlertView: 7387ca9af81796ab22d26ff2fc3cfcb082f3ee09
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   HPReorderTableView: fbecadc7f8b2d5a138d976aa5fe6fbb09524022a
-  IBAnimatable: bcebfaf34b041949da5ed668ac5ab2e28a4b2357
+  IBAnimatable: c5c5e024d4dff879487f401abd52d0dd68765dd0
   IQKeyboardManagerSwift: ede2a27b4e1ce053d03073b9c7fa439322f5e405
   MonkeyKing: 84d0f711a0e20eb104616d0b393a74efd5d9d9ad
   Proposer: e9759ad71a6702fd94315a0bff1f8c116edf6f07
   SECoreTextView: 5f3bedc0c9ffc2f4c109c37142f25c12f37368dd
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   VENTouchLock: f3145d6fbff243d6692dfb1107b88db06dc216c9
+  YYText: 3050159192035d7f232b537ce76668aac2e2bd8b
 
 COCOAPODS: 0.39.0
