@@ -4,7 +4,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'Smartisan-Notes' do
-    pod 'IBAnimatable'
+    #pod 'IBAnimatable'
     #pod 'Spring'
     pod 'MonkeyKing'
     pod 'VENTouchLock'
