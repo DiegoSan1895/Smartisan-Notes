@@ -99,9 +99,20 @@ class WriteCell: UITableViewCell, SETextViewDelegate{
     }
     
     // MARK: - TextViewDelegate
+    
+    func textViewDidChangeSelection(textView: SETextView!) {
+        if let caretView = textView.subviews.last{
+            caretView.backgroundColor = Colors.textColor
+            
+            let frame = CGRect(x: caretView.frame.origin.x, y: caretView.frame.origin.y + caretView.frame.height * 0.25, width: caretView.frame.width, height: caretView.frame.height * 0.75)
+            caretView.frame = frame
+        }
+    }
+    
     func textViewDidChange(textView: SETextView!) {
         self.charactersCountLabel.text = "\(textView.text.characters.count)"
     }
+    
     func textViewDidBeginEditing(textView: SETextView!) {
         
         if let VC = self.parentViewController as? WriteCellDelegate{
@@ -110,6 +121,7 @@ class WriteCell: UITableViewCell, SETextViewDelegate{
         
         self.delegate?.stateBecomeWrite()
     }
+    
     func textViewDidEndEditing(textView: SETextView!) {
         self.delegate?.stateBecomeView()
     }
