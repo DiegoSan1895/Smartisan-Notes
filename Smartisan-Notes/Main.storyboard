@@ -612,36 +612,6 @@
             </objects>
             <point key="canvasLocation" x="3107.5" y="17.5"/>
         </scene>
-        <!--Generate Imaeg Preview View Controller-->
-        <scene sceneID="QHj-HF-ILZ">
-            <objects>
-                <viewController id="MmS-DO-51m" customClass="GenerateImaegPreviewViewController" customModule="Smartisan_Notes" customModuleProvider="target" sceneMemberID="viewController">
-                    <layoutGuides>
-                        <viewControllerLayoutGuide type="top" id="Jcb-gs-REN"/>
-                        <viewControllerLayoutGuide type="bottom" id="ekf-Em-UGM"/>
-                    </layoutGuides>
-                    <view key="view" contentMode="scaleToFill" id="OiL-YQ-SL6">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bg_preview" translatesAutoresizingMaskIntoConstraints="NO" id="orb-DS-aGd">
-                                <rect key="frame" x="20" y="60" width="335" height="587"/>
-                            </imageView>
-                        </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstItem="orb-DS-aGd" firstAttribute="leading" secondItem="OiL-YQ-SL6" secondAttribute="leading" constant="20" id="AyM-Ds-pm7"/>
-                            <constraint firstItem="ekf-Em-UGM" firstAttribute="top" secondItem="orb-DS-aGd" secondAttribute="bottom" constant="20" id="aV7-YS-erY"/>
-                            <constraint firstAttribute="trailing" secondItem="orb-DS-aGd" secondAttribute="trailing" constant="20" id="lJb-hS-Pe8"/>
-                            <constraint firstItem="orb-DS-aGd" firstAttribute="top" secondItem="Jcb-gs-REN" secondAttribute="bottom" constant="40" id="oIJ-L4-9O5"/>
-                        </constraints>
-                    </view>
-                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9Pd-r3-zWc" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3782.5" y="17.5"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="NsO-pm-gik">
             <objects>
@@ -1876,7 +1846,6 @@
         <image name="Cloud_icon" width="60" height="60"/>
         <image name="SmartisanNotes" width="289" height="98"/>
         <image name="SomeNotes" width="289" height="98"/>
-        <image name="bg_preview" width="322" height="161"/>
         <image name="btn_about" width="44" height="30"/>
         <image name="btn_bg_n" width="44" height="44"/>
         <image name="btn_delete" width="44" height="30"/>

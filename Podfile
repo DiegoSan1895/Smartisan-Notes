@@ -4,7 +4,7 @@ platform :ios, '8.0'
 use_frameworks!
 
 target 'Smartisan-Notes' do
-    pod 'IBAnimatable'
+    #pod 'IBAnimatable'
     #pod 'Spring'
     pod 'MonkeyKing'
     pod 'VENTouchLock'
@@ -17,6 +17,7 @@ target 'Smartisan-Notes' do
     #pod 'UITableView+FDTemplateLayoutCell'
     #pod 'RealmSwift'
     pod 'Proposer'
+    pod 'YYText'
 end
 
 target 'Smartisan-NotesTests' do
