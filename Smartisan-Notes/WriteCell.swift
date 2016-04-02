@@ -90,9 +90,13 @@ class WriteCell: UITableViewCell, SETextViewDelegate{
         self.charactersCountLabel.textColor = Colors.timeLabelColor
         
         // 3. set cell's backgroungColor
-        let image = UIImage(named: "note_paper_middle")!
-        let resizableImage = image.resizableImageWithCapInsets(UIEdgeInsets(top: 0, left: 30, bottom: 0, right: 300), resizingMode: .Stretch)
-        self.backgroundColor = UIColor(patternImage: resizableImage)
+        var image: UIImage?
+        if UIScreen.mainScreen().bounds.width == 375{
+            image = UIImage(named: "note_paper_middle_iphone6")
+        }else{
+            image = UIImage(named: "note_paper_middle")!
+        }
+        self.backgroundColor = UIColor(patternImage: image!)
         
 
         

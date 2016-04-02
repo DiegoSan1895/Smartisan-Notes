@@ -9,13 +9,15 @@
 import UIKit
 import RealmSwift
 import CXAlertView
+import YYKit
+import MagicalRecord
 
 let cellIdentifier = "NotesCell"
 let writeSegueIdentifier = "writeNote"
 let contentSequeIdentifier = "showContent"
 let showUEVCIdentifire = "showUEVC"
 
-class HomeViewController: UIViewController {
+class HomeViewController: UIViewController, UISearchBarDelegate {
     
     // MARK: - properties
     let realm: Realm = (UIApplication.sharedApplication().delegate as! AppDelegate).realm
@@ -35,6 +37,10 @@ class HomeViewController: UIViewController {
     var isChecked: Bool = true
     
     var selectedCell: NotesTableViewCell?
+    
+    var searchBarView: UIView!
+    var searchTextField: UITextField!
+    
     @IBAction func ueAdjustmentButtonDidPressed(sender: UIButton) {
         // 1.
         alertView.dismiss()
@@ -127,7 +133,39 @@ class HomeViewController: UIViewController {
     private func setUpViews() {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
         self.tableView.registerNib(UINib(nibName: "NotesTableViewCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: cellIdentifier)
-    }
+        
+        searchBarView = UIView(frame: CGRect(x: 0, y: 0, width: view.width, height: 40))
+        searchBarView.backgroundColor = UIColor.clearColor()
+        tableView.tableHeaderView = searchBarView
+        
+        // bg
+        let searchBarBackgroundImageView = UIImageView(image: UIImage(named: "bg_searchbar_n"))
+        if isiPhone6(){
+            searchBarBackgroundImageView.image = UIImage(named: "bg_searchbar_n_iphone6")
+        }
+        searchBarBackgroundImageView.width = searchBarView.width
+        searchBarBackgroundImageView.contentMode = UIViewContentMode.ScaleAspectFit
+        searchBarBackgroundImageView.center = CGPointMake(searchBarView.width / 2, searchBarView.height / 2)
+        searchBarView.addSubview(searchBarBackgroundImageView)
+        
+        // textField
+        searchTextField = UITextField(frame: searchBarBackgroundImageView.frame)
+        searchTextField.width = searchTextField.width * 0.75
+        searchTextField.center = searchBarBackgroundImageView.center
+        searchTextField.backgroundColor = UIColor.clearColor()
+        searchTextField.textColor = Colors.textColor
+        searchTextField.font = UIFont.systemFontOfSize(12)
+        
+        let attributedPlaceHolder = NSMutableAttributedString(string: "请输入关键字")
+        attributedPlaceHolder.font = UIFont.systemFontOfSize(12)
+        //attributedPlaceHolder.color = Colors.textColor.colorWithAlphaComponent(0.55)
+        searchTextField.attributedPlaceholder = attributedPlaceHolder
+        searchTextField.tintColor = Colors.textColor
+        searchBarView.addSubview(searchTextField)
+
+        searchTextField.addTarget(self, action: "performSearch", forControlEvents: UIControlEvents.EditingChanged)
+}
+    
     private func populateDefaultNotes() {
         // 1.
         if notes.count == 0{
@@ -162,6 +200,11 @@ class HomeViewController: UIViewController {
         return resultCells
     }
     
+    
+    func performSearch() {
+        
+    }
+    
     // MARK: - set statusBar
     override func prefersStatusBarHidden() -> Bool {
         return false
@@ -170,6 +213,11 @@ class HomeViewController: UIViewController {
         return .LightContent
     }
     
+    
+    // MARK: - TextField Delegate
+    func searchBar(searchBar: UISearchBar, textDidChange searchText: String) {
+        print("text did change")
+    }
 }
 
 

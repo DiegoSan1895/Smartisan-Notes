@@ -8,6 +8,14 @@
 
 import UIKit
 
+func isiPhone6() ->Bool{
+    if UIScreen.mainScreen().bounds.width == 375{
+        return true
+    }else{
+        return false
+    }
+}
+
 func loadHTMLForWebView(webView: UIWebView){
     
     var mainHTML: NSURL{
