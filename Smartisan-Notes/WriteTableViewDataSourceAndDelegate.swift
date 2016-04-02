@@ -38,7 +38,7 @@ extension WriteViewController: UITableViewDelegate, UITableViewDataSource{
         let attributedString = NSAttributedString(string: note.contents)
         let textViewRect = SETextView.frameRectWithAttributtedString(attributedString, constraintSize: CGSize(width: 300, height: 300), lineSpacing: 17, font: UIFont.systemFontOfSize(15))
         let height:CGFloat = CGFloat(Int(textViewRect.height / 38) * 38)
-        
+        print(height)
         return max(height, 608)
     }
     

@@ -3,35 +3,42 @@ PODS:
   - DateTools (1.7.0)
   - HPReorderTableView (0.2)
   - IQKeyboardManagerSwift (4.0.0)
+  - MagicalRecord (2.3.2):
+    - MagicalRecord/Core (= 2.3.2)
+  - MagicalRecord/Core (2.3.2)
   - MonkeyKing (0.9.2)
   - Proposer (0.8.0)
   - SECoreTextView (0.8.5)
   - SSKeychain (1.4.0)
   - VENTouchLock (1.11.0):
     - SSKeychain (~> 1.0)
-  - YYText (1.0.3)
+  - YYKit (1.0.3):
+    - YYKit/no-arc (= 1.0.3)
+  - YYKit/no-arc (1.0.3)
 
 DEPENDENCIES:
   - CXAlertView
   - DateTools
   - HPReorderTableView
   - IQKeyboardManagerSwift
+  - MagicalRecord
   - MonkeyKing
   - Proposer
   - SECoreTextView
   - VENTouchLock
-  - YYText
+  - YYKit
 
 SPEC CHECKSUMS:
   CXAlertView: 7387ca9af81796ab22d26ff2fc3cfcb082f3ee09
   DateTools: 53288ee8b905fdc75897a1e6b5cc0144b14cba60
   HPReorderTableView: fbecadc7f8b2d5a138d976aa5fe6fbb09524022a
   IQKeyboardManagerSwift: ede2a27b4e1ce053d03073b9c7fa439322f5e405
+  MagicalRecord: 53bed74b4323b930992a725be713e53b37d19755
   MonkeyKing: 2cf420f9202a51714734374c97d96cf496e7ae2b
   Proposer: 17cd7fd2509b0d8d7c9e33815d648087c7dcaa81
   SECoreTextView: 5f3bedc0c9ffc2f4c109c37142f25c12f37368dd
   SSKeychain: c71293fa57216a40ab06c23f4085387583293de4
   VENTouchLock: f3145d6fbff243d6692dfb1107b88db06dc216c9
-  YYText: 3050159192035d7f232b537ce76668aac2e2bd8b
+  YYKit: fa66d61240458f14562c33c85c91d11131e43261
 
 COCOAPODS: 0.39.0

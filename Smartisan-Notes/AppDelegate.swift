@@ -9,6 +9,8 @@
 import UIKit
 import VENTouchLock
 import RealmSwift
+import CoreData
+import MagicalRecord
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate{
@@ -18,13 +20,16 @@ class AppDelegate: UIResponder, UIApplicationDelegate{
     
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject : AnyObject]?) -> Bool {
         
-        VENTouchLock.sharedInstance().setKeychainService(TouchID.service, keychainAccount: TouchID.account, touchIDReason: TouchID.touchIDReason, passcodeAttemptLimit: TouchID.passcodeAttemptLimit, splashViewControllerClass: SubVENTouchLockSplashViewController.classForCoder())
+        //VENTouchLock.sharedInstance().setKeychainService(TouchID.service, keychainAccount: TouchID.account, touchIDReason: TouchID.touchIDReason, passcodeAttemptLimit: TouchID.passcodeAttemptLimit, splashViewControllerClass: SubVENTouchLockSplashViewController.classForCoder())
         
         customerAppearance()
-        migrateRealmDataBase()
         
-        print(NSLocale.preferredLanguages())
+        MagicalRecord.setupCoreDataStack()
         return true
+    }
+    
+    func applicationWillTerminate(application: UIApplication) {
+        MagicalRecord.cleanUp()
     }
     
     func customerAppearance(){

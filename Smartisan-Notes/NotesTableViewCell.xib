@@ -107,6 +107,7 @@
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
             <connections>
                 <outlet property="cameraImageView" destination="iWv-73-FL8" id="god-Aw-V3L"/>
+                <outlet property="cellImageView" destination="7kh-Ux-kDT" id="bte-72-LOV"/>
                 <outlet property="clipImageView" destination="Js4-fo-zn0" id="MIH-oA-Zen"/>
                 <outlet property="containerView" destination="6RY-co-7fS" id="pfI-gQ-T2o"/>
                 <outlet property="contentLabel" destination="xyz-xt-UQH" id="RsX-aA-yVs"/>

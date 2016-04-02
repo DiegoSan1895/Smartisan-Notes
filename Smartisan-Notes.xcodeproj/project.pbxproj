@@ -48,6 +48,9 @@
 		BD9E78AA1C89AE9E006ED8CB /* statement.html in Resources */ = {isa = PBXBuildFile; fileRef = BD9E78A91C89AE9E006ED8CB /* statement.html */; };
 		BD9E78AC1C89AF77006ED8CB /* UEAdjustmentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78AB1C89AF77006ED8CB /* UEAdjustmentViewController.swift */; };
 		BD9E78B01C89D68A006ED8CB /* NSString+GetDeviceName.m in Sources */ = {isa = PBXBuildFile; fileRef = BD9E78AF1C89D68A006ED8CB /* NSString+GetDeviceName.m */; };
+		BDB53E651CAE8CBC00E03663 /* Note.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = BDB53E631CAE8CBC00E03663 /* Note.xcdatamodeld */; };
+		BDB53E6D1CAE929A00E03663 /* Note+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB53E6B1CAE929A00E03663 /* Note+CoreDataProperties.swift */; };
+		BDB53E6E1CAE929A00E03663 /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDB53E6C1CAE929A00E03663 /* Note.swift */; };
 		BDCE36CB1C8915250080B664 /* ShareViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDCE36CA1C8915250080B664 /* ShareViewController.swift */; };
 		BDF1647C1C98FAE400489F5F /* GenerateImaegPreviewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1647B1C98FAE400489F5F /* GenerateImaegPreviewViewController.swift */; };
 		BDF1647E1C98FB0500489F5F /* NotesBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDF1647D1C98FB0500489F5F /* NotesBaseViewController.swift */; };
@@ -130,6 +133,9 @@
 		BD9E78AD1C89D68A006ED8CB /* Smartisan-Notes-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Smartisan-Notes-Bridging-Header.h"; sourceTree = "<group>"; };
 		BD9E78AE1C89D68A006ED8CB /* NSString+GetDeviceName.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+GetDeviceName.h"; sourceTree = "<group>"; };
 		BD9E78AF1C89D68A006ED8CB /* NSString+GetDeviceName.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+GetDeviceName.m"; sourceTree = "<group>"; };
+		BDB53E641CAE8CBC00E03663 /* Note.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Note.xcdatamodel; sourceTree = "<group>"; };
+		BDB53E6B1CAE929A00E03663 /* Note+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Note+CoreDataProperties.swift"; path = "../Note+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		BDB53E6C1CAE929A00E03663 /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Note.swift; path = ../Note.swift; sourceTree = "<group>"; };
 		BDCE36CA1C8915250080B664 /* ShareViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareViewController.swift; sourceTree = "<group>"; };
 		BDF1647B1C98FAE400489F5F /* GenerateImaegPreviewViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GenerateImaegPreviewViewController.swift; sourceTree = "<group>"; };
 		BDF1647D1C98FB0500489F5F /* NotesBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NotesBaseViewController.swift; sourceTree = "<group>"; };
@@ -223,6 +229,7 @@
 				BD0BEC7F1C86CA2D005580EC /* View */,
 				BD0BEC801C86CA34005580EC /* Realm */,
 				BD0BEC751C867CDB005580EC /* Main.storyboard */,
+				BDB53E661CAE8CC300E03663 /* CoreData */,
 				BD0BEBCA1C867376005580EC /* Assets.xcassets */,
 				BD0BEBCC1C867376005580EC /* LaunchScreen.storyboard */,
 				BD9E78B11C89D6A1006ED8CB /* Helper */,
@@ -367,6 +374,16 @@
 				BD1003C11C8DCEEF00C00C15 /* MyPlayground.playground */,
 			);
 			name = Helper;
+			sourceTree = "<group>";
+		};
+		BDB53E661CAE8CC300E03663 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				BDB53E6B1CAE929A00E03663 /* Note+CoreDataProperties.swift */,
+				BDB53E6C1CAE929A00E03663 /* Note.swift */,
+				BDB53E631CAE8CBC00E03663 /* Note.xcdatamodeld */,
+			);
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		BDF1647F1C98FB2C00489F5F /* Share */ = {
@@ -586,6 +603,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD8E458C1C919E2900B59D6B /* TPKeyboardAvoidingCollectionView.m in Sources */,
+				BDB53E651CAE8CBC00E03663 /* Note.xcdatamodeld in Sources */,
 				BD57F7491C9A41DB00550E30 /* UIButton+Notes.swift in Sources */,
 				BD9E78AC1C89AF77006ED8CB /* UEAdjustmentViewController.swift in Sources */,
 				BD9AB9DA1C885F29007C11FE /* CopyFooterViewController.swift in Sources */,
@@ -607,12 +625,14 @@
 				BD8E458F1C919E2900B59D6B /* UIScrollView+TPKeyboardAvoidingAdditions.m in Sources */,
 				BD5F33C61C8AFF0600223364 /* Async.swift in Sources */,
 				BD5F33C81C8B09FD00223364 /* Appearance.swift in Sources */,
+				BDB53E6E1CAE929A00E03663 /* Note.swift in Sources */,
 				BD9AB9D61C87D8CC007C11FE /* MarkdownTableViewController.swift in Sources */,
 				BD0BCFB81C8AF65F009D0B6F /* SubVENTouchLockSplashViewController.swift in Sources */,
 				BDF1647C1C98FAE400489F5F /* GenerateImaegPreviewViewController.swift in Sources */,
 				BD8E458E1C919E2900B59D6B /* TPKeyboardAvoidingTableView.m in Sources */,
 				BD2A81C41C92F8020074274B /* UIViewController+Notes.swift in Sources */,
 				BD1003C01C8D9A9400C00C15 /* Helper.swift in Sources */,
+				BDB53E6D1CAE929A00E03663 /* Note+CoreDataProperties.swift in Sources */,
 				BDF1647E1C98FB0500489F5F /* NotesBaseViewController.swift in Sources */,
 				BD9E78B01C89D68A006ED8CB /* NSString+GetDeviceName.m in Sources */,
 				BD63A02A1C93FB6600EE680B /* Randoms.swift in Sources */,
@@ -889,6 +909,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		BDB53E631CAE8CBC00E03663 /* Note.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				BDB53E641CAE8CBC00E03663 /* Note.xcdatamodel */,
+			);
+			currentVersion = BDB53E641CAE8CBC00E03663 /* Note.xcdatamodel */;
+			path = Note.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = BD0BEBB81C867376005580EC /* Project object */;
 }

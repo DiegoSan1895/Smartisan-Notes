@@ -24,6 +24,7 @@ class NotesTableViewCell: UITableViewCell {
     @IBOutlet weak var staredButton: UIButton!
     @IBOutlet weak var deleteButton: UIButton!
     @IBOutlet weak var cameraImageView: UIImageView!
+    @IBOutlet weak var cellImageView: UIImageView!
     
     // MARK: - properties
     
@@ -86,6 +87,9 @@ class NotesTableViewCell: UITableViewCell {
             }
         }
         
+        if isiPhone6(){
+            cellImageView.image = UIImage(named: "pad_n_iphone6")
+        }
         addGestures()
     }
     override func prepareForReuse() {
@@ -97,24 +101,36 @@ class NotesTableViewCell: UITableViewCell {
     // add swipeGesture
     func addGestures(){
         // 1.
-        let swipeGesture = UISwipeGestureRecognizer(target: self, action: "swipeAnimation")
+        let swipeGesture = UISwipeGestureRecognizer(target: self, action: "swipeAnimation:")
         swipeGesture.direction = [UISwipeGestureRecognizerDirection.Right, UISwipeGestureRecognizerDirection.Left]
+        
         self.addGestureRecognizer(swipeGesture)
         
         // 2.
         longGesture = UILongPressGestureRecognizer(target: self, action: "longGestureStart")
         //self.addGestureRecognizer(longGesture)
         
+        // 3.
+        let panGesture = UIPanGestureRecognizer(target: self, action: "swipeAnimation:")
+        containerView.addGestureRecognizer(panGesture)
+        
     }
-    func swipeAnimation() {
+    func swipeAnimation(gesture: UIPanGestureRecognizer) {
         
         if slided {
             setToNormalState()
         }else {
             spring(0.4, animations: { () -> Void in
                 self.containerView.transform = CGAffineTransformMakeTranslation(self.deleteButton.bounds.width * 0.8, 0)
+            
+                
                 self.clipImageView.image = UIImage(named: "clip_p")
             })
+            
+            let maxOffSetX = deleteButton.width * 0.8
+            let translation = gesture.translationInView(self)
+            containerView.center = CGPoint(x: gesture.view!.center.x + translation.x, y: gesture.view!.center.y)
+            gesture.setTranslation(CGPointZero, inView: self)
         }
         
         slided = slided == true ? false : true

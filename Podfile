@@ -17,7 +17,8 @@ target 'Smartisan-Notes' do
     #pod 'UITableView+FDTemplateLayoutCell'
     #pod 'RealmSwift'
     pod 'Proposer'
-    pod 'YYText'
+    pod 'YYKit'
+    pod 'MagicalRecord'
 end
 
 target 'Smartisan-NotesTests' do

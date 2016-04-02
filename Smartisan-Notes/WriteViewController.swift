@@ -303,6 +303,12 @@ class WriteViewController: UIViewController, WriteCellDelegate {
         self.view.backgroundColor = UIColor(patternImage: UIImage(named: "bg")!)
         self.tableView.backgroundColor = UIColor.clearColor()
         
+        var image = UIImage(named: "note_paper_bottom_noline")
+        if isiPhone6(){
+            image = UIImage(named: "note_paper_bottom_iphone6_noline")
+        }
+        let imageFooterView = UIImageView(image: image!)
+        tableView.tableFooterView = imageFooterView
     }
     
     func navigationBarChangeToStateView(){
